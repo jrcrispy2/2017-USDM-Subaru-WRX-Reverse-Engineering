@@ -1,0 +1,510 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en-gb">
+<title>RomRaider :: View topic - How To: Get started with IDA and disassembly</title>
+
+<style type="text/css">
+<!--
+
+body {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+}
+
+img {
+	border: 0;
+}
+
+td {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+	line-height: 150%;
+}
+
+.code,
+.quote {
+	font-size: smaller;
+	border: black solid 1px;
+}
+
+.forum {
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+.topic {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.gensmall {
+	font-size: 8pt;
+}
+
+hr {
+	color: #888;
+	height: 3px;
+	border-style: solid;
+}
+
+hr.sep {
+	color: #aaa;
+	height: 1px;
+	border-style: dashed;
+}
+//-->
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Resize too large images
+	*/
+	var reimg_maxWidth = 640, reimg_maxHeight = 480, reimg_relWidth = 100;
+	var reimg_swapPortrait = true;
+	var reimg_loadingImg = "./images/spacer.gif";
+	var reimg_loadingStyle = "width: 16px; height: 16px; background: url(./styles/fisubsilver2/imageset/icon_reimg_loading.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_loadingAlt = "Loading...";
+	
+	var reimg_autoLink = true;
+	
+	var reimg_zoomImg = "./images/spacer.gif";
+	var reimg_zoomStyle = "width: 18px; height: 15px; background: url(./styles/fisubsilver2/imageset/icon_reimg_zoom_in.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_zoomHover = "filter: Alpha(Opacity=90); opacity: .90;";
+	
+	var reimg_zoomAlt = "Zoom in (real dimensions: %1$d x %2$d)";
+	var reimg_zoomTarget = "_highslide";
+	var reimg_ajax_url = "https://www.romraider.com/forum/reimg/reimg_ajax.php";
+
+	function reimg(img, width, height)
+	{
+		if (window.reimg_version)
+		{
+			reimg_resize(img, width, height);
+		}
+	}
+// ]]>
+</script>
+
+<script type="text/javascript" src="./reimg/reimg.js"></script>
+
+	
+<style type="text/css" media="screen, projection">
+<!--
+	
+	.tablebg .tablebg .postbody .reimg-zoom { display: none; }
+	
+	.reimg { width: 10%; height: auto; visibility: visible; }
+	
+-->
+</style>
+	
+<script type="text/javascript" src="./reimg/highslide/highslide-full.packed.js"></script>
+<link rel="stylesheet" type="text/css" href="./reimg/highslide/highslide.css" />
+	
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Light box for resized images
+	*/
+	
+	if (window.hs)
+	{
+		hs.graphicsDir = "./reimg/highslide/graphics/";
+		// Language settings for Highslide JS
+		hs.lang.cssDirection = "ltr";
+		hs.lang.loadingText = "Loading...";
+		hs.lang.loadingTitle = "Click to cancel";
+		hs.lang.focusTitle = "Click to bring to front";
+		hs.lang.fullExpandTitle = "Expand to actual size (f)";
+		hs.lang.creditsText = "Powered by <em>Highslide JS</em>";
+		hs.lang.creditsTitle = "Go to the Highslide JS homepage";
+		hs.lang.previousText = "Previous";
+		hs.lang.nextText = "Next";
+		hs.lang.moveText = "Move";
+		hs.lang.closeText = "Close";
+		hs.lang.closeTitle = "Close (esc)";
+		hs.lang.resizeTitle = "Resize";
+		hs.lang.playText = "Play";
+		hs.lang.playTitle = "Play slideshow (spacebar)";
+		hs.lang.pauseText = "Pause";
+		hs.lang.pauseTitle = "Pause slideshow (spacebar)";
+		hs.lang.previousTitle = "Previous (arrow left)";
+		hs.lang.nextTitle = "Next (arrow right)";
+		hs.lang.moveTitle = "Move";
+		hs.lang.number = "Image %1 of %2";
+		hs.lang.restoreTitle = "Click to close image, click and drag to move. Use arrow keys for next and previous.";
+		hs.dimmingOpacity = 0.75;
+	}
+	
+// ]]>
+</script>
+
+	
+<script type="text/javascript">
+// <![CDATA[
+	reimg_loading('./styles/fisubsilver2/imageset/icon_reimg_loading.gif');
+// ]]>
+</script>
+
+</head>
+<body>
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td colspan="2" align="center"><span class="Forum">RomRaider</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/">https://www.romraider.com/forum/</a></span></td>
+</tr>
+<tr>
+	<td colspan="2"><br /></td>
+</tr>
+<tr>
+	<td><span class="topic">How To: Get started with IDA and disassembly</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303">https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303</a></span></td>
+	<td align="right" valign="bottom"><span class="gensmall">Page <strong>3</strong> of <strong>12</strong></span></td>
+</tr>
+</table>
+
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Thu Jun 24, 2010 5:50 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">Fiend wrote:</div><div class="quotecontent">Maybe I haven't gotten far enough yet, but I'm a bit confused by the 2D/3D table header info as detailed in the guide.  I don't see anything like that for the 2D/3D tables that I've looked at so far (e.g. TargetBoost).  The value portion of the data table converts directly to the 16-bit values.  Is the info for the table (location of row, column values, value data types, etc) kept somewhere else or do only certain tables have this header info?<br /><br />Sorry, lots of questions I know.  Thanks!</div><br />It's not in the &quot;table&quot; per se, it is found in the area that points to the table where the axis and data info are stored.  Follow the xref back to that table definition.<br /><span style="font-weight: bold">Here's a 2D example for MAF Sensor scaling, no conversion</span>.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:00085438 00 36&nbsp; &nbsp; &nbsp; &nbsp;word_85438:&nbsp; &nbsp; &nbsp;.data.w h'36&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:off_7A00<br />ROM:0008543A 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:0008543C 00 0C CE 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l MAFSensorScaling_YAxis<br />ROM:00085440 00 0C CE D8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l MAFSensorScaling<br /></div><br />The first word is the table size in hex.<br />The second word is the data type. 0000 = 32bit (float)<br />The next double word is the ROM address of the axis<br />The next double word is the ROM address of the data<br />And here's what it is pointing to.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:000CCE00 3F 66 00 00 MAFSensorScaling_YAxis:.float 8.984375e-1&nbsp; &nbsp; ; DATA XREF: ROM:0008543C<br />ROM:000CCE04 3F 70 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 9.375e-1<br />ROM:000CCE08 3F 7A 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 9.765625e-1<br />ROM:000CCE0C 3F 82 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.015625<br />ROM:000CCE10 3F 87 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.0546875<br />ROM:000CCE14 3F 8C 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.09375<br />ROM:000CCE18 3F 91 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.1328125<br />ROM:000CCE1C 3F 96 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.171875<br />ROM:000CCE20 3F 9B 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.2109375<br />ROM:000CCE24 3F A0 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.25<br />&lt;... snip ...&gt;<br /><br />ROM:000CCED8 3F 90 71 0C MAFSensorScaling:.float 1.1284499&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:00085440<br />ROM:000CCEDC 3F A6 5E 35&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.29975<br />ROM:000CCEE0 3F BE 5A EE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.48715<br />ROM:000CCEE4 3F D7 7B 4A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.68345<br />ROM:000CCEE8 3F F2 1B 08&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.8914499<br />ROM:000CCEEC 40 07 F7 CE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 2.1244998<br />ROM:000CCEF0 40 18 DB 8B&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 2.3883998<br />ROM:000CCEF4 40 2B F6 2B&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 2.6868999<br />ROM:000CCEF8 40 41 58 10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 3.0209999<br />ROM:000CCEFC 40 57 DB 22&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 3.3727498<br />&lt;... snip ...&gt;<br /><br /></div><br /><br />If the 2D table has a data type other than 32bit then a multiplier and additive value is also specified in the table definition.<br /><span style="font-weight: bold">2D table with conversion data.</span><br />For example Timing Compensation due to IAT.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:000848B8 00 10&nbsp; &nbsp; &nbsp; &nbsp;word_848B8:&nbsp; &nbsp; &nbsp;.data.w h'10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: ROM:off_37678<br />ROM:000848BA 04 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'400<br />ROM:000848BC 00 0C 9D 54&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l TimingCompensationBIAT_YAxis<br />ROM:000848C0 00 0C 9D 94&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l TimingCompensationBIAT<br />ROM:000848C4 3E B4 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 3.515625e-1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; multiplier<br />ROM:000848C8 C2 34 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float -4.5e1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; additive<br /></div>The first word is the table size in hex.<br />The second word is the data type. 0400 = 8bit (byte)<br />The next double word is the ROM address of the axis<br />The next double word is the ROM address of the data<br />The next double word is the multiplier in float form<br />The next double word is the additive in float form<br /><br />And the table it points to.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:000C9D54 C2 20 00 00 TimingCompensationBIAT_YAxis:.float -4.0e1&nbsp; &nbsp;; DATA XREF: ROM:000848BC<br />ROM:000C9D58 C1 F0 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float -3.0e1<br />ROM:000C9D5C C1 A0 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float -2.0e1<br />ROM:000C9D60 C1 20 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float -1.0e1<br />ROM:000C9D64 00 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 0.0<br />ROM:000C9D68 41 20 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.0e1<br />ROM:000C9D6C 41 A0 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 2.0e1<br />ROM:000C9D70 41 F0 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 3.0e1<br />ROM:000C9D74 42 20 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 4.0e1<br />ROM:000C9D78 42 48 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 5.0e1<br />ROM:000C9D7C 42 70 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 6.0e1<br />ROM:000C9D80 42 8C 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 7.0e1<br />ROM:000C9D84 42 A0 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 8.0e1<br />ROM:000C9D88 42 B4 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 9.0e1<br />ROM:000C9D8C 42 C8 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.0e2<br />ROM:000C9D90 42 DC 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.1e2<br />ROM:000C9D94 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TimingCompensationBIAT:.data.b h'89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:000848C0<br />ROM:000C9D95 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D96 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D97 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D98 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D99 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D9A 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D9B 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D9C 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D9D 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D9E 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9D9F 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9DA0 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9DA1 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9DA2 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br />ROM:000C9DA3 89&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .data.b h'89<br /></div>In this case the 8bit unsigned byte converts to:<br />0x89 = 137, then<br />TimingCompensationBIAT = 137 * 3.515625e-1 + (-4.5e1) = 3.1640625<br /><br /><span style="font-weight: bold">Now a 3D table with conversion data</span><br />Initial Wastegate Duty Table A<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:00082D08 00 08&nbsp; &nbsp; &nbsp; &nbsp;word_82D08:&nbsp; &nbsp; &nbsp;.data.w 8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_151DC:off_15390<br />ROM:00082D0A 00 0B&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'B<br />ROM:00082D0C 00 0C 0B 74&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l InitialWastegateDutyA_XAxis<br />ROM:00082D10 00 0C 0B 94&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l InitialWastegateDutyA_YAxis<br />ROM:00082D14 00 0C 0B C0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l InitialWastegateDutyA<br />ROM:00082D18 08 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'8000000<br />ROM:00082D1C 3B 80 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 3.90625e-3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; multiplier<br />ROM:00082D20 00 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 0.0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; additive<br /></div>The first word is the table size in hex.<br />The next double word is the ROM address of an axis<br />The next double word is the ROM address of an axis<br />The next double word is the ROM address of the data<br />The next double word is the data type (80000000) is 16bit unsigned integer<br />The next double word is the multiplier in float form<br />The next double word is the additive in float form<br /><br />The tables and data it refers to.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:000C0B74 41 20 00 00 InitialWastegateDutyA_XAxis:.float 1.0e1&nbsp; &nbsp; &nbsp;; DATA XREF: ROM:00082D0C<br />ROM:000C0B78 41 70 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.5e1<br />ROM:000C0B7C 41 A0 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 2.0e1<br />ROM:000C0B80 41 C8 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 2.5e1<br />ROM:000C0B84 41 F0 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 3.0e1<br />ROM:000C0B88 42 0C 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 3.5e1<br />ROM:000C0B8C 42 20 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 4.0e1<br />ROM:000C0B90 42 A0 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 8.0e1<br />ROM:000C0B94 45 0C A0 00 InitialWastegateDutyA_YAxis:.float 2.25e3&nbsp; &nbsp; ; DATA XREF: ROM:00082D10<br />ROM:000C0B98 45 16 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 2.4e3<br />ROM:000C0B9C 45 2F 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 2.8e3<br />ROM:000C0BA0 45 48 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 3.2e3<br />ROM:000C0BA4 45 61 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 3.6e3<br />ROM:000C0BA8 45 7A 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 4.0e3<br />ROM:000C0BAC 45 89 80 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 4.4e3<br />ROM:000C0BB0 45 A2 80 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 5.2e3<br />ROM:000C0BB4 45 AF 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 5.6e3<br />ROM:000C0BB8 45 C8 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 6.4e3<br />ROM:000C0BBC 45 D4 80 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 6.8e3<br />ROM:000C0BC0 00 00&nbsp; &nbsp; &nbsp; &nbsp;InitialWastegateDutyA:.data.w 0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:00082D14<br />ROM:000C0BC2 5A 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'5A00<br />ROM:000C0BC4 5A 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'5A00<br />ROM:000C0BC6 5A 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'5A00<br />ROM:000C0BC8 5A 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'5A00<br />ROM:000C0BCA 5A 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'5A00<br />ROM:000C0BCC 5A 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'5A00<br />ROM:000C0BCE 5A 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'5A00<br />ROM:000C0BD0 38 CD&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'38CD<br />ROM:000C0BD2 38 CD&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'38CD<br />ROM:000C0BD4 38 CD&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'38CD<br />ROM:000C0BD6 38 CD&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'38CD<br />&lt;... snip ...&gt;<br /></div><br />Here the 16bit unsigned data is converted like so:<br />0x5A00 = 23040<br />InitialWastegateDutyA = 23040 * 3.90625e-3 + 0 = 90
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Thu Jun 24, 2010 6:51 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Thanks for the explanation, I guess I just hadn't gone far enough in my searching.  I assumed the table info was stored right with the tables and not referenced elsewhere.  IDA did not show any XREFs for the tables I was looking at either, so I ended up doing a search for a byte sequence and sure enough, there they are.<br /><br />Thanks!<br /><br />Out of curiosity, is it possible to surround sections of code/data with an encapsulating comment, like how the start and end of functions are delineated by '=' and '-'?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Thu Jun 24, 2010 11:39 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I tell you, I haven't had this much fun going through source code in a long time.  It's like unwrapping an endless pile of little presents. <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" /><br /><br />One thing I was trying to do was to define a structure for the 2D and 3D tables.  I was able to create the structure based on the table formats but I keep getting errors with the floating point values.<br /><br />For instance:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">00000000 ; Ins/Del : create/delete structure<br />00000000 ; D/A/*&nbsp; &nbsp;: create structure member (data/ascii/array)<br />00000000 ; N&nbsp; &nbsp; &nbsp; &nbsp;: rename structure or structure member<br />00000000 ; U&nbsp; &nbsp; &nbsp; &nbsp;: delete structure member<br />00000000 ; ---------------------------------------------------------------------------<br />00000000<br />00000000 table2d_t&nbsp; &nbsp; &nbsp; &nbsp;struc ; (sizeof=0x14)<br />00000000 num_elements:&nbsp; &nbsp;.data.w ?&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; base 10<br />00000002 data_type:&nbsp; &nbsp; &nbsp; .data.w ?&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; enum table2d_datatype_enum<br />00000004 yaxis_address:&nbsp; .data.l ?&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; offset (00000000)<br />00000008 data_address:&nbsp; &nbsp;.data.l ?&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; offset (00000000)<br />0000000C conv_multiplier:.float ?<br />00000010 conv_additive:&nbsp; .float ?<br />00000014 table2d_t&nbsp; &nbsp; &nbsp; &nbsp;ends<br />00000014<br /></div><br /><br />When applied to a 2D table info location, I get this:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:0009A074 Unknown2DTable_8_TablePtr:table2d_t &lt;16, table2d_datatype_enum_8bit, \<br />ROM:0009A074&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: ROM:00039E96o<br />ROM:0009A074&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; ROM:off_39F78o<br />ROM:0009A074&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TimingCompensationImmNonCruiseBECT_YAxis, Unknown2DTable_8,\<br />ROM:0009A074&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ?bad floating?, ?bad floating?&gt;<br /></div><br /><br />See the ?bad floating? errors?  What's stupid about this is if I remove the struct formatting, the floats are displayed correctly:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:0009A074 Unknown2DTable_8_TablePtr:.data.w 16&nbsp; &nbsp; ; DATA XREF: ROM:00039E96o<br />ROM:0009A074&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; ROM:off_39F78o<br />ROM:0009A076&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w table2d_datatype_enum_8bit<br />ROM:0009A078&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l TimingCompensationImmNonCruiseBECT_YAxis<br />ROM:0009A07C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l Unknown2DTable_8<br />ROM:0009A080&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 0.3515625<br />ROM:0009A084&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float -20.0<br /></div><br /><br />See how the floats show up correctly?  Argh.  Is this an IDA bug?<br /><br />So why use a struct definition?  It would make formatting the 2D table info <span style="font-weight: bold">so</span> much faster.  But if the floats aren't going to display correctly after applying the formatting, then what's the point.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Sasha_A80</b> [ Thu Jun 24, 2010 10:25 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />IDA version I am running does not pass floats correctly independently of struct defs.<br /><br />ROM:0002B4E6 ; ---------------------------------------------------------------------------<br />ROM:0002B4E6<br />ROM:0002B4E6 SSM_READ_ENGINE_SPEED_HIGH:             ; DATA XREF: ROM:00037CE8o<br />ROM:0002B4E6                 sts.l   pr, @-r15<br />ROM:0002B4E8                 mov.l   @(h'218,pc), r3 ; [0002B704] = GET_FLOAT_ENGINE_SPEED<br />ROM:0002B4EA                 jsr     @r3 ; GET_FLOAT_ENGINE_SPEED<br />ROM:0002B4EC                 nop<br />ROM:0002B4EE                 fmov    fr0, fr4<br />ROM:0002B4F0                 mova    @(h'214,pc), r0 ; [0002B708] = ?bad floating?<br />ROM:0002B4F2                 fldi0   fr6<br />ROM:0002B4F4                 mov.l   @(h'214,pc), r3 ; [0002B70C] = sub_2170<br />ROM:0002B4F6                 jsr     @r3 ; sub_2170<br />ROM:0002B4F8                 fmov.s  @r0, fr5<br />ROM:0002B4FA                 extu.w  r0, r0<br />ROM:0002B4FC                 lds.l   @r15+, pr<br />ROM:0002B4FE                 rts<br />ROM:0002B500                 shlr8   r0<br />ROM:0002B502 ; ---------------------------------------------------------------------------<br /><br />ROM:0002B704 off_2B704:      .data.l GET_FLOAT_ENGINE_SPEED ; DATA XREF: ROM:0002B4E8<br />ROM:0002B704                                         ; ROM:0002B504<br />ROM:0002B708 dword_2B708:    .data.l 2.5e-1          ; DATA XREF: ROM:0002B4F0<br />ROM:0002B708                                         ; ROM:0002B50C<br />ROM:0002B70C off_2B70C:      .data.l sub_2170        ; DATA XREF: ROM:0002B4F4<br />ROM:0002B70C                                         ; ROM:0002B5104 ...<br /><br />After manual marking variable as float it looks like flt_2B078 that is not as bad...  Value is still invisible in IDA comments.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Fri Jun 25, 2010 8:53 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />All I've got to say is holy crap there are a LOT of 2D and 3D tables that haven't been defined yet.  I've found like a gazillion for what I think relates to idle speed control, some weird ones that have RPM and what I think are two load columns.<br /><br />I also discovered, though I think it was <a href="http://www.romraider.com/forum/viewtopic.php?p=60863#p60863" onclick="window.open(this.href);return false;" class="postlink">mentioned above</a>, that some of the 2D and 3D tables don't have a spot for the conversion multiplier or additive.<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:0009B380 word_9B380:&nbsp; &nbsp; &nbsp;.data.w 11&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_4E3BC+2Co<br />ROM:0009B380&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; ROM:off_4E47Co<br />ROM:0009B382&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 8<br />ROM:0009B384&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l dword_D4FAC<br />ROM:0009B388&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l dword_D4FD8<br />ROM:0009B38C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l dword_D4FF8<br />ROM:0009B390&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l 0<br /></div>
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Fri Jun 25, 2010 9:23 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Yeah, it seems like every other function starts with a lookup based on coolant temperature.<br /><br />At least I hope it's based on coolant temp, because I named all the tables CoolantToSomething001, 002, 003, etc. <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Sat Jun 26, 2010 8:49 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />A quick question regarding this sort of code that uses the tst instruction:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:00035306&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mov.l&nbsp; &nbsp;off_3546C, r6 ; unk_FFFF70F0<br />ROM:00035308&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mov.b&nbsp; &nbsp;@r6, r2<br />ROM:0003530A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tst&nbsp; &nbsp; &nbsp;r2, r2<br />bf&nbsp; &nbsp; &nbsp; loc_353D4<br />ROM:0003530E&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mov&nbsp; &nbsp; &nbsp;#-h'1C, r0<br />ROM:00035310&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;fmov.s&nbsp; @(r0,r11), fr9<br />ROM:00035312&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mov&nbsp; &nbsp; &nbsp;#-h'18, r0<br /></div><br /><br />From what I gather from the manual, tst will perform a logical AND on the parameters.  I've seen many cases where the same register is passed in for both parameters.  This should result in the T bit being cleared to 0.  Is it that simple?  What's the point?<br /><br />For example, in the above code, the branch-false instruction should always take effect and result in the code at 35310 never executing.  Right?<br /><br />Edit:<br /><br />See don't post when tired.  I was writing this assuming unk_FFFF70F0 would always be &gt; 0.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Sat Jun 26, 2010 10:51 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />As I read it...<br /><br />If r2 is nonzero, then (r2 &amp; r2) will be nonzero, so T will be cleared.<br />If r2 is zero, then (r2 &amp; r2) will be zero, so T will be set.<br /><br />So, I think it's equivalent to &quot;cmp/eq #0, r2&quot; but I'd appreciate confirmation if anyone knows for sure.<br /><br />This is <span style="font-style: italic">exactly </span>the kind of thing I had in mind when I reserved a space for &quot;common patterns in the code&quot; at the start of the thread.  I've looked into assembly code for a few different CPU types and there's always stuff like this, where an instruction that looks like it was designed for one thing gets used for something else.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Sun Jun 27, 2010 8:05 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">As I read it...<br /><br />If r2 is nonzero, then (r2 &amp; r2) will be nonzero, so T will be cleared.<br />If r2 is zero, then (r2 &amp; r2) will be zero, so T will be set.<br /></div><br /><br />Sorry, that's correct.  I was a little tired when I wrote my post, but essentially what I was trying to say.  I was just thinking in terms of that memory location being set to 1 (looks like it is a flag of some sort.)<br /><br /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">So, I think it's equivalent to &quot;cmp/eq #0, r2&quot; but I'd appreciate confirmation if anyone knows for sure.<br /><br />This is <span style="font-style: italic">exactly </span>the kind of thing I had in mind when I reserved a space for &quot;common patterns in the code&quot; at the start of the thread.  I've looked into assembly code for a few different CPU types and there's always stuff like this, where an instruction that looks like it was designed for one thing gets used for something else.</div><br /><br />Yeah, I don't get it either since both cmp/eq and tst use the same number of cycles, so it doesn't look like it is being done for efficiency.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Mon Jun 28, 2010 7:08 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Here's one for the 'odd patterns in data' post.<br />After reviewing an XmlToIdc error and undefining a section of map data I noticed that there are maps defined in the ROM that use a common axis, rather than repeating it and just specify a different data address.<br />For example:<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:0007A534 00 10&nbsp; &nbsp; &nbsp; &nbsp;word_7A534:&nbsp; &nbsp; &nbsp;.data.w h'10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_170BC:off_17488<br />ROM:0007A536 04 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'400<br />ROM:0007A538 00 0C 06 E0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l TargetBoostCompensationECT_YAxis<br />ROM:0007A53C 00 0C 08 58&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l byte_C0858<br />ROM:0007A540 3C 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 7.8125e-3<br />ROM:0007A544 00 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 0.0<br />ROM:0007A548 00 10&nbsp; &nbsp; &nbsp; &nbsp;word_7A548:&nbsp; &nbsp; &nbsp;.data.w h'10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_170BC:off_172A0<br />ROM:0007A54A 04 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'400<br />ROM:0007A54C 00 0C 06 E0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l TargetBoostCompensationECT_YAxis<br />ROM:0007A550 00 0C 08 68&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l unk_C0868<br />ROM:0007A554 3C 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 7.8125e-3<br />ROM:0007A558 00 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 0.0<br />ROM:0007A55C 00 10&nbsp; &nbsp; &nbsp; &nbsp;word_7A55C:&nbsp; &nbsp; &nbsp;.data.w h'10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_16DA8:off_16E44<br />ROM:0007A55E 04 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'400<br />ROM:0007A560 00 0C 06 E0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l TargetBoostCompensationECT_YAxis<br />ROM:0007A564 00 0C 08 78&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l unk_C0878<br />ROM:0007A568 3C 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 7.8125e-3<br />ROM:0007A56C 00 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 0.0<br />ROM:0007A570 00 10&nbsp; &nbsp; &nbsp; &nbsp;word_7A570:&nbsp; &nbsp; &nbsp;.data.w h'10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_16DA8:off_16E50<br />ROM:0007A572 04 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'400<br />ROM:0007A574 00 0C 06 E0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l TargetBoostCompensationECT_YAxis<br />ROM:0007A578 00 0C 08 88&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l unk_C0888<br />ROM:0007A57C 3C 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 7.8125e-3<br />ROM:0007A580 00 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 0.0<br /></div> See how <div class="codetitle"><b>Code:</b></div><div class="codecontent">00 0C 06 E0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l TargetBoostCompensationECT_YAxis</div> is repeated in each table definition?<br /><br />A tip:  After you do an analysis and before you run the XmlToIdc scripts, undefine the areas of the ROM they will be naming.  Otherwise you'll get a few errors about no being able to rename addresses.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 28, 2010 7:12 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Interesting.  I've noticed a lots of lookups based on ECT in lots of different parts of the code, they definitely have different table entries but it sorta wouldn't surprise me if most of them shared a common array of table headers.  I haven't checked that but I will the next time I get a chance.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Mon Jun 28, 2010 7:31 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Does this make sense for the FLKC Learning table?<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">FineCorrectionRowsRPM:<br />ROM:000C9208 45 16 00 00 flt_C920C:&nbsp; &nbsp; &nbsp; .float 2.4e3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD60<br />ROM:000C920C 45 61 00 00 flt_C920C:&nbsp; &nbsp; &nbsp; .float 3.6e3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD74<br />ROM:000C9210 45 96 00 00 flt_C9210:&nbsp; &nbsp; &nbsp; .float 4.8e3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD78<br />ROM:000C9214 45 AF 00 00 flt_C9214:&nbsp; &nbsp; &nbsp; .float 5.6e3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD7C<br />ROM:000C9218 46 2B E0 00 flt_C9218:&nbsp; &nbsp; &nbsp; .float 1.1e4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD80<br />ROM:000C921C 46 3B 80 00 flt_C921C:&nbsp; &nbsp; &nbsp; .float 1.2e4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD84<br /></div><br />The last two are 11000 and 12000RPM...
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Mon Jun 28, 2010 8:07 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">Interesting.  I've noticed a lots of lookups based on ECT in lots of different parts of the code, they definitely have different table entries but it sorta wouldn't surprise me if most of them shared a common array of table headers.  I haven't checked that but I will the next time I get a chance.</div><br /><br />I've seen this too in the 08 STI ROM.  There are quite a few 2D tables that share a common Y-axis.  In my opinion, there are far too many tables using coolant...argh! <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" /><br /><br />I'm still trying to figure out the additive a/b logic.  I've found what looks like a &quot;main ignition&quot; control loop (calculates ignition compensation, fine learning/knock correction, base ignition, etc) but have only found one reference to additive B. IDA definitely made some goofs during the analysis, which is what I think is throwing things off.  I have sections of red code that just don't make sense take in isolation.  I'm working to clean that up.<br /><br />Edit:<br /><br />By the way, does this make sense to anyone else?  Here is a 2D table definition that states it uses 32-bit data elements:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:0009BB40 word_9BB40:&nbsp; &nbsp; &nbsp;.data.w 16&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_58EA8+1A2o<br />ROM:0009BB40&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; ROM:off_59138o<br />ROM:0009BB42&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w table2d_datatype_enum_32bit<br />ROM:0009BB44&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l flt_D740C<br />ROM:0009BB48&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l word_D744C<br /></div><br /><br />If you look at the data section though:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:000D744C word_D744C:&nbsp; &nbsp; &nbsp;.data.w 0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: ROM:0009BB48o<br />ROM:000D744E&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7450&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7452&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7454&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7456&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7458&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D745A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D745C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D745E&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7460&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7462&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7464&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7466&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D7468&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000D746A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br /></div><br /><br />There is not enough space to define 16, dword elements.  I ended up defining them as word elements instead.  How weird is that?  There are also no conversion fields in the table info ptr.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 28, 2010 8:14 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">Does this make sense for the FLKC Learning table?<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">FineCorrectionRowsRPM:<br />ROM:000C9208 45 16 00 00 flt_C920C:&nbsp; &nbsp; &nbsp; .float 2.4e3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD60<br />ROM:000C920C 45 61 00 00 flt_C920C:&nbsp; &nbsp; &nbsp; .float 3.6e3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD74<br />ROM:000C9210 45 96 00 00 flt_C9210:&nbsp; &nbsp; &nbsp; .float 4.8e3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD78<br />ROM:000C9214 45 AF 00 00 flt_C9214:&nbsp; &nbsp; &nbsp; .float 5.6e3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD7C<br />ROM:000C9218 46 2B E0 00 flt_C9218:&nbsp; &nbsp; &nbsp; .float 1.1e4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD80<br />ROM:000C921C 46 3B 80 00 flt_C921C:&nbsp; &nbsp; &nbsp; .float 1.2e4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:0004CD84<br /></div><br />The last two are 11000 and 12000RPM...</div><br /><br />I've seen that in quite a few Learning View screenshots.  Basically they just made the FLKC table &quot;smaller.&quot;  Less resolution, etc.  You might find that the last column or two has an impossibly high load as well.  2002ish cars have lots of rows and columns in the FLKC table, whereas 2005+ have fewer.  In between there are some that have large tables with some rows basically removed like you see there.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Mon Jun 28, 2010 8:17 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Oh and can someone please tell me how to convert a range of addresses from byte to word/dword in one go?  I can convert a range of unknown addresses to bytes by selecting the range, pressing D, and unchecking the &quot;create array&quot; option.  I assumed creating word elements would be as simple as selecting the range, pressing D, unchecking the &quot;create array&quot; option, and then setting element width to &quot;2&quot;.  But oh noooo, that'd be too easy.  All I end up with is the selected range being marked as bytes instead of words.<br /><br />Am I missing something?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+<hr width="85%" />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line. If you
+	refuse to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2006
+// -->
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td><span class="gensmall">Page <strong>3</strong> of <strong>12</strong></span></td>
+	<td align="right"><span class="gensmall">All times are UTC - 9 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]</span></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><span class="gensmall">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</span></td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en-gb">
+<title>RomRaider :: View topic - How To: Get started with IDA and disassembly</title>
+
+<style type="text/css">
+<!--
+
+body {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+}
+
+img {
+	border: 0;
+}
+
+td {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+	line-height: 150%;
+}
+
+.code,
+.quote {
+	font-size: smaller;
+	border: black solid 1px;
+}
+
+.forum {
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+.topic {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.gensmall {
+	font-size: 8pt;
+}
+
+hr {
+	color: #888;
+	height: 3px;
+	border-style: solid;
+}
+
+hr.sep {
+	color: #aaa;
+	height: 1px;
+	border-style: dashed;
+}
+//-->
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Resize too large images
+	*/
+	var reimg_maxWidth = 640, reimg_maxHeight = 480, reimg_relWidth = 100;
+	var reimg_swapPortrait = true;
+	var reimg_loadingImg = "./images/spacer.gif";
+	var reimg_loadingStyle = "width: 16px; height: 16px; background: url(./styles/fisubsilver2/imageset/icon_reimg_loading.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_loadingAlt = "Loading...";
+	
+	var reimg_autoLink = true;
+	
+	var reimg_zoomImg = "./images/spacer.gif";
+	var reimg_zoomStyle = "width: 18px; height: 15px; background: url(./styles/fisubsilver2/imageset/icon_reimg_zoom_in.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_zoomHover = "filter: Alpha(Opacity=90); opacity: .90;";
+	
+	var reimg_zoomAlt = "Zoom in (real dimensions: %1$d x %2$d)";
+	var reimg_zoomTarget = "_highslide";
+	var reimg_ajax_url = "https://www.romraider.com/forum/reimg/reimg_ajax.php";
+
+	function reimg(img, width, height)
+	{
+		if (window.reimg_version)
+		{
+			reimg_resize(img, width, height);
+		}
+	}
+// ]]>
+</script>
+
+<script type="text/javascript" src="./reimg/reimg.js"></script>
+
+	
+<style type="text/css" media="screen, projection">
+<!--
+	
+	.tablebg .tablebg .postbody .reimg-zoom { display: none; }
+	
+	.reimg { width: 10%; height: auto; visibility: visible; }
+	
+-->
+</style>
+	
+<script type="text/javascript" src="./reimg/highslide/highslide-full.packed.js"></script>
+<link rel="stylesheet" type="text/css" href="./reimg/highslide/highslide.css" />
+	
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Light box for resized images
+	*/
+	
+	if (window.hs)
+	{
+		hs.graphicsDir = "./reimg/highslide/graphics/";
+		// Language settings for Highslide JS
+		hs.lang.cssDirection = "ltr";
+		hs.lang.loadingText = "Loading...";
+		hs.lang.loadingTitle = "Click to cancel";
+		hs.lang.focusTitle = "Click to bring to front";
+		hs.lang.fullExpandTitle = "Expand to actual size (f)";
+		hs.lang.creditsText = "Powered by <em>Highslide JS</em>";
+		hs.lang.creditsTitle = "Go to the Highslide JS homepage";
+		hs.lang.previousText = "Previous";
+		hs.lang.nextText = "Next";
+		hs.lang.moveText = "Move";
+		hs.lang.closeText = "Close";
+		hs.lang.closeTitle = "Close (esc)";
+		hs.lang.resizeTitle = "Resize";
+		hs.lang.playText = "Play";
+		hs.lang.playTitle = "Play slideshow (spacebar)";
+		hs.lang.pauseText = "Pause";
+		hs.lang.pauseTitle = "Pause slideshow (spacebar)";
+		hs.lang.previousTitle = "Previous (arrow left)";
+		hs.lang.nextTitle = "Next (arrow right)";
+		hs.lang.moveTitle = "Move";
+		hs.lang.number = "Image %1 of %2";
+		hs.lang.restoreTitle = "Click to close image, click and drag to move. Use arrow keys for next and previous.";
+		hs.dimmingOpacity = 0.75;
+	}
+	
+// ]]>
+</script>
+
+	
+<script type="text/javascript">
+// <![CDATA[
+	reimg_loading('./styles/fisubsilver2/imageset/icon_reimg_loading.gif');
+// ]]>
+</script>
+
+</head>
+<body>
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td colspan="2" align="center"><span class="Forum">RomRaider</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/">https://www.romraider.com/forum/</a></span></td>
+</tr>
+<tr>
+	<td colspan="2"><br /></td>
+</tr>
+<tr>
+	<td><span class="topic">How To: Get started with IDA and disassembly</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303">https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303</a></span></td>
+	<td align="right" valign="bottom"><span class="gensmall">Page <strong>4</strong> of <strong>12</strong></span></td>
+</tr>
+</table>
+
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 28, 2010 8:23 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Press D three times, press down-arrow.  Repeat until done.<br /><br />Works for me.<br /><br /><br /><br /><br /><br />Yeah, there's gotta be a better way.  <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Tue Jun 29, 2010 5:46 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />^^^^^ Can you say repetitive strain injury !!!!<br /><br />I haven't figured it out either  <img src="./images/smilies/icon_cry.gif" alt=":cry:" title="Crying or Very sad" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Tue Jun 29, 2010 6:14 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />The only thing I've been able to do to make it a little less painful is to select the range of data, mark it as byte data (press D-&gt;deselect create array), then go through each element and press D again.  Makes converting to words a bit less painful, though converting to dwords/floats still sucks.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Tue Jun 29, 2010 6:32 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">Fiend wrote:</div><div class="quotecontent">By the way, does this make sense to anyone else?  Here is a 2D table definition that states it uses 32-bit data elements</div><br />I have found something similar with my Injector Latency table definition and the map.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:000853D4 00 05&nbsp; &nbsp; &nbsp; &nbsp;tblInjectorLatency:.data.w 5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: ROM:off_9D48<br />ROM:000853D6 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:000853D8 00 0C CB 40&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l InjectorLatency_YAxis<br />ROM:000853DC 00 0C CB 54&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l InjectorLatency<br /><br />ROM:000CCB40 40 C0 00 00 InjectorLatency_YAxis:.float 6.0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: ROM:000853D8<br />ROM:000CCB44 41 10 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 9.0<br />ROM:000CCB48 41 38 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.15e1<br />ROM:000CCB4C 41 60 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.4e1<br />ROM:000CCB50 41 80 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.float 1.6e1<br />ROM:000CCB54 4D 70&nbsp; &nbsp; &nbsp; &nbsp;InjectorLatency:.data.w h'4D70&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; = 19824<br />ROM:000CCB56 1B CC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'1BCC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; =&nbsp; 7116<br />ROM:000CCB58 0F BC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'FBC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; =&nbsp; 4028<br />ROM:000CCB5A 0A 8C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'A8C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; =&nbsp; 2700<br />ROM:000CCB5C 08 60&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'860&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; =&nbsp; 2144<br /></div><br />We might have to change our 2D/3D table definition from datatype 0 = float to 0 = raw value with no conversion parameters.<br />I followed the lookup code for the 2D table and the result of the lookup is converted from float to integer and stored at 0xFFFF2EE0 as a zero extended double word (0x00000A4F = 2639) for example when battery VDC = 14.21875.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sat Jul 03, 2010 3:00 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />What's wrong with this table def?<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:00085674 00 10&nbsp; &nbsp; &nbsp; &nbsp;word_85674:&nbsp; &nbsp; &nbsp;.data.w h'10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: ROM:off_4C77C<br />ROM:00085676 08 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'800<br />ROM:00085678 00 0C DB F8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'CDBF8<br />ROM:0008567C 00 0C DD 0C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l byte_CDD0C<br />ROM:00085680 3B 34 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'3B340000<br />ROM:00085684 C2 B4 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'C2B40000<br />ROM:00085688 00 10&nbsp; &nbsp; &nbsp; &nbsp;word_85688:&nbsp; &nbsp; &nbsp;.data.w h'10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: sub_4D254:off_4D4CC<br />ROM:0008568A 08 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'800<br />ROM:0008568C 00 0C DB F8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'CDBF8<br />ROM:00085690 00 0C DD 2C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l byte_CDD2C<br />ROM:00085694 00 0F&nbsp; &nbsp; &nbsp; &nbsp;word_85694:&nbsp; &nbsp; &nbsp;.data.w h'F&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: ROM:off_4DD58<br />ROM:00085696 08 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w h'800<br />ROM:00085698 00 0C DD 4C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l flt_CDD4C<br />ROM:0008569C 00 0C DD 88&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l unk_CDD88<br />ROM:000856A0 3B B4 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'3BB40000<br />ROM:000856A4 00 00 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l 0<br /></div>
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Mon Jul 05, 2010 8:15 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Probably a silly question but:<br /><br />Can someone explain how the GBR works and its intended usage?  From the manual's description it seems to be a way of accessing peripherals; is this peripheral memory or what?  Are one or more peripherals mapped to this address space; for example, 0x0000-0x00ff might point to controller1's memory address space while 0x0100-0xff00 might point to controller2.  What are these peripherals?  Timer's, interrupt handlers, etc, or something more exotic like sensor inputs (TPS, manifold pressure, etc) or controllers (to handle injectors, etc)?  I see quite a few uses of the GBR for &quot;storing&quot; data (similar to how R15 is used as a stack pointer).  If this is the case, I assume there is no reference material for the various mappings, etc.<br /><br />Thanks!
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Tue Jul 06, 2010 6:43 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Which manual are you referring to, the CPU or the instruction set?<br />The hardware manual explains how to access the peripherals.  I have found how all 32 of the A/D converters are read and stored in RAM.  Still working on other things though, like ports and serial stuff.<br /><br />I believe there is a thread somewhere here that described GBR.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Tue Jul 06, 2010 8:09 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">Which manual are you referring to, the CPU or the instruction set?<br />The hardware manual explains how to access the peripherals.  I have found how all 32 of the A/D converters are read and stored in RAM.  Still working on other things though, like ports and serial stuff.<br /><br />I believe there is a thread somewhere here that described GBR.</div><br /><br />Ah, I was reading just the CPU manual, I didn't realize there was a hardware manual.  I'll see if I can find it.  I didn't think to search for GBR.<br /><br />Thanks.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Wed Jul 07, 2010 6:46 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I have a silly question.<br />Why do we call 1 axis tables 2D and 2 axis tables 3D?<br />Shouldn't it really be 1 axis = 1D and 2 axis = 2D.  We have no X,Y,Z axis tables...
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Wed Jul 07, 2010 8:59 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I completely agree.  I've been toying with the idea of writing tuning software, and I think I'd probably call them scalar / vector / matrix, just because 1D / 2D / 3D bugs me so much, and calling them point / 1D / 2D would be too confusing.  <img src="./images/smilies/icon_lol.gif" alt=":lol:" title="Laughing" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Wed Jul 07, 2010 9:11 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">I have a silly question.<br />Why do we call 1 axis tables 2D and 2 axis tables 3D?<br />Shouldn't it really be 1 axis = 1D and 2 axis = 2D.  We have no X,Y,Z axis tables...</div><br /><br />Well, for graphing purposes wouldn't they have a 2nd and 3rd implicit axis anyhow?  For a 3D table, the 3rd axis is basically the upper and lower bounds of the data values; e.g. 11.0 to 14.7 for primary fueling.  The same goes for the 2D tables.  When you think of it in terms of graphing, it makes sense.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Wed Jul 07, 2010 9:23 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">I completely agree.  I've been toying with the idea of writing tuning software, and I think I'd probably call them scalar / vector / matrix, ...</div><br /><br />That's probably more correct but I don't think 2D/3D is very far off.  A 2D table has elements that are represented by two components, column and value (or X,Y) whereas each element in a 3D table has 3 components, column, row, and value (X,Y,Z).  At least that is how I would <span style="font-style: italic">visualize</span> or graph it.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Thu Jul 08, 2010 12:56 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Yeah, I'm sure that's where the convention came from.  <br />I still think it's abhorrent. <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" /><br /><br />Looking up the value from a &quot;3d&quot; table is a function of two dimensions.  <br />In the fuel table, for example, the dimensions are load and RPM.<br />value = FunctionOf(x,y);<br /><br />There's nothing two-dimensional about a sequence of numbers like the MAF scaling.<br />value = FunctionOf(x);<br /><br />Aargh!  <img src="./images/smilies/icon_lol.gif" alt=":lol:" title="Laughing" class="reimg" /><br /><br />I got over it a long time ago, though.  Mostly.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Thu Jul 08, 2010 5:43 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">I got over it a long time ago, though.  Mostly.</div><br />Till I brought it up again, right?<br /><br />BTW: I have an IDA script I've been working on to rip through a ROM and format all the tables in a ROM, even the ones we have no idea what they are for. It also writes this info out to a RR editor compatible XML file that you can massage and use to view the tables in the editor.  Are you interested in testing it out for me?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Fri Jul 09, 2010 9:25 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Yeah, that could be interesting to play with, I'd be happy to give it a try.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+<hr width="85%" />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line. If you
+	refuse to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2006
+// -->
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td><span class="gensmall">Page <strong>4</strong> of <strong>12</strong></span></td>
+	<td align="right"><span class="gensmall">All times are UTC - 9 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]</span></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><span class="gensmall">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</span></td>
+</tr>
+</table>
+
+</body>
+</html>

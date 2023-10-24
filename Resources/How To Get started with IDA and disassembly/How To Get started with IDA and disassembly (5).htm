@@ -1,0 +1,518 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en-gb">
+<title>RomRaider :: View topic - How To: Get started with IDA and disassembly</title>
+
+<style type="text/css">
+<!--
+
+body {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+}
+
+img {
+	border: 0;
+}
+
+td {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+	line-height: 150%;
+}
+
+.code,
+.quote {
+	font-size: smaller;
+	border: black solid 1px;
+}
+
+.forum {
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+.topic {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.gensmall {
+	font-size: 8pt;
+}
+
+hr {
+	color: #888;
+	height: 3px;
+	border-style: solid;
+}
+
+hr.sep {
+	color: #aaa;
+	height: 1px;
+	border-style: dashed;
+}
+//-->
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Resize too large images
+	*/
+	var reimg_maxWidth = 640, reimg_maxHeight = 480, reimg_relWidth = 100;
+	var reimg_swapPortrait = true;
+	var reimg_loadingImg = "./images/spacer.gif";
+	var reimg_loadingStyle = "width: 16px; height: 16px; background: url(./styles/fisubsilver2/imageset/icon_reimg_loading.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_loadingAlt = "Loading...";
+	
+	var reimg_autoLink = true;
+	
+	var reimg_zoomImg = "./images/spacer.gif";
+	var reimg_zoomStyle = "width: 18px; height: 15px; background: url(./styles/fisubsilver2/imageset/icon_reimg_zoom_in.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_zoomHover = "filter: Alpha(Opacity=90); opacity: .90;";
+	
+	var reimg_zoomAlt = "Zoom in (real dimensions: %1$d x %2$d)";
+	var reimg_zoomTarget = "_highslide";
+	var reimg_ajax_url = "https://www.romraider.com/forum/reimg/reimg_ajax.php";
+
+	function reimg(img, width, height)
+	{
+		if (window.reimg_version)
+		{
+			reimg_resize(img, width, height);
+		}
+	}
+// ]]>
+</script>
+
+<script type="text/javascript" src="./reimg/reimg.js"></script>
+
+	
+<style type="text/css" media="screen, projection">
+<!--
+	
+	.tablebg .tablebg .postbody .reimg-zoom { display: none; }
+	
+	.reimg { width: 10%; height: auto; visibility: visible; }
+	
+-->
+</style>
+	
+<script type="text/javascript" src="./reimg/highslide/highslide-full.packed.js"></script>
+<link rel="stylesheet" type="text/css" href="./reimg/highslide/highslide.css" />
+	
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Light box for resized images
+	*/
+	
+	if (window.hs)
+	{
+		hs.graphicsDir = "./reimg/highslide/graphics/";
+		// Language settings for Highslide JS
+		hs.lang.cssDirection = "ltr";
+		hs.lang.loadingText = "Loading...";
+		hs.lang.loadingTitle = "Click to cancel";
+		hs.lang.focusTitle = "Click to bring to front";
+		hs.lang.fullExpandTitle = "Expand to actual size (f)";
+		hs.lang.creditsText = "Powered by <em>Highslide JS</em>";
+		hs.lang.creditsTitle = "Go to the Highslide JS homepage";
+		hs.lang.previousText = "Previous";
+		hs.lang.nextText = "Next";
+		hs.lang.moveText = "Move";
+		hs.lang.closeText = "Close";
+		hs.lang.closeTitle = "Close (esc)";
+		hs.lang.resizeTitle = "Resize";
+		hs.lang.playText = "Play";
+		hs.lang.playTitle = "Play slideshow (spacebar)";
+		hs.lang.pauseText = "Pause";
+		hs.lang.pauseTitle = "Pause slideshow (spacebar)";
+		hs.lang.previousTitle = "Previous (arrow left)";
+		hs.lang.nextTitle = "Next (arrow right)";
+		hs.lang.moveTitle = "Move";
+		hs.lang.number = "Image %1 of %2";
+		hs.lang.restoreTitle = "Click to close image, click and drag to move. Use arrow keys for next and previous.";
+		hs.dimmingOpacity = 0.75;
+	}
+	
+// ]]>
+</script>
+
+	
+<script type="text/javascript">
+// <![CDATA[
+	reimg_loading('./styles/fisubsilver2/imageset/icon_reimg_loading.gif');
+// ]]>
+</script>
+
+</head>
+<body>
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td colspan="2" align="center"><span class="Forum">RomRaider</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/">https://www.romraider.com/forum/</a></span></td>
+</tr>
+<tr>
+	<td colspan="2"><br /></td>
+</tr>
+<tr>
+	<td><span class="topic">How To: Get started with IDA and disassembly</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303">https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303</a></span></td>
+	<td align="right" valign="bottom"><span class="gensmall">Page <strong>6</strong> of <strong>12</strong></span></td>
+</tr>
+</table>
+
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>sega</b> [ Thu Dec 02, 2010 9:10 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Thanks, dschultz !<br />It helps me get to star the IDA pro into the ROM.<br />Although, I exactly don't know how to read it...<br />hahaha~<br />I will compare the address of the code with the known ROM and try to find out it.<br />One question : How can you know the definition of each address? It's really abstract!!
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Thu Dec 02, 2010 11:12 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />If you <a href="http://www.romraider.com/forum/viewtopic.php?f=8&amp;t=6515" onclick="window.open(this.href);return false;" class="postlink">read through this thread</a> it may help you as I'm sure you're going to ask all the same questions <img src="./images/smilies/icon_wink.gif" alt=";-)" title="Wink" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>sega</b> [ Thu Dec 02, 2010 7:16 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Yes, it's really the new user asking FAQ... hahaha~<br />It looks good start point of reverse engineering.<br />Thanks, dschultz.<br /><br />By the way, do you guys ever find the setting for TDC?<br />I saw some piggyback aftermarket ECU have the TDC setting as 360 degree(default).<br />For the car with higher angle camshaft, it might need to set this value to 400 degree more or less.<br />I guess this should also be a improtant parameter for the stock ECU.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sat Dec 04, 2010 10:36 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />For anyone looking at the EDM diesel ROMs, a new data type has been found to be prevalent in those ROMs.<br />The data type is the first byte of the <a href="http://www.romraider.com/forum/viewtopic.php?f=25&amp;t=6303&amp;start=3" onclick="window.open(this.href);return false;" class="postlink">&quot;data_bits&quot;</a> in the second word of 2D definitions and of the fourth Dword in 3D definitions.<br /><br />We now have five data type identifiers:<br />0x<span style="font-weight: bold">00</span> float  (not guaranteed to be float all of the time)<br />0x<span style="font-weight: bold">04</span> uint8 (zero extended byte when read) i.e.: 0xE4 = 228<br />0x<span style="font-weight: bold">08</span> uint16 (zero extended word when read)<br />0x<span style="font-weight: bold">0C</span> int8 (sign extended byte when read) i.e.: 0xE4 = -28<br />0x<span style="font-weight: bold">10</span> int16 (sign extended word when read)<br /><br />At the moment RomRaider does not understand the int8 &amp; int16 types.  I'll work on fixing that...<div class="attachtitle">Attachment:</div><div class="attachcontent">
+			<span class="gensmall"><b>File comment:</b> Sample signed data table</span><br />
+		
+			<a href="./download/file.php?id=12992&amp;mode=view"><img src="./download/file.php?id=12992&amp;t=1" alt="signed.png" class="reimg" /></a><br />
+			<span class="gensmall">signed.png [ 213.44 KiB | Viewed 258 times ]</span>
+		
+
+		<br />
+	</div>
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sun Mar 13, 2011 3:34 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Back in <a href="http://www.romraider.com/forum/viewtopic.php?f=25&amp;t=6303&amp;hilit=adc&amp;start=69" onclick="window.open(this.href);return false;" class="postlink">this post</a> I made reference to the ADC inputs.  Has anyone figure any more out?<br />ADC 30 seems to be used in a routine that reads a large 2D float table in my ROM at 0x85474.  This table is defined in the area where other input sensor scaling are stored.  The two table immediately before the large one are also used in the same routine.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:0008545C 00 0A&nbsp; &nbsp; &nbsp; &nbsp;word_8545C:&nbsp; &nbsp; &nbsp;.data.w h'A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_AEC0:off_B274<br />ROM:0008545E 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:00085460 00 0C D1 08&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l flt_CD108<br />ROM:00085464 00 0C D1 30&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l flt_CD130<br />ROM:00085468 00 12&nbsp; &nbsp; &nbsp; &nbsp;word_85468:&nbsp; &nbsp; &nbsp;.data.w h'12&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: sub_AEC0:off_B1EC<br />ROM:0008546A 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:0008546C 00 0C D1 58&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l flt_CD158<br />ROM:00085470 00 0C D1 A0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l flt_CD1A0<br />ROM:00085474 00 3A&nbsp; &nbsp; &nbsp; &nbsp;word_85474:&nbsp; &nbsp; &nbsp;.data.w h'3A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: sub_AEC0:off_B228<br />ROM:00085476 00 00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.w 0<br />ROM:00085478 00 0C D1 E8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l flt_CD1E8<br />ROM:0008547C 00 0C D2 D0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l flt_CD2D0<br /><br /></div>Time to go log that ADC to see what's up.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Sasha_A80</b> [ Sun Mar 13, 2011 8:06 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I see also AD31 fuel level sensor and AD30 prepared for some high tempreture measuments.<br />Rear O2 voltage is at AD6 in my ecu under test.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Sasha_A80</b> [ Tue May 03, 2011 4:52 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Is there any way to save and correct IDA results ( code, marks, RAM assignment) if minor corrections of previously disassembled ECU code have been made?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Tue May 03, 2011 10:04 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Just select the code of interest and 'u' to undefined it.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Sasha_A80</b> [ Tue May 03, 2011 10:37 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I am afraid this is not as simple as an apple pie...<br /><br />The problem is as follows:<br />- stock ROM is disassembed and commented in IDA<br />- minor modifications have been made in the initial ECU code ( subroutine start addresses are at their original place )<br />- corrected ROM disassembly is wanted badly with minimum efforts spent...
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Tue May 03, 2011 3:38 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Under the file menu there is an option to export to .IDC.  Do that, the open the new ROM image (like starting over) and run that IDC file.  That will do what you want.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Sasha_A80</b> [ Tue May 03, 2011 7:29 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Done.  It really works.<br />Thanks a lot!
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Sasha_A80</b> [ Thu May 26, 2011 7:05 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">Back in <a href="http://www.romraider.com/forum/viewtopic.php?f=25&amp;t=6303&amp;hilit=adc&amp;start=69" onclick="window.open(this.href);return false;" class="postlink">this post</a> I made reference to the ADC inputs.  Has anyone figure any more out?<br />ADC 30 seems to be used in a routine that reads a large 2D float table in my ROM at 0x85474.  This table is defined in the area where other input sensor scaling are stored.  The two table immediately before the large one are also used in the same routine.<br />Time to go log that ADC to see what's up.</div><br /><br />Some ADC inputs that have related code  but corresponding sensors installed are tied to 2.5 V inside the ecu in order to avoid CELs generated.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">td-d</b> [ Sun Aug 07, 2011 11:22 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">I'd say yes GBR has a second life as a general index register.<br />And yes again &quot;Indirect indexed register addressing&quot;  &amp; &quot;Indirect indexed GBR addressing&quot; are both a pain.<br />I've been thinking about how to use IDA scripting to comment those indirect address destinations...<br /><br />BTW: if you want to have those four functions I wrote available all the time and loaded at IDA startup then just rename your &quot;C:\Program Files\IDA\idc\ida.idc&quot; file and replace it with this one.</div><br /><br />Argh.... I can't believe I only just saw these scripts. I've got carpal tunnel syndrome from tapping the 'd' key 4 times x 10000!
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">td-d</b> [ Sat Oct 01, 2011 2:37 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I've come across a great introductory text to assembly language that I think all of us beginners who are looking for a more structured learning approach to the disassembly game would find useful.<br /><br />Sivarama P. Dandamudi<br />Introduction to Assembly<br />Language Programming<br />For Pentium and RISC Processors<br />ISBN 0-387-20636-1
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Merp</b> [ Thu Jul 12, 2012 10:10 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Has anyone made a foray into IDA scripting for indirect addressing yet? Picking through some parts of these roms is quite tedious, and makes the analysis much more....... roundabout.<br /><br />If anyone has found any pertinent resources, plugins, etc... please post <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+<hr width="85%" />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line. If you
+	refuse to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2006
+// -->
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td><span class="gensmall">Page <strong>6</strong> of <strong>12</strong></span></td>
+	<td align="right"><span class="gensmall">All times are UTC - 9 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]</span></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><span class="gensmall">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</span></td>
+</tr>
+</table>
+
+</body>
+</html>

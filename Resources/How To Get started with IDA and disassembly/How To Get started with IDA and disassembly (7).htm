@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en-gb">
+<title>RomRaider :: View topic - How To: Get started with IDA and disassembly</title>
+
+<style type="text/css">
+<!--
+
+body {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+}
+
+img {
+	border: 0;
+}
+
+td {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+	line-height: 150%;
+}
+
+.code,
+.quote {
+	font-size: smaller;
+	border: black solid 1px;
+}
+
+.forum {
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+.topic {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.gensmall {
+	font-size: 8pt;
+}
+
+hr {
+	color: #888;
+	height: 3px;
+	border-style: solid;
+}
+
+hr.sep {
+	color: #aaa;
+	height: 1px;
+	border-style: dashed;
+}
+//-->
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Resize too large images
+	*/
+	var reimg_maxWidth = 640, reimg_maxHeight = 480, reimg_relWidth = 100;
+	var reimg_swapPortrait = true;
+	var reimg_loadingImg = "./images/spacer.gif";
+	var reimg_loadingStyle = "width: 16px; height: 16px; background: url(./styles/fisubsilver2/imageset/icon_reimg_loading.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_loadingAlt = "Loading...";
+	
+	var reimg_autoLink = true;
+	
+	var reimg_zoomImg = "./images/spacer.gif";
+	var reimg_zoomStyle = "width: 18px; height: 15px; background: url(./styles/fisubsilver2/imageset/icon_reimg_zoom_in.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_zoomHover = "filter: Alpha(Opacity=90); opacity: .90;";
+	
+	var reimg_zoomAlt = "Zoom in (real dimensions: %1$d x %2$d)";
+	var reimg_zoomTarget = "_highslide";
+	var reimg_ajax_url = "https://www.romraider.com/forum/reimg/reimg_ajax.php";
+
+	function reimg(img, width, height)
+	{
+		if (window.reimg_version)
+		{
+			reimg_resize(img, width, height);
+		}
+	}
+// ]]>
+</script>
+
+<script type="text/javascript" src="./reimg/reimg.js"></script>
+
+	
+<style type="text/css" media="screen, projection">
+<!--
+	
+	.tablebg .tablebg .postbody .reimg-zoom { display: none; }
+	
+	.reimg { width: 10%; height: auto; visibility: visible; }
+	
+-->
+</style>
+	
+<script type="text/javascript" src="./reimg/highslide/highslide-full.packed.js"></script>
+<link rel="stylesheet" type="text/css" href="./reimg/highslide/highslide.css" />
+	
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Light box for resized images
+	*/
+	
+	if (window.hs)
+	{
+		hs.graphicsDir = "./reimg/highslide/graphics/";
+		// Language settings for Highslide JS
+		hs.lang.cssDirection = "ltr";
+		hs.lang.loadingText = "Loading...";
+		hs.lang.loadingTitle = "Click to cancel";
+		hs.lang.focusTitle = "Click to bring to front";
+		hs.lang.fullExpandTitle = "Expand to actual size (f)";
+		hs.lang.creditsText = "Powered by <em>Highslide JS</em>";
+		hs.lang.creditsTitle = "Go to the Highslide JS homepage";
+		hs.lang.previousText = "Previous";
+		hs.lang.nextText = "Next";
+		hs.lang.moveText = "Move";
+		hs.lang.closeText = "Close";
+		hs.lang.closeTitle = "Close (esc)";
+		hs.lang.resizeTitle = "Resize";
+		hs.lang.playText = "Play";
+		hs.lang.playTitle = "Play slideshow (spacebar)";
+		hs.lang.pauseText = "Pause";
+		hs.lang.pauseTitle = "Pause slideshow (spacebar)";
+		hs.lang.previousTitle = "Previous (arrow left)";
+		hs.lang.nextTitle = "Next (arrow right)";
+		hs.lang.moveTitle = "Move";
+		hs.lang.number = "Image %1 of %2";
+		hs.lang.restoreTitle = "Click to close image, click and drag to move. Use arrow keys for next and previous.";
+		hs.dimmingOpacity = 0.75;
+	}
+	
+// ]]>
+</script>
+
+	
+<script type="text/javascript">
+// <![CDATA[
+	reimg_loading('./styles/fisubsilver2/imageset/icon_reimg_loading.gif');
+// ]]>
+</script>
+
+</head>
+<body>
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td colspan="2" align="center"><span class="Forum">RomRaider</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/">https://www.romraider.com/forum/</a></span></td>
+</tr>
+<tr>
+	<td colspan="2"><br /></td>
+</tr>
+<tr>
+	<td><span class="topic">How To: Get started with IDA and disassembly</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303">https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303</a></span></td>
+	<td align="right" valign="bottom"><span class="gensmall">Page <strong>8</strong> of <strong>12</strong></span></td>
+</tr>
+</table>
+
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">td-d</b> [ Thu Nov 08, 2012 2:25 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Chuckle...<br /><br />I figured there were some poor people who have waited for 16 bit definitions for ages on here, so I'd dive in. Takes some getting used to, different table architecture altogether.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Fri Nov 09, 2012 6:38 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Which CPU type did you select, the Z or Y1 version?<br />I'm wondering if we need to set a page register globally first so it offsets all the address by the register value.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">td-d</b> [ Fri Nov 09, 2012 7:54 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">Which CPU type did you select, the Z or Y1 version?<br />I'm wondering if we need to set a page register globally first so it offsets all the address by the register value.</div><br /><br />Can't remember, I think it was Y1.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Carbibbles</b> [ Fri Nov 09, 2012 11:06 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />^ y5<br /><br />The biggest problem I have had is that there is not a reference manual available that is specific to our 16bit processor. Most of the hardware and port addresses are incorrect from the y3 manual <img src="./images/smilies/icon_sad.gif" alt=":(" title="Sad" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">td-d</b> [ Fri Nov 09, 2012 11:08 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I was hoping you'd chime in <img src="./images/smilies/icon_wink.gif" alt=";)" title="Wink" class="reimg" /><br /><br />Hmm.. y5, like you say, have not seen any literature on that implementation...
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Carbibbles</b> [ Fri Nov 09, 2012 11:15 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Also, about addressing. There are many subroutines that use a different zk and yk offset, so you can't just set it to 02 globally. When zk is changed you will find that direct addressing or extended addressing is used so I usually check xrefs for an address in both formats. I haven't found a way to name an indirect address, I usually just comment them all. ek is always 02 so ida automatically converts all extended addresses, I don't believe there is a way to designate k registers per subroutine.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">td-d</b> [ Fri Nov 09, 2012 12:00 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />That's what I was worried about reading through elevenpoint7five's description - there are too many exceptions to the Z, Y always equals 2 rule.  Oh well... manual it is till we figure out something better.<br /><br />I'm getting the hang of it - have A4SHCOOH halfways defined already, including all the CELs.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Sasha_A80</b> [ Fri Nov 09, 2012 12:03 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />It is not just &quot;16bit&quot; problem to tackle. <br /><br /><div class="quotetitle">Carbibbles wrote:</div><div class="quotecontent">I usually check xrefs for an address in both formats. I haven't found a way to name an indirect address, I usually just comment them all. </div><br /><br />M32R compiler use any but link (return adrress) register as a base at any time and there are a lot of clusters used (learning, SSM, CELs, etc ).
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sat Nov 10, 2012 12:54 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">Carbibbles wrote:</div><div class="quotecontent">^ y5<br /><br />The biggest problem I have had is that there is not a reference manual available that is specific to our 16bit processor. Most of the hardware and port addresses are incorrect from the y3 manual <img src="./images/smilies/icon_sad.gif" alt=":(" title="Sad" class="reimg" /></div><br />If you can list the ones that are correct and incorrect with an update we can update the IDA config file.<br />I did this for the SH7058 and submitted it to Hex-Rays and they're going to incorporate my changes into future releases.<br /><br />Does this help with the instruction set?<br /><!-- m --><a class="postlink" href="http://cache.freescale.com/files/microcontrollers/doc/ref_manual/CPU16RM.pdf">http://cache.freescale.com/files/microc ... PU16RM.pdf</a><!-- m -->
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">td-d</b> [ Wed Nov 14, 2012 7:17 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Ok, well I've found a quicker way of resolving the references in the 16 bit roms, using the same user referenced offset trick (ctrl R).<br /><br />Say you have a line like this:<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:1AE04&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ldaa&nbsp; &nbsp; 15E4h, Z</div><br />Using a user referenced offset of 0x20000, with base as plain number and signed operand ticked off will give you this:<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:1AE04&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ldaa&nbsp; &nbsp; (byte_215E4 - 20000h), Z</div><br />Slightly quicker than adding and commenting <img src="./images/smilies/icon_wink.gif" alt=";)" title="Wink" class="reimg" /><br /><br />Now if only there was somebody on here who was super adept at IDC scripts, that could rip through the whole rom and do this <img src="./images/smilies/icon_wink.gif" alt=";)" title="Wink" class="reimg" /><br /><br />The other thing that struck me is that somewhere in the processor module procedure used by IDA, Z is set to 0.  A quick and dirty would be to reset it to 2.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:0000 ; assume EK = 0<br />ROM:0000 ; assume XK = 0<br />ROM:0000 ; assume YK = 0<br />ROM:0000 ; assume ZK = 0</div><br />No idea how to...
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Wed Nov 14, 2012 7:19 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Yes. Edit &gt; Segment &gt; Change Segment Registers and set the default offset.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">td-d</b> [ Wed Nov 14, 2012 7:29 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Ok, got it - managed to change it and reanalyse the rom - doesn't translate the addresses, however. The user reference offset works relatively well.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Wed Nov 14, 2012 7:31 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />It does work for some references to the 0x20000 section.  Did you they setting Y = 0x2?<br /><!-- m --><a class="postlink" href="http://www.hex-rays.com/products/ida/support/idadoc/524.shtml">http://www.hex-rays.com/products/ida/su ... /524.shtml</a><!-- m -->
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sat Nov 17, 2012 8:26 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Anyone looking for a 6816 simulator can <a href="http://www.lauterbach.com/dwnload.html" onclick="window.open(this.href);return false;" class="postlink">try here</a>.<br />When using the simulator load a 192kB version of the ROM so the data is in the correct address range.<br /><span style="color: #0000FF">d.load &quot;full_path_to_192kB_file.hex&quot;</span><br />To set the CPU to 68HC16Y1:<br /><span style="color: #0000FF">sys.cpu M68HC16Y</span><br />To set the registers correctly:<br /><span style="color: #0000FF">r.set iz 0x20000<br />r.set pc 0x00220<br />r.set sp 0x208F6</span><br /><br />Some basics of 16bit CPU initialization.<br />The first 6 words of the ROM are the initialization values.  They are:<br />0000: 0220 - each byte sets one of the K register nibbles in this order: xx ZK SK PK <br />0002: 0220 - this is the lower 16 bits of the program counter (PC).  The full value is PK &amp; PC to make a 20 bit address<br />0004: 08F6 - this is the lower 16 bits of the stack pointer (SP).  The full value is SK &amp; SP to make a 20 bit address<br />0006: 0000 - this is the lower 16 bits of the Z index register (IZ). The full value is ZK &amp; IZ to make a 20 bit address<br /><div class="attachtitle">Attachment:</div><div class="attachcontent">
+			<img src="./download/file.php?id=18588" alt="registers.png" class="reimg" /><br />
+			<span class="gensmall">registers.png [ 3.96 KiB | Viewed 62 times ]</span>
+		
+
+		<br />
+	</div><br />The address range from 0x0008 to 0x01FF is for various reset vectors addresses.<br />All on-board peripherals are accessed using the IY register.  The YK extension register is always set to 0xf.  So peripheral modules are all at the top of the addressable range above 0xFF0000, typically starting around 0xFFF400.  The actual peripheral modules are not well documented for the 68HC16Y5 CPU.  So using documentation for the Y1, Y3 and other series may not give accurate module addressing.<br /><span style="font-style: italic">Note: the CPU has 20 different addressing modes.</span><br /><br />If you need a compiler, I ran <a href="http://shop-pdp.kent.edu/ashtml/asxdoc.htm" onclick="window.open(this.href);return false;" class="postlink">across this</a>.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Wed Nov 21, 2012 2:32 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">td-d wrote:</div><div class="quotecontent">Ok, well I've found a quicker way of resolving the references in the 16 bit roms, using the same user referenced offset trick (ctrl R).<br /><br />Say you have a line like this:<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:1AE04&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ldaa&nbsp; &nbsp; 15E4h, Z</div><br />Using a user referenced offset of 0x20000, with base as plain number and signed operand ticked off will give you this:<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:1AE04&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ldaa&nbsp; &nbsp; (byte_215E4 - 20000h), Z</div></div><br />The only problem with blindly setting the offset to 0x20000 is that it may not always be a correct assumption.<br />The operand for this opcode is a signed offset to be applied to the contents of the IZ register.  In the case above you are assuming ZK = 2 and IZ = 0000.<br />What if in the calling subroutine IZ was modified and set to a value other than 0x0000.  Then when you get to this routine and apply the manual offest (0x20000), the resulting address is not valid.<br />For example:<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:1AD8A ; assume ZK = 2<br />ROM:1AD8A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;aiz&nbsp; &nbsp; 234h, Z<br />ROM:1AD90&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bsr&nbsp; &nbsp; 74h&nbsp; &nbsp; &nbsp;; sub_1AE04<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />ROM:1AE04&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ldaa&nbsp; &nbsp;15E4h, Z</div>in this case IZ has been modified to add 0x234 to its current value and then you add the offset 0x15E4 to load a byte into A.<br /><br />You really need to keep track of the register modifications when using indexed addressing.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+<hr width="85%" />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line. If you
+	refuse to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2006
+// -->
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td><span class="gensmall">Page <strong>8</strong> of <strong>12</strong></span></td>
+	<td align="right"><span class="gensmall">All times are UTC - 9 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]</span></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><span class="gensmall">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</span></td>
+</tr>
+</table>
+
+</body>
+</html>

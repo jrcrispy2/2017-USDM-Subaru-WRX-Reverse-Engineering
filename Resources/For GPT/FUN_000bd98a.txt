@@ -1,0 +1,671 @@
+                             *************************************************************
+                             *                           FUNCTION                          
+                             *************************************************************
+                             int  __stdcall  FUN_000bd98a (undefined4 *  param_1 , int  pa
+             int               r0:4           <RETURN>
+             undefined4 *      r4:4           param_1
+             int               r5:4           param_2
+             byte              r6:1           param_3
+             undefined4        Stack[-0x4]:4  local_4                                 XREF[1]:     000bd98a (*)   
+             undefined4        Stack[-0x8]:4  local_8                                 XREF[2]:     000bd98c (*) , 
+                                                                                                   000bde74 (*)   
+             undefined4        Stack[-0xc]:4  local_c                                 XREF[2]:     000bd98e (*) , 
+                                                                                                   000bde72 (*)   
+             undefined4        Stack[-0x10]:4 local_10                                XREF[2]:     000bd990 (*) , 
+                                                                                                   000bde70 (*)   
+             undefined4        Stack[-0x24]:4 local_24                                XREF[4]:     000bd998 (*) , 
+                                                                                                   000bd9b4 (*) , 
+                                                                                                   000bde60 (*) , 
+                                                                                                   000bde62 (*)   
+                             FUN_000bd98a                                    XREF[2]:     000b9e86 (c) , 000ba010 (*)   
+        000bd98a 2f  b6           mov.l      r11 ,@- r15 =>local_4
+        000bd98c 2f  c6           mov.l      r12 ,@- r15 =>local_8
+        000bd98e 2f  d6           mov.l      r13 ,@- r15 =>local_c
+        000bd990 2f  e6           mov.l      r14 ,@- r15 =>local_10
+        000bd992 7f  ec           add        -0x14 ,r15
+        000bd994 1f  62           mov.l      param_3 ,@( 0x8 ,r15 )
+        000bd996 1f  51           mov.l      param_2 ,@( 0x4 ,r15 )
+        000bd998 2f  42           mov.l      param_1 ,@r15 =>local_24
+        000bd99a 60  63           mov        param_3 ,r0
+        000bd99c 80  fb           mov.b      r0,@( 0xb ,r15 )
+        000bd99e 1f  43           mov.l      param_1 ,@( 0xc ,r15 )
+        000bd9a0 e2  00           mov        #0x0 ,r2
+        000bd9a2 3f  21  00  11    mov.b      r2,@( 0x11 ,r15 )
+        000bd9a6 e7  00           mov        #0x0 ,r7
+        000bd9a8 3e  f1  80  0b    movu.b     @(0xb ,r15 ),r14
+        000bd9ac 5d  f1           mov.l      @(0x4 ,r15 ),r13
+        000bd9ae dc  4c           mov.l      @(PTR_DAT_000bdae0 ,pc),r12                      = 00037c4f
+        000bd9b0 db  4c           mov.l      @(PTR_DAT_000bdae4 ,pc),r11                      = 00037c50
+        000bd9b2 a2  50           bra        LAB_000bde56
+        000bd9b4 65  f2           _mov.l     @r15 =>local_24 ,param_2
+                             LAB_000bd9b6                                    XREF[1]:     000bde5c (j)   
+        000bd9b6 67  7c           extu.b     r7,r7
+        000bd9b8 60  73           mov        r7,r0
+        000bd9ba 02  dc           mov.b      @(r0,r13 ),r2
+        000bd9bc 62  2c           extu.b     r2,r2
+        000bd9be 22  28           tst        r2,r2
+        000bd9c0 8b  06           bf         LAB_000bd9d0
+        000bd9c2 60  23           mov        r2,r0
+        000bd9c4 45  8b           mov.b      r0,@param_2 +
+        000bd9c6 60  c0           mov.b      @r12 =>DAT_00037c4f ,r0                           = 55h
+        000bd9c8 45  8b           mov.b      r0,@param_2 +
+        000bd9ca 66  b0           mov.b      @r11 =>DAT_00037c50 ,param_3                      = 40h
+        000bd9cc a2  1a           bra        LAB_000bde04
+        000bd9ce 25  60           _mov.b     param_3 ,@param_2
+                             LAB_000bd9d0                                    XREF[1]:     000bd9c0 (j)   
+        000bd9d0 60  23           mov        r2,r0
+        000bd9d2 88  01           cmp/eq     0x1 ,r0
+        000bd9d4 8b  04           bf         LAB_000bd9e0
+        000bd9d6 3c  79  30  00    bld.b      #0x7 ,@( 0x0 ,r12 =>DAT_00037c4f )                   = 55h
+        000bd9da 8b  01           bf         LAB_000bd9e0
+        000bd9dc a2  3a           bra        LAB_000bde54
+        000bd9de 00  09           _nop
+                             LAB_000bd9e0                                    XREF[2]:     000bd9d4 (j) , 000bd9da (j)   
+        000bd9e0 60  23           mov        r2,r0
+        000bd9e2 88  02           cmp/eq     0x2 ,r0
+        000bd9e4 8b  2a           bf         LAB_000bda3c
+        000bd9e6 3c  69  30  00    bld.b      #0x6 ,@( 0x0 ,r12 =>DAT_00037c4f )                   = 55h
+        000bd9ea 8b  27           bf         LAB_000bda3c
+        000bd9ec d6  3e           mov.l      @(DAT_000bdae8 ,pc),param_3                      = FFF811B0h
+        000bd9ee 60  23           mov        r2,r0
+        000bd9f0 45  8b           mov.b      r0,@param_2 +
+        000bd9f2 e0  01           mov        #0x1 ,r0
+        000bd9f4 45  8b           mov.b      r0,@param_2 +
+        000bd9f6 60  64           mov.b      @param_3 =>DAT_fff811b0 +,r0
+        000bd9f8 45  8b           mov.b      r0,@param_2 +
+        000bd9fa 60  64           mov.b      @param_3 =>DAT_fff811b1 +,r0
+        000bd9fc 45  8b           mov.b      r0,@param_2 +
+        000bd9fe 60  64           mov.b      @param_3 =>DAT_fff811b2 +,r0
+        000bda00 45  8b           mov.b      r0,@param_2 +
+        000bda02 60  64           mov.b      @param_3 =>DAT_fff811b3 +,r0
+        000bda04 45  8b           mov.b      r0,@param_2 +
+        000bda06 60  64           mov.b      @param_3 =>DAT_fff811b4 +,r0
+        000bda08 45  8b           mov.b      r0,@param_2 +
+        000bda0a 60  64           mov.b      @param_3 =>DAT_fff811b5 +,r0
+        000bda0c 45  8b           mov.b      r0,@param_2 +
+        000bda0e 60  64           mov.b      @param_3 =>DAT_fff811b6 +,r0
+        000bda10 45  8b           mov.b      r0,@param_2 +
+        000bda12 60  64           mov.b      @param_3 =>DAT_fff811b7 +,r0
+        000bda14 45  8b           mov.b      r0,@param_2 +
+        000bda16 60  64           mov.b      @param_3 =>DAT_fff811b8 +,r0
+        000bda18 45  8b           mov.b      r0,@param_2 +
+        000bda1a 60  64           mov.b      @param_3 =>DAT_fff811b9 +,r0
+        000bda1c 45  8b           mov.b      r0,@param_2 +
+        000bda1e 60  64           mov.b      @param_3 =>DAT_fff811ba +,r0
+        000bda20 45  8b           mov.b      r0,@param_2 +
+        000bda22 60  64           mov.b      @param_3 =>DAT_fff811bb +,r0
+        000bda24 45  8b           mov.b      r0,@param_2 +
+        000bda26 60  64           mov.b      @param_3 =>DAT_fff811bc +,r0
+        000bda28 45  8b           mov.b      r0,@param_2 +
+        000bda2a 60  64           mov.b      @param_3 =>DAT_fff811bd +,r0
+        000bda2c 45  8b           mov.b      r0,@param_2 +
+        000bda2e 60  64           mov.b      @param_3 =>DAT_fff811be +,r0
+        000bda30 45  8b           mov.b      r0,@param_2 +
+        000bda32 60  60           mov.b      @param_3 =>DAT_fff811bf ,r0
+        000bda34 45  8b           mov.b      r0,@param_2 +
+        000bda36 84  61           mov.b      @(0x1 ,param_3 ),r0=>DAT_fff811c0
+        000bda38 a1  e8           bra        LAB_000bde0c
+        000bda3a 25  00           _mov.b     r0,@param_2
+                             LAB_000bda3c                                    XREF[2]:     000bd9e4 (j) , 000bd9ea (j)   
+        000bda3c 60  23           mov        r2,r0
+        000bda3e 88  03           cmp/eq     0x3 ,r0
+        000bda40 8b  04           bf         LAB_000bda4c
+        000bda42 3c  59  30  00    bld.b      #0x5 ,@( 0x0 ,r12 =>DAT_00037c4f )                   = 55h
+        000bda46 8b  01           bf         LAB_000bda4c
+        000bda48 a2  04           bra        LAB_000bde54
+        000bda4a 00  09           _nop
+                             LAB_000bda4c                                    XREF[2]:     000bda40 (j) , 000bda46 (j)   
+        000bda4c 60  23           mov        r2,r0
+        000bda4e 88  04           cmp/eq     0x4 ,r0
+        000bda50 8b  5c           bf         LAB_000bdb0c
+        000bda52 3c  49  30  00    bld.b      #0x4 ,@( 0x0 ,r12 =>DAT_00037c4f )                   = 55h
+        000bda56 8b  59           bf         LAB_000bdb0c
+        000bda58 60  23           mov        r2,r0
+        000bda5a 45  8b           mov.b      r0,@param_2 +
+        000bda5c e0  01           mov        #0x1 ,r0
+        000bda5e 45  8b           mov.b      r0,@param_2 +
+        000bda60 d1  22           mov.l      @(PTR_DAT_000bdaec ,pc),r1                       = 00037c51
+        000bda62 60  10           mov.b      @r1=>DAT_00037c51 ,r0                            = 4Ch
+        000bda64 45  8b           mov.b      r0,@param_2 +
+        000bda66 d1  22           mov.l      @(PTR_DAT_000bdaf0 ,pc),r1                       = 00037c52
+        000bda68 60  10           mov.b      @r1=>DAT_00037c52 ,r0                            = 46h
+        000bda6a 45  8b           mov.b      r0,@param_2 +
+        000bda6c d1  21           mov.l      @(PTR_DAT_000bdaf4 ,pc),r1                       = 00037c53
+        000bda6e 60  10           mov.b      @r1=>DAT_00037c53 ,r0                            = 37h
+        000bda70 45  8b           mov.b      r0,@param_2 +
+        000bda72 d1  21           mov.l      @(PTR_DAT_000bdaf8 ,pc),r1                       = 00037c54
+        000bda74 60  10           mov.b      @r1=>DAT_00037c54 ,r0                            = 39h
+        000bda76 45  8b           mov.b      r0,@param_2 +
+        000bda78 d1  20           mov.l      @(PTR_DAT_000bdafc ,pc),r1                       = 00037c55
+        000bda7a 60  10           mov.b      @r1=>DAT_00037c55 ,r0                            = 31h
+        000bda7c 45  8b           mov.b      r0,@param_2 +
+        000bda7e d1  20           mov.l      @(PTR_DAT_000bdb00 ,pc),r1                       = 00037c56
+        000bda80 60  10           mov.b      @r1=>DAT_00037c56 ,r0                            = 30h
+        000bda82 45  8b           mov.b      r0,@param_2 +
+        000bda84 d1  1f           mov.l      @(PTR_DAT_000bdb04 ,pc),r1                       = 00037c57
+        000bda86 60  10           mov.b      @r1=>DAT_00037c57 ,r0                            = 33h
+        000bda88 45  8b           mov.b      r0,@param_2 +
+        000bda8a d1  1f           mov.l      @(PTR_DAT_000bdb08 ,pc),r1                       = 00037c58
+        000bda8c 60  10           mov.b      @r1=>DAT_00037c58 ,r0                            = 50h
+        000bda8e 45  8b           mov.b      r0,@param_2 +
+        000bda90 e0  00           mov        #0x0 ,r0
+        000bda92 45  8b           mov.b      r0,@param_2 +
+        000bda94 45  8b           mov.b      r0,@param_2 +
+        000bda96 45  8b           mov.b      r0,@param_2 +
+        000bda98 a1  55           bra        LAB_000bdd46
+        000bda9a 25  00           _mov.b     r0,@param_2
+                             PTR_DAT_000bda9c                                XREF[1]:     FUN_000bd874:000bd876 (R)   
+        000bda9c 00  04  ca  70    addr       DAT_0004ca70                                     = 45h
+                             DAT_000bdaa0                                    XREF[3]:     FUN_000bd874:000bd884 (R) , 
+                                                                                          FUN_000bd874:000bd8a0 (R) , 
+                                                                                          FUN_000bd874:000bd8c2 (R)   
+        000bdaa0 ff  f8  95  95    undefine   FFF89595h
+                             PTR_FUN_000bdaa4                                XREF[2]:     FUN_000bd874:000bd892 (R) , 
+                                                                                          FUN_000bd874:000bd8b4 (R)   
+        000bdaa4 00  00  6e  04    addr       FUN_00006e04
+                             PTR_DAT_000bdaa8                                XREF[1]:     FUN_000bd874:000bd894 (R)   
+        000bdaa8 00  05  54  be    addr       DAT_000554be                                     = 470Ah
+                             DAT_000bdaac                                    XREF[1]:     FUN_000bd874:000bd898 (R)   
+        000bdaac ff  f8  c5  42    undefine   FFF8C542h
+                             DAT_000bdab0                                    XREF[1]:     FUN_000bd874:000bd8ae (R)   
+        000bdab0 ff  e7  ff  ff    undefine   FFE7FFFFh
+                             PTR_DAT_000bdab4                                XREF[1]:     FUN_000bd874:000bd8ba (R)   
+        000bdab4 00  05  54  bc    addr       DAT_000554bc                                     = 8800h
+                             DAT_000bdab8                                    XREF[1]:     FUN_000bd874:000bd8c8 (R)   
+        000bdab8 ff  f8  8d  b8    undefine   FFF88DB8h
+                             DAT_000bdabc                                    XREF[1]:     FUN_000bd874:000bd8d0 (R)   
+        000bdabc ff  f8  8e  0e    undefine   FFF88E0Eh
+                             PTR_DAT_000bdac0                                XREF[1]:     FUN_000bd874:000bd8d4 (R)   
+        000bdac0 00  05  53  2a    addr       DAT_0005532a                                     = 8B85h
+                             DAT_000bdac4                                    XREF[1]:     FUN_000bd874:000bd8e8 (R)   
+        000bdac4 ff  f8  c5  68    undefine   FFF8C568h
+                             PTR_DAT_000bdac8                                XREF[1]:     FUN_000bd874:000bd8ec (R)   
+        000bdac8 00  05  53  88    addr       DAT_00055388                                     = 1482h
+                             DAT_000bdacc                                    XREF[1]:     FUN_000bd874:000bd8f4 (R)   
+        000bdacc ff  f8  8d  bd    undefine   FFF88DBDh
+                             DAT_000bdad0                                    XREF[1]:     FUN_000bd874:000bd8fc (R)   
+        000bdad0 ff  f8  b2  53    undefine   FFF8B253h
+                             DAT_000bdad4                                    XREF[2]:     FUN_000bd874:000bd910 (R) , 
+                                                                                          FUN_000bd874:000bd924 (R)   
+        000bdad4 ff  f8  95  94    undefine   FFF89594h
+                             DAT_000bdad8                                    XREF[3]:     FUN_000bd874:000bd92c (R) , 
+                                                                                          FUN_000bd874:000bd94c (R) , 
+                                                                                          FUN_000bd874:000bd970 (R)   
+        000bdad8 ff  f8  14  8c    undefine   FFF8148Ch
+                             DAT_000bdadc                                    XREF[2]:     FUN_000bd874:000bd934 (R) , 
+                                                                                          FUN_000bd874:000bd954 (R)   
+        000bdadc ff  f8  b3  c8    undefine   FFF8B3C8h
+                             PTR_DAT_000bdae0                                XREF[1]:     FUN_000bd98a:000bd9ae (R)   
+        000bdae0 00  03  7c  4f    addr       DAT_00037c4f                                     = 55h
+                             PTR_DAT_000bdae4                                XREF[1]:     FUN_000bd98a:000bd9b0 (R)   
+        000bdae4 00  03  7c  50    addr       DAT_00037c50                                     = 40h
+                             DAT_000bdae8                                    XREF[1]:     FUN_000bd98a:000bd9ec (R)   
+        000bdae8 ff  f8  11  b0    undefine   FFF811B0h
+                             PTR_DAT_000bdaec                                XREF[1]:     FUN_000bd98a:000bda60 (R)   
+        000bdaec 00  03  7c  51    addr       DAT_00037c51                                     = 4Ch
+                             PTR_DAT_000bdaf0                                XREF[1]:     FUN_000bd98a:000bda66 (R)   
+        000bdaf0 00  03  7c  52    addr       DAT_00037c52                                     = 46h
+                             PTR_DAT_000bdaf4                                XREF[1]:     FUN_000bd98a:000bda6c (R)   
+        000bdaf4 00  03  7c  53    addr       DAT_00037c53                                     = 37h
+                             PTR_DAT_000bdaf8                                XREF[1]:     FUN_000bd98a:000bda72 (R)   
+        000bdaf8 00  03  7c  54    addr       DAT_00037c54                                     = 39h
+                             PTR_DAT_000bdafc                                XREF[1]:     FUN_000bd98a:000bda78 (R)   
+        000bdafc 00  03  7c  55    addr       DAT_00037c55                                     = 31h
+                             PTR_DAT_000bdb00                                XREF[1]:     FUN_000bd98a:000bda7e (R)   
+        000bdb00 00  03  7c  56    addr       DAT_00037c56                                     = 30h
+                             PTR_DAT_000bdb04                                XREF[1]:     FUN_000bd98a:000bda84 (R)   
+        000bdb04 00  03  7c  57    addr       DAT_00037c57                                     = 33h
+                             PTR_DAT_000bdb08                                XREF[1]:     FUN_000bd98a:000bda8a (R)   
+        000bdb08 00  03  7c  58    addr       DAT_00037c58                                     = 50h
+                             LAB_000bdb0c                                    XREF[2]:     000bda50 (j) , 000bda56 (j)   
+        000bdb0c 60  23           mov        r2,r0
+        000bdb0e 88  05           cmp/eq     0x5 ,r0
+        000bdb10 8b  04           bf         LAB_000bdb1c
+        000bdb12 3c  39  30  00    bld.b      #0x3 ,@( 0x0 ,r12 =>DAT_00037c4f )                   = 55h
+        000bdb16 8b  01           bf         LAB_000bdb1c
+        000bdb18 a1  9c           bra        LAB_000bde54
+        000bdb1a 00  09           _nop
+                             LAB_000bdb1c                                    XREF[2]:     000bdb10 (j) , 000bdb16 (j)   
+        000bdb1c 60  23           mov        r2,r0
+        000bdb1e 88  06           cmp/eq     0x6 ,r0
+        000bdb20 8b  38           bf         LAB_000bdb94
+        000bdb22 3c  29  30  00    bld.b      #0x2 ,@( 0x0 ,r12 =>DAT_00037c4f )                   = 55h
+        000bdb26 8b  35           bf         LAB_000bdb94
+        000bdb28 d1  89           mov.l      @(DAT_000bdd50 ,pc),r1                           = FFF8065Eh
+        000bdb2a 31  09  30  00    bld.b      #0x0 ,@( 0x0 ,r1=>DAT_fff8065e )
+        000bdb2e d6  89           mov.l      @(DAT_000bdd54 ,pc),param_3                      = FFF9BA0Ah
+        000bdb30 8f  24           bf/s       LAB_000bdb7c
+        000bdb32 e4  01           _mov       #0x1 ,param_1
+        000bdb34 60  23           mov        r2,r0
+        000bdb36 45  8b           mov.b      r0,@param_2 +
+        000bdb38 e0  01           mov        #0x1 ,r0
+        000bdb3a 45  8b           mov.b      r0,@param_2 +
+        000bdb3c d1  86           mov.l      @(DAT_000bdd58 ,pc),r1                           = FFF806D0h
+        000bdb3e 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff806d0 ),r2
+        000bdb42 42  11           cmp/pz     r2
+        000bdb44 89  02           bt         LAB_000bdb4c
+        000bdb46 01  00  00  ff    movi20     #0xff ,r1
+        000bdb4a 32  1c           add        r1,r2
+                             LAB_000bdb4c                                    XREF[1]:     000bdb44 (j)   
+        000bdb4c e4  f8           mov        #-0x8 ,param_1
+        000bdb4e 42  4c           shad       param_1 ,r2
+        000bdb50 60  23           mov        r2,r0
+        000bdb52 45  8b           mov.b      r0,@param_2 +
+        000bdb54 d1  80           mov.l      @(DAT_000bdd58 ,pc),r1                           = FFF806D0h
+        000bdb56 60  11           mov.w      @r1=>DAT_fff806d0 ,r0
+        000bdb58 45  8b           mov.b      r0,@param_2 +
+        000bdb5a d1  80           mov.l      @(DAT_000bdd5c ,pc),r1                           = FFF806D2h
+        000bdb5c 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff806d2 ),r2
+        000bdb60 42  11           cmp/pz     r2
+        000bdb62 89  02           bt         LAB_000bdb6a
+        000bdb64 01  00  00  ff    movi20     #0xff ,r1
+        000bdb68 32  1c           add        r1,r2
+                             LAB_000bdb6a                                    XREF[1]:     000bdb62 (j)   
+        000bdb6a e4  f8           mov        #-0x8 ,param_1
+        000bdb6c 42  4c           shad       param_1 ,r2
+        000bdb6e 60  23           mov        r2,r0
+        000bdb70 45  8b           mov.b      r0,@param_2 +
+        000bdb72 d1  7a           mov.l      @(DAT_000bdd5c ,pc),r1                           = FFF806D2h
+        000bdb74 64  11           mov.w      @r1=>DAT_fff806d2 ,param_1
+        000bdb76 25  40           mov.b      param_1 ,@param_2
+        000bdb78 75  01           add        0x1 ,param_2
+        000bdb7a e4  00           mov        #0x0 ,param_1
+                             LAB_000bdb7c                                    XREF[1]:     000bdb30 (j)   
+        000bdb7c 24  48           tst        param_1 ,param_1
+        000bdb7e 89  05           bt         LAB_000bdb8c
+        000bdb80 36  79  10  00    bset.b     #0x7 ,@( 0x0 ,param_3 =>DAT_fff9ba0a )
+        000bdb84 e2  09           mov        #0x9 ,r2
+        000bdb86 d1  76           mov.l      @(DAT_000bdd60 ,pc),r1                           = FFF9B852h
+        000bdb88 a1  64           bra        LAB_000bde54
+        000bdb8a 21  20           _mov.b     r2,@r1=>DAT_fff9b852
+                             LAB_000bdb8c                                    XREF[1]:     000bdb7e (j)   
+        000bdb8c 36  79  00  00    bclr.b     #0x7 ,@( 0x0 ,param_3 =>DAT_fff9ba0a )
+        000bdb90 a1  60           bra        LAB_000bde54
+        000bdb92 00  09           _nop
+                             LAB_000bdb94                                    XREF[2]:     000bdb20 (j) , 000bdb26 (j)   
+        000bdb94 60  23           mov        r2,r0
+        000bdb96 88  07           cmp/eq     0x7 ,r0
+        000bdb98 8b  04           bf         LAB_000bdba4
+        000bdb9a 3c  19  30  00    bld.b      #0x1 ,@( 0x0 ,r12 =>DAT_00037c4f )                   = 55h
+        000bdb9e 8b  01           bf         LAB_000bdba4
+        000bdba0 a1  58           bra        LAB_000bde54
+        000bdba2 00  09           _nop
+                             LAB_000bdba4                                    XREF[2]:     000bdb98 (j) , 000bdb9e (j)   
+        000bdba4 60  23           mov        r2,r0
+        000bdba6 88  08           cmp/eq     0x8 ,r0
+        000bdba8 89  01           bt         LAB_000bdbae
+        000bdbaa a0  f3           bra        LAB_000bdd94
+        000bdbac 00  09           _nop
+                             LAB_000bdbae                                    XREF[1]:     000bdba8 (j)   
+        000bdbae 3c  09  30  00    bld.b      #0x0 ,@( 0x0 ,r12 =>DAT_00037c4f )                   = 55h
+        000bdbb2 89  01           bt         LAB_000bdbb8
+        000bdbb4 a0  ee           bra        LAB_000bdd94
+        000bdbb6 00  09           _nop
+                             LAB_000bdbb8                                    XREF[1]:     000bdbb2 (j)   
+        000bdbb8 60  23           mov        r2,r0
+        000bdbba 45  8b           mov.b      r0,@param_2 +
+        000bdbbc e0  14           mov        #0x14 ,r0
+        000bdbbe 45  8b           mov.b      r0,@param_2 +
+        000bdbc0 d1  68           mov.l      @(DAT_000bdd64 ,pc),r1                           = FFF816C0h
+        000bdbc2 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff816c0 ),r2
+        000bdbc6 42  11           cmp/pz     r2
+        000bdbc8 89  02           bt         LAB_000bdbd0
+        000bdbca 04  00  00  ff    movi20     #0xff ,param_1
+        000bdbce 32  4c           add        param_1 ,r2
+                             LAB_000bdbd0                                    XREF[1]:     000bdbc8 (j)   
+        000bdbd0 e6  f8           mov        #-0x8 ,param_3
+        000bdbd2 42  6c           shad       param_3 ,r2
+        000bdbd4 60  23           mov        r2,r0
+        000bdbd6 45  8b           mov.b      r0,@param_2 +
+        000bdbd8 d1  62           mov.l      @(DAT_000bdd64 ,pc),r1                           = FFF816C0h
+        000bdbda 60  11           mov.w      @r1=>DAT_fff816c0 ,r0
+        000bdbdc 45  8b           mov.b      r0,@param_2 +
+        000bdbde d1  62           mov.l      @(DAT_000bdd68 ,pc),r1                           = FFF817ACh
+        000bdbe0 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff817ac ),r2
+        000bdbe4 42  11           cmp/pz     r2
+        000bdbe6 89  02           bt         LAB_000bdbee
+        000bdbe8 04  00  00  ff    movi20     #0xff ,param_1
+        000bdbec 32  4c           add        param_1 ,r2
+                             LAB_000bdbee                                    XREF[1]:     000bdbe6 (j)   
+        000bdbee e6  f8           mov        #-0x8 ,param_3
+        000bdbf0 42  6c           shad       param_3 ,r2
+        000bdbf2 60  23           mov        r2,r0
+        000bdbf4 45  8b           mov.b      r0,@param_2 +
+        000bdbf6 d1  5c           mov.l      @(DAT_000bdd68 ,pc),r1                           = FFF817ACh
+        000bdbf8 60  11           mov.w      @r1=>DAT_fff817ac ,r0
+        000bdbfa 45  8b           mov.b      r0,@param_2 +
+        000bdbfc d1  5b           mov.l      @(DAT_000bdd6c ,pc),r1                           = FFF816A8h
+        000bdbfe 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff816a8 ),r2
+        000bdc02 42  11           cmp/pz     r2
+        000bdc04 89  02           bt         LAB_000bdc0c
+        000bdc06 04  00  00  ff    movi20     #0xff ,param_1
+        000bdc0a 32  4c           add        param_1 ,r2
+                             LAB_000bdc0c                                    XREF[1]:     000bdc04 (j)   
+        000bdc0c e6  f8           mov        #-0x8 ,param_3
+        000bdc0e 42  6c           shad       param_3 ,r2
+        000bdc10 60  23           mov        r2,r0
+        000bdc12 45  8b           mov.b      r0,@param_2 +
+        000bdc14 d1  55           mov.l      @(DAT_000bdd6c ,pc),r1                           = FFF816A8h
+        000bdc16 60  11           mov.w      @r1=>DAT_fff816a8 ,r0
+        000bdc18 45  8b           mov.b      r0,@param_2 +
+        000bdc1a d1  55           mov.l      @(DAT_000bdd70 ,pc),r1                           = FFF816AAh
+        000bdc1c 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff816aa ),r2
+        000bdc20 42  11           cmp/pz     r2
+        000bdc22 89  02           bt         LAB_000bdc2a
+        000bdc24 04  00  00  ff    movi20     #0xff ,param_1
+        000bdc28 32  4c           add        param_1 ,r2
+                             LAB_000bdc2a                                    XREF[1]:     000bdc22 (j)   
+        000bdc2a e6  f8           mov        #-0x8 ,param_3
+        000bdc2c 42  6c           shad       param_3 ,r2
+        000bdc2e 60  23           mov        r2,r0
+        000bdc30 45  8b           mov.b      r0,@param_2 +
+        000bdc32 d1  4f           mov.l      @(DAT_000bdd70 ,pc),r1                           = FFF816AAh
+        000bdc34 60  11           mov.w      @r1=>DAT_fff816aa ,r0
+        000bdc36 45  8b           mov.b      r0,@param_2 +
+        000bdc38 e0  00           mov        #0x0 ,r0
+        000bdc3a 45  8b           mov.b      r0,@param_2 +
+        000bdc3c 45  8b           mov.b      r0,@param_2 +
+        000bdc3e 45  8b           mov.b      r0,@param_2 +
+        000bdc40 45  8b           mov.b      r0,@param_2 +
+        000bdc42 d1  4c           mov.l      @(DAT_000bdd74 ,pc),r1                           = FFF81698h
+        000bdc44 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff81698 ),r2
+        000bdc48 42  11           cmp/pz     r2
+        000bdc4a 89  02           bt         LAB_000bdc52
+        000bdc4c 04  00  00  ff    movi20     #0xff ,param_1
+        000bdc50 32  4c           add        param_1 ,r2
+                             LAB_000bdc52                                    XREF[1]:     000bdc4a (j)   
+        000bdc52 e6  f8           mov        #-0x8 ,param_3
+        000bdc54 42  6c           shad       param_3 ,r2
+        000bdc56 60  23           mov        r2,r0
+        000bdc58 45  8b           mov.b      r0,@param_2 +
+        000bdc5a d1  46           mov.l      @(DAT_000bdd74 ,pc),r1                           = FFF81698h
+        000bdc5c 60  11           mov.w      @r1=>DAT_fff81698 ,r0
+        000bdc5e 45  8b           mov.b      r0,@param_2 +
+        000bdc60 d1  45           mov.l      @(DAT_000bdd78 ,pc),r1                           = FFF8169Ah
+        000bdc62 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff8169a ),r2
+        000bdc66 42  11           cmp/pz     r2
+        000bdc68 89  02           bt         LAB_000bdc70
+        000bdc6a 04  00  00  ff    movi20     #0xff ,param_1
+        000bdc6e 32  4c           add        param_1 ,r2
+                             LAB_000bdc70                                    XREF[1]:     000bdc68 (j)   
+        000bdc70 e6  f8           mov        #-0x8 ,param_3
+        000bdc72 42  6c           shad       param_3 ,r2
+        000bdc74 60  23           mov        r2,r0
+        000bdc76 45  8b           mov.b      r0,@param_2 +
+        000bdc78 d1  3f           mov.l      @(DAT_000bdd78 ,pc),r1                           = FFF8169Ah
+        000bdc7a 60  11           mov.w      @r1=>DAT_fff8169a ,r0
+        000bdc7c 45  8b           mov.b      r0,@param_2 +
+        000bdc7e e0  00           mov        #0x0 ,r0
+        000bdc80 45  8b           mov.b      r0,@param_2 +
+        000bdc82 45  8b           mov.b      r0,@param_2 +
+        000bdc84 45  8b           mov.b      r0,@param_2 +
+        000bdc86 45  8b           mov.b      r0,@param_2 +
+        000bdc88 d1  3c           mov.l      @(DAT_000bdd7c ,pc),r1                           = FFF81764h
+        000bdc8a 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff81764 ),r2
+        000bdc8e 42  11           cmp/pz     r2
+        000bdc90 89  02           bt         LAB_000bdc98
+        000bdc92 04  00  00  ff    movi20     #0xff ,param_1
+        000bdc96 32  4c           add        param_1 ,r2
+                             LAB_000bdc98                                    XREF[1]:     000bdc90 (j)   
+        000bdc98 e6  f8           mov        #-0x8 ,param_3
+        000bdc9a 42  6c           shad       param_3 ,r2
+        000bdc9c 60  23           mov        r2,r0
+        000bdc9e 45  8b           mov.b      r0,@param_2 +
+        000bdca0 d1  36           mov.l      @(DAT_000bdd7c ,pc),r1                           = FFF81764h
+        000bdca2 60  11           mov.w      @r1=>DAT_fff81764 ,r0
+        000bdca4 45  8b           mov.b      r0,@param_2 +
+        000bdca6 d1  36           mov.l      @(DAT_000bdd80 ,pc),r1                           = FFF81766h
+        000bdca8 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff81766 ),r2
+        000bdcac 42  11           cmp/pz     r2
+        000bdcae 89  02           bt         LAB_000bdcb6
+        000bdcb0 04  00  00  ff    movi20     #0xff ,param_1
+        000bdcb4 32  4c           add        param_1 ,r2
+                             LAB_000bdcb6                                    XREF[1]:     000bdcae (j)   
+        000bdcb6 e6  f8           mov        #-0x8 ,param_3
+        000bdcb8 42  6c           shad       param_3 ,r2
+        000bdcba 60  23           mov        r2,r0
+        000bdcbc 45  8b           mov.b      r0,@param_2 +
+        000bdcbe d1  30           mov.l      @(DAT_000bdd80 ,pc),r1                           = FFF81766h
+        000bdcc0 60  11           mov.w      @r1=>DAT_fff81766 ,r0
+        000bdcc2 45  8b           mov.b      r0,@param_2 +
+        000bdcc4 e0  00           mov        #0x0 ,r0
+        000bdcc6 45  8b           mov.b      r0,@param_2 +
+        000bdcc8 45  8b           mov.b      r0,@param_2 +
+        000bdcca 45  8b           mov.b      r0,@param_2 +
+        000bdccc 45  8b           mov.b      r0,@param_2 +
+        000bdcce d1  2d           mov.l      @(DAT_000bdd84 ,pc),r1                           = FFF81768h
+        000bdcd0 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff81768 ),r2
+        000bdcd4 42  11           cmp/pz     r2
+        000bdcd6 89  02           bt         LAB_000bdcde
+        000bdcd8 04  00  00  ff    movi20     #0xff ,param_1
+        000bdcdc 32  4c           add        param_1 ,r2
+                             LAB_000bdcde                                    XREF[1]:     000bdcd6 (j)   
+        000bdcde e6  f8           mov        #-0x8 ,param_3
+        000bdce0 42  6c           shad       param_3 ,r2
+        000bdce2 60  23           mov        r2,r0
+        000bdce4 45  8b           mov.b      r0,@param_2 +
+        000bdce6 d1  27           mov.l      @(DAT_000bdd84 ,pc),r1                           = FFF81768h
+        000bdce8 60  11           mov.w      @r1=>DAT_fff81768 ,r0
+        000bdcea 45  8b           mov.b      r0,@param_2 +
+        000bdcec d1  26           mov.l      @(DAT_000bdd88 ,pc),r1                           = FFF816DAh
+        000bdcee 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff816da ),r2
+        000bdcf2 42  11           cmp/pz     r2
+        000bdcf4 89  02           bt         LAB_000bdcfc
+        000bdcf6 04  00  00  ff    movi20     #0xff ,param_1
+        000bdcfa 32  4c           add        param_1 ,r2
+                             LAB_000bdcfc                                    XREF[1]:     000bdcf4 (j)   
+        000bdcfc e6  f8           mov        #-0x8 ,param_3
+        000bdcfe 42  6c           shad       param_3 ,r2
+        000bdd00 60  23           mov        r2,r0
+        000bdd02 45  8b           mov.b      r0,@param_2 +
+        000bdd04 d1  20           mov.l      @(DAT_000bdd88 ,pc),r1                           = FFF816DAh
+        000bdd06 60  11           mov.w      @r1=>DAT_fff816da ,r0
+        000bdd08 45  8b           mov.b      r0,@param_2 +
+        000bdd0a d1  20           mov.l      @(DAT_000bdd8c ,pc),r1                           = FFF817ECh
+        000bdd0c 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff817ec ),r2
+        000bdd10 42  11           cmp/pz     r2
+        000bdd12 89  02           bt         LAB_000bdd1a
+        000bdd14 04  00  00  ff    movi20     #0xff ,param_1
+        000bdd18 32  4c           add        param_1 ,r2
+                             LAB_000bdd1a                                    XREF[1]:     000bdd12 (j)   
+        000bdd1a e6  f8           mov        #-0x8 ,param_3
+        000bdd1c 42  6c           shad       param_3 ,r2
+        000bdd1e 60  23           mov        r2,r0
+        000bdd20 45  8b           mov.b      r0,@param_2 +
+        000bdd22 d1  1a           mov.l      @(DAT_000bdd8c ,pc),r1                           = FFF817ECh
+        000bdd24 60  11           mov.w      @r1=>DAT_fff817ec ,r0
+        000bdd26 45  8b           mov.b      r0,@param_2 +
+        000bdd28 d1  19           mov.l      @(DAT_000bdd90 ,pc),r1                           = FFF817EEh
+        000bdd2a 32  11  90  00    movu.w     @(0x0 ,r1=>DAT_fff817ee ),r2
+        000bdd2e 42  11           cmp/pz     r2
+        000bdd30 89  02           bt         LAB_000bdd38
+        000bdd32 04  00  00  ff    movi20     #0xff ,param_1
+        000bdd36 32  4c           add        param_1 ,r2
+                             LAB_000bdd38                                    XREF[1]:     000bdd30 (j)   
+        000bdd38 e6  f8           mov        #-0x8 ,param_3
+        000bdd3a 42  6c           shad       param_3 ,r2
+        000bdd3c 60  23           mov        r2,r0
+        000bdd3e 45  8b           mov.b      r0,@param_2 +
+        000bdd40 d1  13           mov.l      @(DAT_000bdd90 ,pc),r1                           = FFF817EEh
+        000bdd42 66  11           mov.w      @r1=>DAT_fff817ee ,param_3
+        000bdd44 25  60           mov.b      param_3 ,@param_2
+                             LAB_000bdd46                                    XREF[1]:     000bda98 (j)   
+        000bdd46 75  01           add        0x1 ,param_2
+        000bdd48 e0  00           mov        #0x0 ,r0
+        000bdd4a 45  8b           mov.b      r0,@param_2 +
+        000bdd4c a0  5a           bra        LAB_000bde04
+        000bdd4e 25  00           _mov.b     r0,@param_2
+                             DAT_000bdd50                                    XREF[1]:     FUN_000bd98a:000bdb28 (R)   
+        000bdd50 ff  f8  06  5e    undefine   FFF8065Eh
+                             DAT_000bdd54                                    XREF[1]:     FUN_000bd98a:000bdb2e (R)   
+        000bdd54 ff  f9  ba  0a    undefine   FFF9BA0Ah
+                             DAT_000bdd58                                    XREF[2]:     FUN_000bd98a:000bdb3c (R) , 
+                                                                                          FUN_000bd98a:000bdb54 (R)   
+        000bdd58 ff  f8  06  d0    undefine   FFF806D0h
+                             DAT_000bdd5c                                    XREF[2]:     FUN_000bd98a:000bdb5a (R) , 
+                                                                                          FUN_000bd98a:000bdb72 (R)   
+        000bdd5c ff  f8  06  d2    undefine   FFF806D2h
+                             DAT_000bdd60                                    XREF[1]:     FUN_000bd98a:000bdb86 (R)   
+        000bdd60 ff  f9  b8  52    undefine   FFF9B852h
+                             DAT_000bdd64                                    XREF[2]:     FUN_000bd98a:000bdbc0 (R) , 
+                                                                                          FUN_000bd98a:000bdbd8 (R)   
+        000bdd64 ff  f8  16  c0    undefine   FFF816C0h
+                             DAT_000bdd68                                    XREF[2]:     FUN_000bd98a:000bdbde (R) , 
+                                                                                          FUN_000bd98a:000bdbf6 (R)   
+        000bdd68 ff  f8  17  ac    undefine   FFF817ACh
+                             DAT_000bdd6c                                    XREF[2]:     FUN_000bd98a:000bdbfc (R) , 
+                                                                                          FUN_000bd98a:000bdc14 (R)   
+        000bdd6c ff  f8  16  a8    undefine   FFF816A8h
+                             DAT_000bdd70                                    XREF[2]:     FUN_000bd98a:000bdc1a (R) , 
+                                                                                          FUN_000bd98a:000bdc32 (R)   
+        000bdd70 ff  f8  16  aa    undefine   FFF816AAh
+                             DAT_000bdd74                                    XREF[2]:     FUN_000bd98a:000bdc42 (R) , 
+                                                                                          FUN_000bd98a:000bdc5a (R)   
+        000bdd74 ff  f8  16  98    undefine   FFF81698h
+                             DAT_000bdd78                                    XREF[2]:     FUN_000bd98a:000bdc60 (R) , 
+                                                                                          FUN_000bd98a:000bdc78 (R)   
+        000bdd78 ff  f8  16  9a    undefine   FFF8169Ah
+                             DAT_000bdd7c                                    XREF[2]:     FUN_000bd98a:000bdc88 (R) , 
+                                                                                          FUN_000bd98a:000bdca0 (R)   
+        000bdd7c ff  f8  17  64    undefine   FFF81764h
+                             DAT_000bdd80                                    XREF[2]:     FUN_000bd98a:000bdca6 (R) , 
+                                                                                          FUN_000bd98a:000bdcbe (R)   
+        000bdd80 ff  f8  17  66    undefine   FFF81766h
+                             DAT_000bdd84                                    XREF[2]:     FUN_000bd98a:000bdcce (R) , 
+                                                                                          FUN_000bd98a:000bdce6 (R)   
+        000bdd84 ff  f8  17  68    undefine   FFF81768h
+                             DAT_000bdd88                                    XREF[2]:     FUN_000bd98a:000bdcec (R) , 
+                                                                                          FUN_000bd98a:000bdd04 (R)   
+        000bdd88 ff  f8  16  da    undefine   FFF816DAh
+                             DAT_000bdd8c                                    XREF[2]:     FUN_000bd98a:000bdd0a (R) , 
+                                                                                          FUN_000bd98a:000bdd22 (R)   
+        000bdd8c ff  f8  17  ec    undefine   FFF817ECh
+                             DAT_000bdd90                                    XREF[2]:     FUN_000bd98a:000bdd28 (R) , 
+                                                                                          FUN_000bd98a:000bdd40 (R)   
+        000bdd90 ff  f8  17  ee    undefine   FFF817EEh
+                             LAB_000bdd94                                    XREF[2]:     000bdbaa (j) , 000bdbb4 (j)   
+        000bdd94 60  23           mov        r2,r0
+        000bdd96 88  09           cmp/eq     0x9 ,r0
+        000bdd98 8b  02           bf         LAB_000bdda0
+        000bdd9a 3b  79  30  00    bld.b      #0x7 ,@( 0x0 ,r11 =>DAT_00037c50 )                   = 40h
+        000bdd9e 89  59           bt         LAB_000bde54
+                             LAB_000bdda0                                    XREF[1]:     000bdd98 (j)   
+        000bdda0 60  23           mov        r2,r0
+        000bdda2 88  0a           cmp/eq     0xa ,r0
+        000bdda4 8b  34           bf         LAB_000bde10
+        000bdda6 3b  69  30  00    bld.b      #0x6 ,@( 0x0 ,r11 =>DAT_00037c50 )                   = 40h
+        000bddaa 8b  31           bf         LAB_000bde10
+        000bddac 60  23           mov        r2,r0
+        000bddae 45  8b           mov.b      r0,@param_2 +
+        000bddb0 e0  01           mov        #0x1 ,r0
+        000bddb2 45  8b           mov.b      r0,@param_2 +
+        000bddb4 e4  45           mov        #0x45 ,param_1
+        000bddb6 60  43           mov        param_1 ,r0
+        000bddb8 45  8b           mov.b      r0,@param_2 +
+        000bddba e6  43           mov        #0x43 ,param_3
+        000bddbc 60  63           mov        param_3 ,r0
+        000bddbe 45  8b           mov.b      r0,@param_2 +
+        000bddc0 e0  4d           mov        #0x4d ,r0
+        000bddc2 45  8b           mov.b      r0,@param_2 +
+        000bddc4 e0  00           mov        #0x0 ,r0
+        000bddc6 45  8b           mov.b      r0,@param_2 +
+        000bddc8 e0  2d           mov        #0x2d ,r0
+        000bddca 45  8b           mov.b      r0,@param_2 +
+        000bddcc 60  43           mov        param_1 ,r0
+        000bddce 45  8b           mov.b      r0,@param_2 +
+        000bddd0 e2  6e           mov        #0x6e ,r2
+        000bddd2 60  23           mov        r2,r0
+        000bddd4 45  8b           mov.b      r0,@param_2 +
+        000bddd6 e0  67           mov        #0x67 ,r0
+        000bddd8 45  8b           mov.b      r0,@param_2 +
+        000bddda e0  69           mov        #0x69 ,r0
+        000bdddc 45  8b           mov.b      r0,@param_2 +
+        000bddde 60  23           mov        r2,r0
+        000bdde0 45  8b           mov.b      r0,@param_2 +
+        000bdde2 e0  65           mov        #0x65 ,r0
+        000bdde4 45  8b           mov.b      r0,@param_2 +
+        000bdde6 60  63           mov        param_3 ,r0
+        000bdde8 45  8b           mov.b      r0,@param_2 +
+        000bddea e6  6f           mov        #0x6f ,param_3
+        000bddec 60  63           mov        param_3 ,r0
+        000bddee 45  8b           mov.b      r0,@param_2 +
+        000bddf0 60  23           mov        r2,r0
+        000bddf2 45  8b           mov.b      r0,@param_2 +
+        000bddf4 e0  74           mov        #0x74 ,r0
+        000bddf6 45  8b           mov.b      r0,@param_2 +
+        000bddf8 e0  72           mov        #0x72 ,r0
+        000bddfa 45  8b           mov.b      r0,@param_2 +
+        000bddfc 60  63           mov        param_3 ,r0
+        000bddfe 45  8b           mov.b      r0,@param_2 +
+        000bde00 e2  6c           mov        #0x6c ,r2
+        000bde02 25  20           mov.b      r2,@param_2
+                             LAB_000bde04                                    XREF[2]:     000bd9cc (j) , 000bdd4c (j)   
+        000bde04 75  01           add        0x1 ,param_2
+        000bde06 e0  00           mov        #0x0 ,r0
+        000bde08 45  8b           mov.b      r0,@param_2 +
+        000bde0a 25  00           mov.b      r0,@param_2
+                             LAB_000bde0c                                    XREF[1]:     000bda38 (j)   
+        000bde0c a0  22           bra        LAB_000bde54
+        000bde0e 75  01           _add       0x1 ,param_2
+                             LAB_000bde10                                    XREF[2]:     000bdda4 (j) , 000bddaa (j)   
+        000bde10 60  23           mov        r2,r0
+        000bde12 88  0b           cmp/eq     0xb ,r0
+        000bde14 8b  02           bf         LAB_000bde1c
+        000bde16 3b  59  30  00    bld.b      #0x5 ,@( 0x0 ,r11 =>DAT_00037c50 )                   = 40h
+        000bde1a 89  1b           bt         LAB_000bde54
+                             LAB_000bde1c                                    XREF[1]:     000bde14 (j)   
+        000bde1c 60  23           mov        r2,r0
+        000bde1e 88  0c           cmp/eq     0xc ,r0
+        000bde20 8b  02           bf         LAB_000bde28
+        000bde22 3b  49  30  00    bld.b      #0x4 ,@( 0x0 ,r11 =>DAT_00037c50 )                   = 40h
+        000bde26 89  15           bt         LAB_000bde54
+                             LAB_000bde28                                    XREF[1]:     000bde20 (j)   
+        000bde28 60  23           mov        r2,r0
+        000bde2a 88  0d           cmp/eq     0xd ,r0
+        000bde2c 8b  02           bf         LAB_000bde34
+        000bde2e 3b  39  30  00    bld.b      #0x3 ,@( 0x0 ,r11 =>DAT_00037c50 )                   = 40h
+        000bde32 89  0f           bt         LAB_000bde54
+                             LAB_000bde34                                    XREF[1]:     000bde2c (j)   
+        000bde34 60  23           mov        r2,r0
+        000bde36 88  0e           cmp/eq     0xe ,r0
+        000bde38 8b  02           bf         LAB_000bde40
+        000bde3a 3b  29  30  00    bld.b      #0x2 ,@( 0x0 ,r11 =>DAT_00037c50 )                   = 40h
+        000bde3e 89  09           bt         LAB_000bde54
+                             LAB_000bde40                                    XREF[1]:     000bde38 (j)   
+        000bde40 60  23           mov        r2,r0
+        000bde42 88  0f           cmp/eq     0xf ,r0
+        000bde44 8b  02           bf         LAB_000bde4c
+        000bde46 3b  19  30  00    bld.b      #0x1 ,@( 0x0 ,r11 =>DAT_00037c50 )                   = 40h
+        000bde4a 89  03           bt         LAB_000bde54
+                             LAB_000bde4c                                    XREF[1]:     000bde44 (j)   
+        000bde4c 60  23           mov        r2,r0
+        000bde4e 88  10           cmp/eq     0x10 ,r0
+        000bde50 8b  00           bf         LAB_000bde54
+        000bde52 66  b0           mov.b      @r11 =>DAT_00037c50 ,param_3                      = 40h
+                             LAB_000bde54                                    XREF[14]:    000bd9dc (j) , 000bda48 (j) , 
+                                                                                          000bdb18 (j) , 000bdb88 (j) , 
+                                                                                          000bdb90 (j) , 000bdba0 (j) , 
+                                                                                          000bdd9e (j) , 000bde0c (j) , 
+                                                                                          000bde1a (j) , 000bde26 (j) , 
+                                                                                          000bde32 (j) , 000bde3e (j) , 
+                                                                                          000bde4a (j) , 000bde50 (j)   
+        000bde54 77  01           add        0x1 ,r7
+                             LAB_000bde56                                    XREF[1]:     000bd9b2 (j)   
+        000bde56 62  7c           extu.b     r7,r2
+        000bde58 32  e3           cmp/ge     r14 ,r2
+        000bde5a 89  01           bt         LAB_000bde60
+        000bde5c ad  ab           bra        LAB_000bd9b6
+        000bde5e 00  09           _nop
+                             LAB_000bde60                                    XREF[1]:     000bde5a (j)   
+        000bde60 2f  52           mov.l      param_2 ,@r15 =>local_24
+        000bde62 62  f2           mov.l      @r15 =>local_24 ,r2
+        000bde64 56  f3           mov.l      @(0xc ,r15 ),param_3
+        000bde66 32  68           sub        param_3 ,r2
+        000bde68 3f  21  00  10    mov.b      r2,@( 0x10 ,r15 )
+        000bde6c 85  f8           mov.w      @(0x10 ,r15 ),r0
+        000bde6e 7f  14           add        0x14 ,r15
+        000bde70 6e  f6           mov.l      @r15 =>local_10 +,r14
+        000bde72 6d  f6           mov.l      @r15 =>local_c +,r13
+        000bde74 6c  f6           mov.l      @r15 =>local_8 +,r12
+        000bde76 00  0b           rts
+        000bde78 6b  f6           _mov.l     @r15 +,r11

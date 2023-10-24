@@ -1,0 +1,549 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en-gb">
+<title>RomRaider :: View topic - How To: Get started with IDA and disassembly</title>
+
+<style type="text/css">
+<!--
+
+body {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+}
+
+img {
+	border: 0;
+}
+
+td {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+	line-height: 150%;
+}
+
+.code,
+.quote {
+	font-size: smaller;
+	border: black solid 1px;
+}
+
+.forum {
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+.topic {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.gensmall {
+	font-size: 8pt;
+}
+
+hr {
+	color: #888;
+	height: 3px;
+	border-style: solid;
+}
+
+hr.sep {
+	color: #aaa;
+	height: 1px;
+	border-style: dashed;
+}
+//-->
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Resize too large images
+	*/
+	var reimg_maxWidth = 640, reimg_maxHeight = 480, reimg_relWidth = 100;
+	var reimg_swapPortrait = true;
+	var reimg_loadingImg = "./images/spacer.gif";
+	var reimg_loadingStyle = "width: 16px; height: 16px; background: url(./styles/fisubsilver2/imageset/icon_reimg_loading.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_loadingAlt = "Loading...";
+	
+	var reimg_autoLink = true;
+	
+	var reimg_zoomImg = "./images/spacer.gif";
+	var reimg_zoomStyle = "width: 18px; height: 15px; background: url(./styles/fisubsilver2/imageset/icon_reimg_zoom_in.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_zoomHover = "filter: Alpha(Opacity=90); opacity: .90;";
+	
+	var reimg_zoomAlt = "Zoom in (real dimensions: %1$d x %2$d)";
+	var reimg_zoomTarget = "_highslide";
+	var reimg_ajax_url = "https://www.romraider.com/forum/reimg/reimg_ajax.php";
+
+	function reimg(img, width, height)
+	{
+		if (window.reimg_version)
+		{
+			reimg_resize(img, width, height);
+		}
+	}
+// ]]>
+</script>
+
+<script type="text/javascript" src="./reimg/reimg.js"></script>
+
+	
+<style type="text/css" media="screen, projection">
+<!--
+	
+	.tablebg .tablebg .postbody .reimg-zoom { display: none; }
+	
+	.reimg { width: 10%; height: auto; visibility: visible; }
+	
+-->
+</style>
+	
+<script type="text/javascript" src="./reimg/highslide/highslide-full.packed.js"></script>
+<link rel="stylesheet" type="text/css" href="./reimg/highslide/highslide.css" />
+	
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Light box for resized images
+	*/
+	
+	if (window.hs)
+	{
+		hs.graphicsDir = "./reimg/highslide/graphics/";
+		// Language settings for Highslide JS
+		hs.lang.cssDirection = "ltr";
+		hs.lang.loadingText = "Loading...";
+		hs.lang.loadingTitle = "Click to cancel";
+		hs.lang.focusTitle = "Click to bring to front";
+		hs.lang.fullExpandTitle = "Expand to actual size (f)";
+		hs.lang.creditsText = "Powered by <em>Highslide JS</em>";
+		hs.lang.creditsTitle = "Go to the Highslide JS homepage";
+		hs.lang.previousText = "Previous";
+		hs.lang.nextText = "Next";
+		hs.lang.moveText = "Move";
+		hs.lang.closeText = "Close";
+		hs.lang.closeTitle = "Close (esc)";
+		hs.lang.resizeTitle = "Resize";
+		hs.lang.playText = "Play";
+		hs.lang.playTitle = "Play slideshow (spacebar)";
+		hs.lang.pauseText = "Pause";
+		hs.lang.pauseTitle = "Pause slideshow (spacebar)";
+		hs.lang.previousTitle = "Previous (arrow left)";
+		hs.lang.nextTitle = "Next (arrow right)";
+		hs.lang.moveTitle = "Move";
+		hs.lang.number = "Image %1 of %2";
+		hs.lang.restoreTitle = "Click to close image, click and drag to move. Use arrow keys for next and previous.";
+		hs.dimmingOpacity = 0.75;
+	}
+	
+// ]]>
+</script>
+
+	
+<script type="text/javascript">
+// <![CDATA[
+	reimg_loading('./styles/fisubsilver2/imageset/icon_reimg_loading.gif');
+// ]]>
+</script>
+
+</head>
+<body>
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td colspan="2" align="center"><span class="Forum">RomRaider</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/">https://www.romraider.com/forum/</a></span></td>
+</tr>
+<tr>
+	<td colspan="2"><br /></td>
+</tr>
+<tr>
+	<td><span class="topic">How To: Get started with IDA and disassembly</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303">https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303</a></span></td>
+	<td align="right" valign="bottom"><span class="gensmall">Page <strong>10</strong> of <strong>12</strong></span></td>
+</tr>
+</table>
+
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Merp</b> [ Fri May 03, 2013 8:43 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Excellent work <img src="./images/smilies/icon_biggrin.gif" alt=":D" title="Very Happy" class="reimg" /><br /><br />I have some very alpha test code for map switching that uses SI Drive for selection. TGV input control for non-SI cars is working its way up the TODO <img src="./images/smilies/icon_wink.gif" alt=":wink:" title="Wink" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Easty</b> [ Fri May 03, 2013 3:06 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">Merp wrote:</div><div class="quotecontent">Excellent work <img src="./images/smilies/icon_biggrin.gif" alt=":D" title="Very Happy" class="reimg" /><br /><br />I have some very alpha test code for map switching that uses SI Drive for selection. TGV input control for non-SI cars is working its way up the TODO <img src="./images/smilies/icon_wink.gif" alt=":wink:" title="Wink" class="reimg" /></div><br />If it works out I'll post a full ''How To'' I don't really know much about patch utilities and HEW.<br />So I'm just going to make the few small changes with HxD but maybe with your help we could make a patch that others could use?<br /><br />Eventually what I want to do is install an SI-drive selector plus required parts of centre console and use the C-diff and dccd sw's for ffs and lc. I'd have to rewrite the determination logic because there would need to be 4 recognisable states not three.<br /><br />Would it be easy enough to integrate this in to one of your FFS/LC patches?<br /><br />Basically all I'd need is logic to go from....<br /><br />0 = Lc and Ffs off<br />1 = LC on Ffs off<br />2 = Lc off Ffs on<br />3 = lc Off Ffs Off
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sun May 05, 2013 5:58 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">Easty wrote:</div><div class="quotecontent">If it works out I'll post a full ''How To'' I don't really know much about patch utilities and HEW.</div>A place to start... <!-- l --><a class="postlink-local" href="http://www.romraider.com/forum/viewtopic.php?f=25&amp;t=7680">viewtopic.php?f=25&amp;t=7680</a><!-- l -->
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>aijii</b> [ Mon Sep 16, 2013 6:18 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />hi guys,<br /><br />I've had more progress- when I run the tables idc script, i get the following:<br /><br />--- Now marking Tables_AZ1G900C ---<br />No reference to Target_Boost_Compensation_ECT<br />No reference to InitialMax_Wastegate_Duty_Compensation_IAT<br />No reference to InitialMax_Wastegate_Duty_Compensation_ECT<br />No reference to TD_Proportional_Compensation_IAT<br />No reference to TD_Integral_Positive_Compensation_IAT<br />No reference to TD_Integral_Negative_Compensation_IAT<br />No reference to Primary_Open_Loop_Fueling<br />No reference to Primary_Open_Loop_Fueling_Failsafe<br />No reference to CL_to_OL_Transition_with_Delay_Throttle<br />No reference to Per_Injector_Pulse_Width_Compensation_A<br />No reference to Per_Injector_Pulse_Width_Compensation_B<br />No reference to Per_Injector_Pulse_Width_Compensation_C<br />No reference to Per_Injector_Pulse_Width_Compensation_D<br />No reference to Cranking_Fuel_Injector_Pulse_Width_A_ECT<br />No reference to Cranking_Fuel_Injector_Pulse_Width_B_ECT<br />No reference to Cranking_Fuel_Injector_Pulse_Width_C_ECT<br />No reference to Cranking_Fuel_Injector_Pulse_Width_D_ECT<br />No reference to Cranking_Fuel_Injector_Pulse_Width_E_ECT<br />No reference to Cranking_Fuel_Injector_Pulse_Width_F_ECT<br />No reference to Throttle_Tipin_Enrichment_A<br />No reference to Tipin_Enrichment_Compensation_RPM<br />No reference to Tipin_Enrichment_Compensation_A_ECT<br />No reference to Tipin_Enrichment_Compensation_B_ECT<br />No reference to Tipin_Enrichment_Compensation_C_ECT<br />No reference to Tipin_Enrichment_Compensation_D_ECT<br />No reference to Min_Primary_Base_Enrichment_1_Cruise<br />No reference to Min_Primary_Base_Enrichment_1_NonCruise<br />No reference to Min_Primary_Base_Enrichment_1_NonPrimary_OL_<br />No reference to MAF_Sensor_Scaling<br />No reference to Base_Timing_Primary_Cruise<br />No reference to Base_Timing_Reference_NonCruise_AVCS_related<br />No reference to Base_Timing_Primary_NonCruise<br />No reference to Base_Timing_Reference_Cruise_AVCS_related<br />No reference to Base_Timing_Idle_B_InGear<br />No reference to Base_Timing_Idle_A_Neutral<br />No reference to Knock_Correction_Advance_Max_Cruise<br />No reference to Knock_Correction_Advance_Max_NonCruise<br />No reference to Timing_Compensation_A_IAT<br />No reference to Timing_Compensation_B_IAT<br />No reference to Timing_Compensation_Imm_Cruise_A_ECT<br />No reference to Timing_Compensation_Imm_Cruise_B_ECT<br />No reference to Timing_Compensation_Imm_NonCruise_A_ECT<br />No reference to Timing_Compensation_Imm_NonCruise_B_ECT<br />No reference to Intake_Cam_Advance_Angle_Cruise_AVCS<br />No reference to Intake_Cam_Advance_Angle_NonCruise_AVCS<br />No reference to Requested_Torque_Base_RPM<br />No reference to Target_Throttle_Plate_Position_Cruise_Requested_Torque_Ratio<br />No reference to Target_Throttle_Plate_Position_NonCruise_Requested_Torque_Ratio<br />No reference to Target_Throttle_Plate_Position_Maximum_Requested_Torque_Ratio<br />No reference to Idle_Speed_Target_A<br />No reference to Idle_Speed_Target_B<br />No reference to Idle_Speed_Target_C<br /><br />If i click on one of these, it takes me to the table in ROM, for instance if I click on the first message re:Turbo_Dynamics_Integral_Positive_Y_Axis:<br /><br />ROM:000C090C Turbo_Dynamics_Integral_Positive_Y_Axis:.data.l 0 ; DATA XREF: ROM:00084B10o<br />ROM:000C0910                 .data.l h'41200000, h'41A00000, h'42200000, h'42A00000<br />ROM:000C0910                 .data.l h'42F00000, h'43200000, h'43480000, h'43700000<br /><br />Does this look right ?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Mon Sep 16, 2013 6:30 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />When you get the &quot;no reference&quot; message that means you probably have not disassemble all of the code in the ROM yet.  Look for sections that did not disassemble automatically into code or data and proceed to undefined them and then &quot;force&quot; code analysis by pressing the c key while at the start of the section.  After you have completed that re-run the IDC script to mark the ROM and many of the &quot;no reference&quot; messages should disappear.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>aijii</b> [ Mon Sep 16, 2013 7:58 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Hmm okay...<br /><br />For example:<br /><br />I click Throttle_Tipin_Enrichment_A in the list of &quot;no references found, and jump to the following in the disassembly window:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:000CA4FC Throttle_Tipin_Enrichment_A:.data.l h'580058, h'64007D, h'8A0096, h'A300BC, h'CD00E1<br />ROM:000CA4FC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'FA0107, h'1130120, h'12C0139, h'1450152<br /></div><br /><br />I search for a byte sequence 0CA4FC and get the following:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:00086CBC dword_86CBC:&nbsp; &nbsp; .data.l h'120800, h'CA4B4, h'CA4FC, h'40800000, 0<br />ROM:00086CBC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; DATA XREF: sub_34334+14o<br />ROM:00086CBC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; ROM:off_343F8o<br /></div><br /><br />i presume this is an array ? <br /><br />i then select it and click U to undefine it:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:00086CBC unk_86CBC:&nbsp; &nbsp; &nbsp; .data.b&nbsp; &nbsp; 0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_34334+14o<br />ROM:00086CBC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; ROM:off_343F8o<br />ROM:00086CBD&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b h'12<br />ROM:00086CBE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 8<br />ROM:00086CBF&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 0<br />ROM:00086CC0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 0<br />ROM:00086CC1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; h'C<br />ROM:00086CC2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b h'A4 ; ñ<br />ROM:00086CC3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b h'B4 ; ¦<br />ROM:00086CC4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 0<br />ROM:00086CC5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; h'C<br />ROM:00086CC6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b h'A4 ; ñ<br />ROM:00086CC7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b h'FC ; n<br />ROM:00086CC8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b h'40 ; @<br />ROM:00086CC9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b h'80 ; Ç<br />ROM:00086CCA&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 0<br />ROM:00086CCB&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 0<br />ROM:00086CCC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 0<br />ROM:00086CCD&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 0<br />ROM:00086CCE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 0<br />ROM:00086CCF&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.b&nbsp; &nbsp; 0</div><br /><br />and then if i select this and click C, and then select &quot;analyze&quot; it just puts it back the way it was before I undefined it.<br /><br />If however, I convert them all to longs one by one I get the following:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:00086CBC dword_86CBC:&nbsp; &nbsp; .data.l h'120800&nbsp; &nbsp; &nbsp; &nbsp; ; DATA XREF: sub_34334+14o<br />ROM:00086CBC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; ROM:off_343F8o<br />ROM:00086CC0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'CA4B4<br />ROM:00086CC4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l Throttle_Tipin_Enrichment_A<br />ROM:00086CC8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'40800000<br />ROM:00086CCC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l 0</div><br /><br />and the &quot;no reference&quot; message for Throttle_Tipin_Enrichment_A goes away.<br /><br />But I want to know, if what I am doing is correct ?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">td-d</b> [ Mon Sep 16, 2013 10:08 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />You need to read through the first couple of posts thoroughly again, especially regarding the table structures (Layout of a 2D table in memory (32-bit) ).<br /><br />What you have there is the Lookup Table.  The first two words give you the axis sizes (12x8), the first reference (0xCA4B4) is the x axis, the next is the 'z' axis (i.e. the table) and the last two are float values (multiplier and offset). <br /><br />Using Dale's formatting scripts will make your life <span style="font-style: italic">much </span>easier.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Tue Sep 17, 2013 5:34 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">aijii wrote:</div><div class="quotecontent"><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:000CA4FC Throttle_Tipin_Enrichment_A:.data.l h'580058, h'64007D, h'8A0096, h'A300BC, h'CD00E1<br />ROM:000CA4FC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.data.l h'FA0107, h'1130120, h'12C0139, h'1450152<br /></div><br /></div><br />Notice that you are missing a reference to this table data.  That's what the script is complaining about.  So it can't follow back to the lookup table structure that points to it.<br />When the lookup table structure is formatted correctly then the IDC script can properly mark all the references.<br />See <!-- l --><a class="postlink-local" href="http://www.romraider.com/forum/viewtopic.php?t=8449">viewtopic.php?t=8449</a><!-- l --> step 4 (but do steps 1 - 3 first)
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>aijii</b> [ Tue Sep 17, 2013 8:19 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Holy s***... Okay there is a bunch of stuff I missed. I'd never even set foot in that thread... <br /><br />You, my friend, are a legend <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" /><br /><br />Thanks!
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>aijii</b> [ Tue Sep 17, 2013 3:13 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">td-d wrote:</div><div class="quotecontent">You need to read through the first couple of posts thoroughly again, especially regarding the table structures (Layout of a 2D table in memory (32-bit) ).<br /><br />What you have there is the Lookup Table.  The first two words give you the axis sizes (12x8), the first reference (0xCA4B4) is the x axis, the next is the 'z' axis (i.e. the table) and the last two are float values (multiplier and offset). <br /><br />Using Dale's formatting scripts will make your life <span style="font-style: italic">much </span>easier.</div><br /><br /><br />just saw this. okay good stuff, that makes sense now. lots to keep me busy on my downtime during our canada/usa holiday.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>ilarson007</b> [ Tue Sep 09, 2014 5:46 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Okay, so I have never disassembled a binary before.  I am having a hard time understanding everything I need to get the file to open in IDA.  I have tried reading through the first post, and not really grasping it.<br /><br />The ROM is from my bike, 06 GSX-R 750.  The ECU uses a Renesas SH7054 (as best I can tell).  I will attach my ROM and the 7054 datasheet.  I am unsure how to get the file to open in Ida!<br /><br />The only thing I know is that RAM starts at 0xFFFF8000 and goes to 0xFFFFBFFF (length of 0x7FFF).  I also don't really understand hex at all.  I got that length from Google Calculator, not going to lie about it.
+
+		
+			<br clear="all" /><br />
+
+			<table class="tablebg" width="100%" cellspacing="1">
+			<tr>
+				<td><b class="genmed">Attachments: </b></td>
+			</tr>
+			
+				<tr>
+					<td>
+			<span class="gensmall"><b>File comment:</b> 32920-02H10 binary file (06 GSX-R 750)</span><br />
+		
+			<span class="genmed">
+				<img src="./styles/fisubsilver2/imageset/icon_topic_attach.gif" alt="" title="" /> 
+				<a href="./download/file.php?id=22417">32920-02H10.bin.zip</a> [155.26 KiB]
+			</span><br />
+			<span class="gensmall">Downloaded 4 times</span>
+		
+
+		<br />
+	</td>
+				</tr>
+			
+				<tr>
+					<td>
+			<span class="gensmall"><b>File comment:</b> SH7054F datasheet</span><br />
+		
+			<span class="genmed">
+				<img src="./styles/fisubsilver2/imageset/icon_topic_attach.gif" alt="" title="" /> 
+				<a href="./download/file.php?id=22416">e602185_sh7052f.pdf</a> [3.4 MiB]
+			</span><br />
+			<span class="gensmall">Downloaded 3 times</span>
+		
+
+		<br />
+	</td>
+				</tr>
+			
+			</table>
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Tue Sep 09, 2014 6:48 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />When you open the hex file in IDA select process type Renesas SH2A.  If you are prompt for a specific processor version just ignore it as you don't have the complete definition in IDA for the SH7054, you would need to create it.  Set the RAM to 0xFFFF8000 size 0x4000 (16kB).<br />If IDA does not start to process the ROM then you will need to open the Option &gt; General tab click 'Kernel options 1' and check the 'Make final analysis pass' box.  Click OK and the re-analyze.<br />The very first subroutine run by the processor on RESET or power up is the one indicated by the first 4 bytes of the ROM (sub_400).  This sub starts the processor and peripherals initialization.<br />If you have the addresses of a few tables then you can go to them 'g command' and list the x-ref back to where they are used in code, assuming the ROM unfolded correctly and completely.  You need the SH-2A software manual to get a sense of how the processor operates on each instruction.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>ilarson007</b> [ Tue Sep 09, 2014 7:59 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">When you open the hex file in IDA select process type Renesas SH2A.  If you are prompt for a specific processor version just ignore it as you don't have the complete definition in IDA for the SH7054, you would need to create it.  Set the RAM to 0xFFFF8000 size 0x4000 (16kB).<br />If IDA does not start to process the ROM then you will need to open the Option &gt; General tab click 'Kernel options 1' and check the 'Make final analysis pass' box.  Click OK and the re-analyze.<br />The very first subroutine run by the processor on RESET or power up is the one indicated by the first 4 bytes of the ROM (sub_400).  This sub starts the processor and peripherals initialization.<br />If you have the addresses of a few tables then you can go to them 'g command' and list the x-ref back to where they are used in code, assuming the ROM unfolded correctly and completely.  You need the SH-2A software manual to get a sense of how the processor operates on each instruction.</div><br /><br />Ok, I'll try to start with that.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>ilarson007</b> [ Sat Dec 06, 2014 3:52 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">6) Unfold the startup/reset code.  The first 4 bytes of ROM are a pointer to the code that runs when the ECU is powered up.  Jump to that location (AAC in the ROM I'm looking at) and press 'c' to mark it as 'code.' You'll see a small portion of the ROM disassembled.</div><br /><br />So, I will admit that I don't know the first thing about ROM disassembly.  I am trying to open up the 710J (04 STi) ROM in Ida, and am stuck on this step... First of all, how long is 4 bytes in hex?  Second, how do I determine where this pointer is pointing to?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Professwrx</b> [ Sat Dec 06, 2014 7:11 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">ilarson007 wrote:</div><div class="quotecontent"><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">6) Unfold the startup/reset code.  The first 4 bytes of ROM are a pointer to the code that runs when the ECU is powered up.  Jump to that location (AAC in the ROM I'm looking at) and press 'c' to mark it as 'code.' You'll see a small portion of the ROM disassembled.</div><br /><br />So, I will admit that I don't know the first thing about ROM disassembly.  I am trying to open up the 710J (04 STi) ROM in Ida, and am stuck on this step... First of all, how long is 4 bytes in hex?  Second, how do I determine where this pointer is pointing to?</div><br />Open the Rom. While at the top click the rom address. press d three times. You should have made the first four bytes (8hex digits) clickable. Double click, press c.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+<hr width="85%" />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line. If you
+	refuse to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2006
+// -->
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td><span class="gensmall">Page <strong>10</strong> of <strong>12</strong></span></td>
+	<td align="right"><span class="gensmall">All times are UTC - 9 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]</span></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><span class="gensmall">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</span></td>
+</tr>
+</table>
+
+</body>
+</html>

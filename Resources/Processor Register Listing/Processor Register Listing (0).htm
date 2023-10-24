@@ -1,0 +1,538 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en-gb">
+<title>RomRaider :: View topic - SH7055/SH7058/SH72531/SH72543R Processor Register Listing</title>
+
+<style type="text/css">
+<!--
+
+body {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+}
+
+img {
+	border: 0;
+}
+
+td {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+	line-height: 150%;
+}
+
+.code,
+.quote {
+	font-size: smaller;
+	border: black solid 1px;
+}
+
+.forum {
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+.topic {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.gensmall {
+	font-size: 8pt;
+}
+
+hr {
+	color: #888;
+	height: 3px;
+	border-style: solid;
+}
+
+hr.sep {
+	color: #aaa;
+	height: 1px;
+	border-style: dashed;
+}
+//-->
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Resize too large images
+	*/
+	var reimg_maxWidth = 640, reimg_maxHeight = 480, reimg_relWidth = 100;
+	var reimg_swapPortrait = true;
+	var reimg_loadingImg = "./images/spacer.gif";
+	var reimg_loadingStyle = "width: 16px; height: 16px; background: url(./styles/fisubsilver2/imageset/icon_reimg_loading.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_loadingAlt = "Loading...";
+	
+	var reimg_autoLink = true;
+	
+	var reimg_zoomImg = "./images/spacer.gif";
+	var reimg_zoomStyle = "width: 18px; height: 15px; background: url(./styles/fisubsilver2/imageset/icon_reimg_zoom_in.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_zoomHover = "filter: Alpha(Opacity=90); opacity: .90;";
+	
+	var reimg_zoomAlt = "Zoom in (real dimensions: %1$d x %2$d)";
+	var reimg_zoomTarget = "_highslide";
+	var reimg_ajax_url = "https://www.romraider.com/forum/reimg/reimg_ajax.php";
+
+	function reimg(img, width, height)
+	{
+		if (window.reimg_version)
+		{
+			reimg_resize(img, width, height);
+		}
+	}
+// ]]>
+</script>
+
+<script type="text/javascript" src="./reimg/reimg.js"></script>
+
+	
+<style type="text/css" media="screen, projection">
+<!--
+	
+	.tablebg .tablebg .postbody .reimg-zoom { display: none; }
+	
+	.reimg { width: 10%; height: auto; visibility: visible; }
+	
+-->
+</style>
+	
+<script type="text/javascript" src="./reimg/highslide/highslide-full.packed.js"></script>
+<link rel="stylesheet" type="text/css" href="./reimg/highslide/highslide.css" />
+	
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Light box for resized images
+	*/
+	
+	if (window.hs)
+	{
+		hs.graphicsDir = "./reimg/highslide/graphics/";
+		// Language settings for Highslide JS
+		hs.lang.cssDirection = "ltr";
+		hs.lang.loadingText = "Loading...";
+		hs.lang.loadingTitle = "Click to cancel";
+		hs.lang.focusTitle = "Click to bring to front";
+		hs.lang.fullExpandTitle = "Expand to actual size (f)";
+		hs.lang.creditsText = "Powered by <em>Highslide JS</em>";
+		hs.lang.creditsTitle = "Go to the Highslide JS homepage";
+		hs.lang.previousText = "Previous";
+		hs.lang.nextText = "Next";
+		hs.lang.moveText = "Move";
+		hs.lang.closeText = "Close";
+		hs.lang.closeTitle = "Close (esc)";
+		hs.lang.resizeTitle = "Resize";
+		hs.lang.playText = "Play";
+		hs.lang.playTitle = "Play slideshow (spacebar)";
+		hs.lang.pauseText = "Pause";
+		hs.lang.pauseTitle = "Pause slideshow (spacebar)";
+		hs.lang.previousTitle = "Previous (arrow left)";
+		hs.lang.nextTitle = "Next (arrow right)";
+		hs.lang.moveTitle = "Move";
+		hs.lang.number = "Image %1 of %2";
+		hs.lang.restoreTitle = "Click to close image, click and drag to move. Use arrow keys for next and previous.";
+		hs.dimmingOpacity = 0.75;
+	}
+	
+// ]]>
+</script>
+
+	
+<script type="text/javascript">
+// <![CDATA[
+	reimg_loading('./styles/fisubsilver2/imageset/icon_reimg_loading.gif');
+// ]]>
+</script>
+
+</head>
+<body>
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td colspan="2" align="center"><span class="Forum">RomRaider</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/">https://www.romraider.com/forum/</a></span></td>
+</tr>
+<tr>
+	<td colspan="2"><br /></td>
+</tr>
+<tr>
+	<td><span class="topic">SH7055/SH7058/SH72531/SH72543R Processor Register Listing</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=5825">https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=5825</a></span></td>
+	<td align="right" valign="bottom"><span class="gensmall">Page <strong>1</strong> of <strong>3</strong></span></td>
+</tr>
+</table>
+
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sun Feb 14, 2010 9:22 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>SH7055/SH7058/SH72531/SH72543R Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I put together this register definition for the SH7055 / SH7058 / SH72531 &amp; SH72543R for use with IDA.<br />Let me know if you see any errors.<div class="attachtitle">Attachment:</div><div class="attachcontent">
+			<span class="gensmall"><b>File comment:</b> SH7055 / SH7058 / SH72531 &amp; SH72543R Registers</span><br />
+		
+			<span class="genmed">
+				<img src="./styles/fisubsilver2/imageset/icon_topic_attach.gif" alt="" title="" class="reimg" /> 
+				<a href="./download/file.php?id=22638">sh3.zip</a> [38.1 KiB]
+			</span><br />
+			<span class="gensmall">Downloaded 1240 times</span>
+		
+
+		<br />
+	</div><div class="attachtitle">Attachment:</div><div class="attachcontent">
+			<span class="gensmall"><b>File comment:</b> SH CPU Summary</span><br />
+		
+			<span class="genmed">
+				<img src="./styles/fisubsilver2/imageset/icon_topic_attach.gif" alt="" title="" class="reimg" /> 
+				<a href="./download/file.php?id=22639">Renesas CPU Summary.xls</a> [11 KiB]
+			</span><br />
+			<span class="gensmall">Downloaded 1108 times</span>
+		
+
+		<br />
+	</div>
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>fujiillin</b> [ Mon Feb 15, 2010 5:57 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Thanks so much! Going through the manual to find all of these addresses is pretty tedious, this will definitely make things much easier. Should have some time to try it out later.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>fujiillin</b> [ Mon Feb 15, 2010 3:13 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Everything worked great with the exception of some HCAN registers:<br /><br />I got a huge list of these for them:<br />FFFFDCF2: can't rename byte as 'HCAN1_MB31[17],[18]_W' because it contains a bad character ','.<br /><br />Edit: I was looking for a way to get Xrefs for the registers, but I realized that instead of binary pattern searching for the address and parsing all of the hits, a text pattern search only hits the actual uses, making things just as easy as Xrefs.<br /><br />Thanks!
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Mon Feb 15, 2010 4:43 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Shoot, I thought I cleaned all those out... try the new version in the OP.<br />I'll add in the SH7055 in the next day or two.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Wed Feb 17, 2010 4:33 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Added SH7055, now in the OP zip file.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Sun Jun 06, 2010 10:02 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />This is really useful, thanks!
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Wed Jun 16, 2010 9:34 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Probably a stupid question but how do you use this configuration file?  Do you rename it to IDA.cfg and put it in the IDA's root directory?  I don't see a menu command for loading the configuration file.  I'm a IDA newb, so it's probably something simple.<br /><br />Thanks!
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Wed Jun 16, 2010 10:49 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Just replace the current file with the one you downloaded from here.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Wed Jun 16, 2010 10:58 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">Just replace the current file with the one you downloaded from here.</div><br /><br />Oh my god I'm such a newb.  I completely missed the CFG directory...lol.  Sorry and thanks. <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Sasha_A80</b> [ Tue Jan 11, 2011 2:01 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Following corrections in sh3.cfg make evident where AUD debugging is disabled inside the ROM. <br /><br />.SH7055<br />; Power-down State<br />SYSCR_B 0xFFFFF708<br />MSTCR_[W]_W 0xFFFFF70A<br />MSTCR_[R]_B 0xFFFFF70B<br /><br />.SH7058<br />; Power-Down State<br />SYSCR1_B	0xFFFFF708	<br />SYSCR2_[W]_W	0xFFFFF70A	<br />SYSCR2_[R]_B	0xFFFFF70B	<br /><br />.SH7058S<br />; Power-Down State<br />SYSCR1_B	0xFFFFF708	<br />SYSCR2_[W]_W	0xFFFFF70A	<br />SYSCR2_[R]_B	0xFFFFF70B<br /><br />OS is configured to disable AUD debugging just after secondary bootloader (using SCI2 communication port) transfers control to OS.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Tue Jan 11, 2011 2:40 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Update complete.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Double Phister</b> [ Thu Feb 24, 2011 9:00 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />IDA newb here.<br /><br />I don't see any addresses beyond the end of the RAM that ends at 0xFFFFBFFF<br /><br />Should I see this stuff somewhere when looking at the ROM or is it related to some other function within IDA?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Mart</b> [ Thu Feb 24, 2011 10:55 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />from here: <!-- m --><a class="postlink" href="http://www.romraider.com/forum/viewtopic.php?f=25&amp;t=6303">http://www.romraider.com/forum/viewtopi ... =25&amp;t=6303</a><!-- m --><br /><br />RAM segment:<br /><br />For 7055, Start is 0xFFFF6000 and Length is 0x8000<br />For 7058, Start is 0xFFFF0000 and Length is 0xC000<br />Be sure to check the box to make the RAM segment.<br /><br />it is documented in the spec sheet.<br /><br />Mart<br /><br /><div class="quotetitle">Double Phister wrote:</div><div class="quotecontent">IDA newb here.<br /><br />I don't see any addresses beyond the end of the RAM that ends at 0xFFFFBFFF<br /><br />Should I see this stuff somewhere when looking at the ROM or is it related to some other function within IDA?</div>
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Double Phister</b> [ Thu Feb 24, 2011 3:34 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">Mart wrote:</div><div class="quotecontent">from here: <!-- l --><a class="postlink-local" href="http://www.romraider.com/forum/viewtopic.php?f=25&amp;t=6303">viewtopic.php?f=25&amp;t=6303</a><!-- l --><br /><br />RAM segment:<br /><br />For 7055, Start is 0xFFFF6000 and Length is 0x7FFF<br />For 7058, Start is 0xFFFF0000 and Length is 0xBFFF<br />Be sure to check the box to make the RAM segment.<br /><br />it is documented in the spec sheet.<br /><br />Mart</div><br /><br />Ya I got that part. My question was what does this register listing do for me? Should I be able to see the addresses above 0xFFFFBFFE (I'm looking at a 7058)? Will this just label references in the ROM to these registers with nicer names?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Thu Feb 24, 2011 4:32 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: SH7055 &amp; SH7058 Processor Register Listing</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />If you made the RAM segment from 0xFFFF0000 to 0xFFFFFFFF <span style="font-weight: bold">before</span> you did the analysis then you can see them at the high end of RAM, otherwise not.<br /><br />If you used a RAM segment of 0xFFFF0000 to 0xFFFFBFFFF then you will only see them referenced in code like this sample.<div class="attachtitle">Attachment:</div><div class="attachcontent">
+			<a href="./download/file.php?id=13404&amp;mode=view"><img src="./download/file.php?id=13404&amp;t=1" alt="code.png" class="reimg" /></a><br />
+			<span class="gensmall">code.png [ 16.1 KiB | Viewed 3970 times ]</span>
+		
+
+		<br />
+	</div>
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+<hr width="85%" />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line. If you
+	refuse to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2006
+// -->
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td><span class="gensmall">Page <strong>1</strong> of <strong>3</strong></span></td>
+	<td align="right"><span class="gensmall">All times are UTC - 9 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]</span></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><span class="gensmall">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</span></td>
+</tr>
+</table>
+
+</body>
+</html>

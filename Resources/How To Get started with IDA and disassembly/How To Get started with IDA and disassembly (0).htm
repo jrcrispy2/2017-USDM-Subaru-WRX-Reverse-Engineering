@@ -1,0 +1,532 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en-gb">
+<title>RomRaider :: View topic - How To: Get started with IDA and disassembly</title>
+
+<style type="text/css">
+<!--
+
+body {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+}
+
+img {
+	border: 0;
+}
+
+td {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+	line-height: 150%;
+}
+
+.code,
+.quote {
+	font-size: smaller;
+	border: black solid 1px;
+}
+
+.forum {
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+.topic {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.gensmall {
+	font-size: 8pt;
+}
+
+hr {
+	color: #888;
+	height: 3px;
+	border-style: solid;
+}
+
+hr.sep {
+	color: #aaa;
+	height: 1px;
+	border-style: dashed;
+}
+//-->
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Resize too large images
+	*/
+	var reimg_maxWidth = 640, reimg_maxHeight = 480, reimg_relWidth = 100;
+	var reimg_swapPortrait = true;
+	var reimg_loadingImg = "./images/spacer.gif";
+	var reimg_loadingStyle = "width: 16px; height: 16px; background: url(./styles/fisubsilver2/imageset/icon_reimg_loading.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_loadingAlt = "Loading...";
+	
+	var reimg_autoLink = true;
+	
+	var reimg_zoomImg = "./images/spacer.gif";
+	var reimg_zoomStyle = "width: 18px; height: 15px; background: url(./styles/fisubsilver2/imageset/icon_reimg_zoom_in.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_zoomHover = "filter: Alpha(Opacity=90); opacity: .90;";
+	
+	var reimg_zoomAlt = "Zoom in (real dimensions: %1$d x %2$d)";
+	var reimg_zoomTarget = "_highslide";
+	var reimg_ajax_url = "https://www.romraider.com/forum/reimg/reimg_ajax.php";
+
+	function reimg(img, width, height)
+	{
+		if (window.reimg_version)
+		{
+			reimg_resize(img, width, height);
+		}
+	}
+// ]]>
+</script>
+
+<script type="text/javascript" src="./reimg/reimg.js"></script>
+
+	
+<style type="text/css" media="screen, projection">
+<!--
+	
+	.tablebg .tablebg .postbody .reimg-zoom { display: none; }
+	
+	.reimg { width: 10%; height: auto; visibility: visible; }
+	
+-->
+</style>
+	
+<script type="text/javascript" src="./reimg/highslide/highslide-full.packed.js"></script>
+<link rel="stylesheet" type="text/css" href="./reimg/highslide/highslide.css" />
+	
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Light box for resized images
+	*/
+	
+	if (window.hs)
+	{
+		hs.graphicsDir = "./reimg/highslide/graphics/";
+		// Language settings for Highslide JS
+		hs.lang.cssDirection = "ltr";
+		hs.lang.loadingText = "Loading...";
+		hs.lang.loadingTitle = "Click to cancel";
+		hs.lang.focusTitle = "Click to bring to front";
+		hs.lang.fullExpandTitle = "Expand to actual size (f)";
+		hs.lang.creditsText = "Powered by <em>Highslide JS</em>";
+		hs.lang.creditsTitle = "Go to the Highslide JS homepage";
+		hs.lang.previousText = "Previous";
+		hs.lang.nextText = "Next";
+		hs.lang.moveText = "Move";
+		hs.lang.closeText = "Close";
+		hs.lang.closeTitle = "Close (esc)";
+		hs.lang.resizeTitle = "Resize";
+		hs.lang.playText = "Play";
+		hs.lang.playTitle = "Play slideshow (spacebar)";
+		hs.lang.pauseText = "Pause";
+		hs.lang.pauseTitle = "Pause slideshow (spacebar)";
+		hs.lang.previousTitle = "Previous (arrow left)";
+		hs.lang.nextTitle = "Next (arrow right)";
+		hs.lang.moveTitle = "Move";
+		hs.lang.number = "Image %1 of %2";
+		hs.lang.restoreTitle = "Click to close image, click and drag to move. Use arrow keys for next and previous.";
+		hs.dimmingOpacity = 0.75;
+	}
+	
+// ]]>
+</script>
+
+	
+<script type="text/javascript">
+// <![CDATA[
+	reimg_loading('./styles/fisubsilver2/imageset/icon_reimg_loading.gif');
+// ]]>
+</script>
+
+</head>
+<body>
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td colspan="2" align="center"><span class="Forum">RomRaider</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/">https://www.romraider.com/forum/</a></span></td>
+</tr>
+<tr>
+	<td colspan="2"><br /></td>
+</tr>
+<tr>
+	<td><span class="topic">How To: Get started with IDA and disassembly</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303">https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303</a></span></td>
+	<td align="right" valign="bottom"><span class="gensmall">Page <strong>1</strong> of <strong>12</strong></span></td>
+</tr>
+</table>
+
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 21, 2010 3:40 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>How To: Get started with IDA and disassembly</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />All of the 16-bit guidance in the following posts is from Elevenpoint7five.  Thank him for his help!  Blame me for any mistakes!<br /><br /><span style="font-weight: bold">Scope:</span><br /><br />This document is intended for people whose ECUs already have RomRaider/EcuFlash definitions.  If you want to understand in more detail how your ECU works, and you've read everything available on the forums, disassembling the ROM is the next step.  It's tedious, and it takes a lot of time, but it can give you insights into how and why the ECU does what it does.  Better yet, reverse engineering the ROM will allow you to create table definitions that you can use to modify new aspects of your tune.  All of the existing table definitions were created this way, and there are lots more tables that have not yet been figured out and defined.<br /><br />If your ROM has not yet been defined, I suggest choosing a ROM that has, and exploring that one first.  The existing definitions will give you a big head start in understanding what's inside that ROM.  Finding tables in an undocumented ROM will be easier after you gain some familiarity with a documented ROM.<br /><br /><span style="font-weight: bold">Stuff you'll need:</span><br /><br />1) A copy of the ROM you wish to reverse-engineer.  You can acquire this with EcuFlash and a Tactrix OpenPort that is compatible with the vehicle in question.<br /><br />2) An understanding of how a CPU works.  Concepts like instructions, pointers, flags, memory, registers, stacks, addressing, branching, hexadecimal notation and floating-point representation should be familiar to you already.  I'm not really sure how best to acquire this knowledge today.  I started 25 years ago with an 8-bit home computer and a reference manual.  It is routinely taught in college and perhaps advanced high school courses.  There are books, however I don't have any recommendations.  <br /><br />I'll cover some fundamentals below, but it is intended mostly to refresh the memories of people who already have some familiarity with the concepts.  If you have no formal eduction in this field I think that you will find it difficult to make progress based on this how-to alone - in that case I strongly suggest getting a book and/or taking a class.<br /><br />3) A reference to the instruction set for the CPU for that ROM was created for.  First you'll need to know what CPU your ECU uses.  If your ROM has been documented, just open the ROM in EcuFlash and look in the &quot;Rom Info&quot; section.  Then put &quot;renesas 7058&quot; into your favorite search engine (assuming your ROM uses a 7508 of course), and look for documentation. <br /><br /><!-- m --><a class="postlink" href="http://www.renesas.com/products/mpumcu/superh/sh7050/sh7058/Documentation.jsp">http://www.renesas.com/products/mpumcu/ ... tation.jsp</a><!-- m --><br /><br />If working with a ROM that has not been documented, you might be able to guess based on what similar ECUs used, but you might just have to open up the ECU and look for a part number.<br /><br />4) You'll need time.  Lots and lots of time.  Plan to spend a couple weeks of evenings to get familiar with the basics.<br /><br />5) You'll want my XmlToIdc utility.  This is a tool for importing the information in the existing definitions into IDA - it will give you a significant head start.  You can acquire it from this thread: <!-- l --><a class="postlink-local" href="http://www.romraider.com/forum/viewtopic.php?f=32&amp;t=6234">viewtopic.php?f=32&amp;t=6234</a><!-- l --><br /><br />6) A copy of IDA Pro.  You can acquire this in the same way that you would acquire any other software that sells for about $1000 per license.  By that I mean you should bust out your credit card and call the distributor, of course.  <br /><br /><!-- m --><a class="postlink" href="http://www.hex-rays.com/idapro/idaorder.htm">http://www.hex-rays.com/idapro/idaorder.htm</a><!-- m -->  <br /><br />On a related note, I am trying to get a reduced rate for us not-for-profit hobbyists.  I will start a separate thread about that if I have any luck.<br /><br />7) You should have a quest.  Why are you looking into your ROM?  This is tedious stuff, but having a purpose will help keep you focused and motivated.  I started out with an interest in LC and FFS, so my first quest was to find the rev limiter code, and figure out how it works.  If you are interested in a speed-density hack, you'll want to find the MAF code, and figure that out (hint: start by looking for references to the MAF scaling table).<br /><br /><span style="font-weight: bold">What's in a ROM?</span><br /><br />The ROM contains two types of information: code and data.  The code is the set of instructions that the CPU executes to read the sensors and manipulate the actuators that keep the engine running.  The data is the set of numbers that we think of as 'the tune.' I will also refer to the data as 'constants' below since their values don't change while the car is running (though it can be changed in RomRaider or EcuFlash).  You'll also be analyzing RAM, which contains the data that changes while the engine is running.  I'll refer to this data as 'variables' below since the values vary while the car is running (think of MAF and RPM, for example).<br /><br />All of this stuff - code, constants, and variables, in stored in memory at various addresses.  IDA will present the ROM and RAM to as one long series of memory locations and the information in memory at those addresses; in ROM the instructions and constant values are shown, and in RAM the values are not shown, since the values are only known when the car is actually running.<br /><br />IDA will make an effort to determine which parts of the ROM contain code, and it will perform a basic analysis of the code - displaying instructions in mnemonic form, linking load and store instructions to the addresses they're loading from and storing to, and so on.  But keep in mind that IDA's analyzer is not perfect - there will be times when you need to re-define sections of the ROM as code rather than data, and vice-versa.<br /><br /><span style="font-weight: bold">Frequently used commands in IDA</span><br /><br />1) Rename a memory location (press N).  IDA will generate names like &quot;sub_1234&quot; when it finds instructions that appear to be a subroutine at address 1234, or unk_FFFF2345 when it finds a reference to memory location FFFF2345.  If you suspect that FFFF2345 actually holds the engine coolant temperature, you should rename it CoolantTemperature so that you can recognize references to it in the code.  I would actually call it ProbablyCoolantTemperature at first, then NsfwCoolantTemperature when I am confident that's what it really is.  <br /><br />I think it's helpful to distinguish things that I discovered (or think I have discovered) from names for things that Merchgod discovered.  I have more confidence in his work than in my own.<br /><br />2) Rename a function (press ALT+P).  Same as above, but with a different keystroke, and function names are stored in a separate list from other memory location names.<br /><br />3) Follow cross-references (press X).  This is extremely useful.  If you'e found a memory location that holds something interesting, you'll probably want to hae a look at all of the code that refers to that memory location.  Pressing X will show you that list.  As a nice bonus, IDA will remember which item in the list you clicked on last, so you can bring up the list, move to the next item in the list, and jump to it, working your way down the list.<br /><br />4) Jump to an arbitrary address (press G).  Sometimes you don't have a reference to where you want to go.  Press G and enter the address directly, and you'll go there.<br /><br />5) Mark as code or data (press C or D).  As noted above, IDA's analysis isn't perfect.  Pressing D repeatedly will cause IDA to interpret the current address as a single byte, two bytes (also known as a &quot;word&quot;) or 4 bytes (also known as a &quot;long word&quot;).  Under the &quot;Options&quot; menu, in &quot;Setup data types&quot; you should check &quot;4 - Float&quot; to get floating-point representation into the set of data type options.  <br /><br /><span style="font-weight: bold">How do you open a ROM? (32-bit)</span><br /><br />1) Get the DSchultz' processor register listing from this thread:<br /><!-- l --><a class="postlink-local" href="http://www.romraider.com/forum/viewtopic.php?f=25&amp;t=5825&amp;start=0">viewtopic.php?f=25&amp;t=5825&amp;start=0</a><!-- l --><br />Copy it to IDA's cfg directory.<br /><br />2) Use the &quot;File, Open&quot; menu just as you would with any other Windows application.<br /><br />3) Choose your processor type.  <br /><br />4) IDA will prompt you to create a RAM segment as you open the ROM.  Specify the RAM start address and length.  The specifics are below, courtesy of DSchultz, but set the length to whatever it takes to make RAM extend to 0xFFFFFFFF.  Special-purpose registers (for IO, etc) are located at the top end.<br /><br />For 7055, Start is 0xFFFF6000, physical RAM length is 0x7FFF, but enter 0x9FFF.<br />For 7058, Start is 0xFFFF0000, physical RAM length is 0xBFFF, but enter 0xFFFF.<br />Be sure to check the box to make the RAM segment.<br /><br />There's a way to create one later as well.  After the ROM is opened, click &quot;Edit, Segments, Create Segment&quot; in the menu.  For a 7058 CPU, fill in the box as follows:<br /><br />	Segment name: RAM<br />	Start address: FFFF0000<br />	Length: BFFF (End: FFFFBFFF)<br />	Base: 0<br />	Class: (empty)<br />	32-bit segment<br /><br />5) If you're working with an ECU for which definitions already exist, use XmlToIdc to tell IDA the names for the tables and extended parameters.  See the XmlToIdc thread for details.  You can't do standard parameters yet, but you will in a few minutes - keep reading.<br /><br />6) Unfold the startup/reset code.  The first 4 bytes of ROM are a pointer to the code that runs when the ECU is powered up.  Jump to that location (AAC in the ROM I'm looking at) and press 'c' to mark it as 'code.' You'll see a small portion of the ROM disassembled.  <br /><br />7) Make an analysis pass.  From the &quot;Options&quot; menu, click &quot;General.&quot;  Under &quot;Kernel Options 1&quot; select &quot;Make final analysis pass.&quot;  Click &quot;Reanalyze Program.&quot;  IDA should spend a minute analyzing the ROM, marking some sections as code and others as data.  This is very helpful, but again it is not perfect - there will be sections of code erroneously marked as data, and vice-versa.<br /><br />8 ) Find the SSM base, using DSchultz's method.<br /><br />The &quot;SSM base&quot; is the base (starting address) of an array of function pointers that handle the standard SSM queries.  Most of those functions just load a value from some memory location, do a conversion, and send the value back to the SSM device (i.e. the data logger).  With the knowledge of what the standard queries are (from logger.xml and XmlToIdc.exe) you can determine what those memory locations are.  More about this in the next post...<br /><br />Finding the SSM base is a good first exercise in reverse engineering.  I refer you to DSchultz's thread for a detailed description:<br /><br /><!-- l --><a class="postlink-local" href="http://www.romraider.com/forum/viewtopic.php?f=25&amp;t=6295">viewtopic.php?f=25&amp;t=6295</a><!-- l --><br /><br /><span style="font-weight: bold">How do you open a ROM? (16-bit)</span><br /><br /><a href="http://www.romraider.com/forum/viewtopic.php?t=6303&amp;start=122" onclick="window.open(this.href);return false;" class="postlink"><span style="font-weight: bold">&gt;&gt;&gt; See this new and improved 16bit post for opening ROMs</span></a> (dschultz)<br /><br />1) You will need to convert your 160kb ROM to 192kb. To do this you will need a hex editor. EleventPoint7five recommends TinyHexer. Open the ROM in the hex editor of your choice and navigate to 0x20000. In TinyHexer you can hit ‘ctrl + g’ to enter an address. You then need to insert a RAM space(basically all 0’s) that is 0x08000 long. Attached is a file you can add in with TinyHexer to do this for you. You click ‘File’ the ‘Insert File’ then save your newly converted ROM.<br /><br />2)Open your ROM with IDA.<br /><br />3)Change the processor type to Motorola Series: 6816. Click Kernel Options 1 and make sure ‘Make Final Analysis Pass’ is checked. It should be by default, but just make sure. Hit ok.<br /><br />4)Once the little bar at the top has stopped moving and changing colors, your ROM is loaded and analyzed!<br /><br />5)Hit ‘g’, type 0x220 into the input field and hit ok, hit ‘c’ and wait a minute. Now your ROM is “unfolded” or “opened up”<br /><br />0x220 is the entry point for every 16bit ROM known so far. It will open up a very large portion of the ROM, enough for you to edit/define almost anything you’ll ever want to. There are a few other smaller entry points that can be found in the processor data sheets. From here you can use the same commands with IDA as the 32bit ROMs.<br /><br /><span style="font-weight: bold">The easy part is done.</span><br /><br />At this point, you should have a ton of code and data in front of you, with some clues about what some of it means.  The rest is up to you.<br /><br /><span style="font-weight: bold">Additional resources</span><br /><br />IDA Pro reference material, and also some data sheets for Evo ECUs:<br /><!-- m --><a class="postlink" href="http://www.evoscan.com/technical-vehicle-manuals/17-evo-ecu-dissassembly">http://www.evoscan.com/technical-vehicl ... ssassembly</a><!-- m --><br />(thanks to dschultz for this link)
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 21, 2010 3:40 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Here are some tips on making sense of the rest of the code you have just disassembled.<br /><br />It is useful to examine each of the SSM handlers to find what memory locations they look at.  For example, SsmGetExhaustGasTemperature looks at one memory location, calls a subroutine to convert its value, and returns.  So, that memory location is probably the exhaust gas temperature.  Follow XREFs to that location to see where it gets used.<br /><br />Pick some tables at random (XmlToIdc creates names that start with &quot;Table&quot;) and follow XREFs to the code that uses those tables.  You'll probably notice that the code sets fr4 and fr5, then jsr's to a subroutine.  Rename those subroutines to Pull2d or Pull3d, as appropriate.  Now you'll be able to spot 2d and 3d table lookups anywhere in the code.<br /><br />When you find a call to Pull2d or Pull3d, look upwards from the jsr instruction and see if you can figure out what's in fr4 (and, for 3d tables, fr5).  Sometimes you can find that they come from memory locations that are already known, so you can tell what the table axes are.  Also look at what happens to fr0 after the table pull.  The more variables you define, the more you'll be able to figure out about the various Pull operations, since you'll know what the inputs and outputs are.  <br /><br />When you find a memory location in RAM and you have a good theory about what it is used for, add it to your logger definition as an extended parameter.  Then go for a drive, and see if the logger shows what you expected to see.<br /><br />When you find a memory location in ROM and you think you know what's in it, add it to your ECU definition, open the ROM, and see if it shows what you expected to find.  I prefer EcuFlash for this - the ROM definition file format is easier to work with, and EcuFlash can open a new ROM much more quickly than RomRaider.  Also note that EcuFlash has UI for tweaking table definitions.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 21, 2010 3:41 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><span style="font-weight: bold">Quirks of the SHx instruction set.</span><br /><br /><span style="font-weight: bold">1. Delayed Branching</span><br /><br />For the most part, the SHx chips use a pretty straightforward RISC model.  There are instructions to load values from memory, store values in memory, operate on those values, compare and branch, and so on.<br /><br />But here's something that will drive you nuts for a while:<br /><br /><img src="http://i193.photobucket.com/albums/z151/Legacy_NSFW/Tuning/FlkcCheck-1.png" alt="Image" class="reimg" /><br /><br />Why is there a no-op right after the <span style="font-weight: bold">bf/s</span> instruction?<br />What's the point of storing the value of r0 after that last <span style="font-weight: bold">bra </span>instruction?<br /><br />Welcome to the magic of the 'delayed branch.'  When you see a branch instruction, keep in mind that the CPU executes the instruction <span style="font-weight: bold">after </span>the branch <span style="font-weight: bold">before </span>actually taking the branch.  You will see this with function calls as well (<span style="font-weight: bold">jsr</span> instructions).  Even after reading this in the instruction listing, it still took me a couple nights of occasional confusion before I got into the habit of looking at the instructions after the branches.<br /><br /><span style="font-weight: bold">2.  ZK = 0 (16-bit only)</span><br /><br />With these ROMs, ZK is always 2. So, if you see an instruction like:<br /><br />ldd 0F0h, Z<br /><br />then:<br /><br />Z = ZK &amp; IZ<br />IZ = 0x00F0 (bits 0 - 15)<br />ZK = 0x2 (bits 16-20)<br /><br />So, Z = 0x200F0 (20-bit RAM reference)<br /><br />YK is not always 0x2, but where Y is referenced as it is relates to map offsets it is.  You can verify this by going back far enough and seeing where yk is changed, which is usually through the tekb, tbky instructions.  EK always equal to 2.<br /><br /><span style="font-weight: bold">Indirect Addressing</span><br /><br />The 32-bit CPUs support reading and writing memory using a base address and an offset from that address. The base is often R0 in earlier ROMs, and often the GBR register in later ROMs. R15 is effectively a stack pointer, so when you see R15 being used for indirect addressing, you're looking at references to what were local variables in the original C code (I'll admit that I have no <span style="font-style: italic">solid </span>evidence that the original code was C, but the assembly code strongly resembles the output of GCC.)<br /><br />Indirect addressing makes the code a bit harder to follow, but there's an IDA feature that will help make sense of it:<br /><br /><div class="quotetitle">td-d wrote:</div><div class="quotecontent">I've found a fantastic trick to resolve indirect addressing (well, for those of us who have not yet upgraded to IDA 6.3), using user defined offsets.<br /><br />for example:<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">mov.l&nbsp; &nbsp;#unk_FFFF636C, r0<br />ldc&nbsp; &nbsp; &nbsp;r0, gbr<br />add&nbsp; &nbsp; &nbsp;#(unk_FFFF6360 - unk_FFFF636C), r15<br />mov.l&nbsp; &nbsp;#Ram_Vehicle_Speed_0, r2<br />fmov.s&nbsp; @r2, fr15<br />mov.l&nbsp; &nbsp;#Ram_Memorised_Cruise_Speed_, r2<br />fmov.s&nbsp; @r2, fr5<br />fmov&nbsp; &nbsp; fr5, fr14</div><br /><br />Copy the address of the base - GBR, or whatever base is used.  Select the indirect reference, and press control-R to get to the user defined offset GUI window.  Paste the address into the base address field and enter - it nicely resolves the reference for you, and as a bonus, also creates an X-ref.  Winner!</div><br /><br /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">Also check the box that says: treat the address as a plain number, or you get what GBR references too.</div>
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 21, 2010 3:41 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><span style="font-weight: bold">Common patterns in the data - notable data structures and address ranges, etc</span><br /><br />16-bit content by Eleventpoint7five, 32-bit content by NSFW.  Editing (or lack thereof) also by NSFW.  There's probably room for some merging of the two, but that hasn't happened yet.  <br /><br /><span style="font-size: 85%; line-height: normal"><span style="font-style: italic"><span style="color: #0000FF">Edit: dschultz - added more table/series structure definition detail for 16 bit ECU</span></span></span><br /><a href="https://github.com/dschultzca/DefinitionTools/raw/master/src/IDA/Format16bitTABLE.idc" onclick="window.open(this.href);return false;" class="postlink">16bit Table formatting IDA script</a><br /><br /><span style="font-weight: bold">2D table structure layout:</span><br />---------------------<br />axis values<br />axis length - 1 (i.e.: 0 based)<br />type   (this is the byte referenced in subroutines, i.e.: Table_)<br />data values<br />When reading the map:<br />idxY = table map type byte (function assumes yk=2).<br />regB (byte) or regD (word) = axis (depending on data type).<br /><br /><br /><span style="font-weight: bold">3D table structure layout:</span><br />---------------------<br />y-axis values<br />y-axis length - 1 (i.e.: 0 based)<br />x-axis values<br />x-axis length - 1 (i.e.: 0 based)<br />type   (this is the byte referenced in subroutines, i.e.: Table_)<br />data values<br />When reading the map:<br />idxY = table map type byte 16-bit offset<br />regB (byte) or regD (word) = x-axis (depending on data type)<br />regE = y-axis<br /><br /><br /><span style="font-weight: bold">2D series structure layout:</span><br />----------------------<br />axis step<br />axis start<br />number of data items - 1 (i.e.: 0 based)<br />type   (this is the byte referenced in subroutines, i.e.: Table_)<br />data values<br /><br /><br /><span style="font-weight: bold">3D series structure layout:</span><br />----------------------<br />y-axis step<br />y-axis start<br />x-axis series length - 1 (i.e.: 0 based)<br />x-axis step<br />x-axis start<br />x-axis series length - 1 (i.e.: 0 based)<br />type   (this is the byte referenced in subroutines, i.e.: Table_)<br />data values<br /><br /><span style="font-weight: bold">Type byte - bit definition:</span><div class="codetitle"><b>Code:</b></div><div class="codecontent">7--4-2-0<br />00000000<br />||||||||- bit 0: 0 = byte, 1 = word (X or single axis data type)<br />|||||||- <br />||||||- bit 2: 0 = byte, 1 = word (Y or dual axis data type)<br />|||||- <br />||||- bit 4: 0 = byte, 1 = word (data values)<br />|||- <br />||- <br />|- bit7: 0 = Table, 1 = Series</div><br /><br /><span style="font-weight: bold">Layout of a 2D table in memory (32-bit)</span><br /><br />The table format information below was <a href="http://forums.openecu.org/viewtopic.php?f=9&amp;t=503" onclick="window.open(this.href);return false;" class="postlink">originally posted by XSWREX at the OpenEcu.org forums</a>, and I have changed the presentation a little bit here for readability.<br /><br />row_count: 2 bytes indicating the number of elements<br />data_bits: 2 bytes indicating the type of data (0 = 32-bit*, 4 = 8-bit, 8 = 16-bit)<br />row_address: 4 bytes pointing to the start of the row heading value array<br />data_address: 4 bytes pointing to the start of the data array<br /><br />In some ROMs, if data_bits is not zero, the values above may be followed by:<br />multiplier: 4 bytes indicating a multiplier for data<br />offset: 4 bytes indicating an offset to the data values<br /><br />Think &quot;y = mx+b&quot; where the multiplier and offset values are the M and B in that function.<br />Tables containing 32 bit data are not followed by scaling values.<br /><br /><span style="font-weight: bold">Layout of a 3D table in memory (32-bit)</span><br /><br />column_count: 2 bytes indicating the number of columns<br />row_count: 2 bytes indicating the number of rows<br />column_address: 4 bytes pointing to the start of the column heading array<br />row_address: 4 bytes pointing to the start of the row heading array<br />data_address: 4 bytes pointing to the start of the value matrix<br />data_bits:  4 bytes indicating the type of data (0 = 32-bit*, 4 = 8-bit, 8 = 16-bit)<br /><br />In some ROMs this may be followed by:<br />multiplier: 4 bytes indicating a multiplier for data<br />offset: 4 bytes indicating an offset to the data values<br /><br />The multiplier and offset are floating point numbers - 4 bytes, single-precision, IEEE format.  These are not always present.  <br /><br />* A value of zero in the data_bits field usually indicates float values, but may just mean that there is no offset and multiplier.  I'm not entirely clear on this.<br /><br /><span style="font-weight: bold">Using the Pull routines to find more tables</span><br /><br />If you look for references to tables, you'll find that they're typically loaded into a register right before a call to a function.  That function is something that you'll want to label as &quot;Pull2d&quot; or &quot;Pull3d&quot; depending on the table type.  Then keep an eye out for other calls to Pull2d or Pull3d.  That will make it easier to recognize usages of not-yet-documented tables.  <br /><br />You may also find specialized versions of the Pull routines, for example there's one in the 32-bit ROMs which is used only for tables that have 8-bit cell values.<br /><br />With an understanding these types and data layouts, you can find tables like Target Boost and Base Timing. If you're just learning, it's best to find stuff that is already defined study the code that uses them to familiarize yourself with the ROM.<br /><br /><span style="font-weight: bold">1D Tables (16- and 32-bit)</span><br /><br />There are also constant values scattered throughout the code.  These are referred to as 1D tables in the ROM definition, but they're really just the addresses of const values.  You'll just have to find those one at a time because there is no extra data structure around them that indicates they're special.<br /><br />For example, when investigating the fuel pump duty cycle tables, I (NSFW) found some instructions that were loading values from memory into floating-point registers.  Viewing those memory locations as floating-point values, I found values of 33% and 66%  - since I recognized those values from logging Fuel Pump Duty Cycle, I knew I had some memory locations that were worth defining as a 1D table.<br /><br /><span style="font-weight: bold">Interesting addresses and ranges (32-bit)</span><br />My Legacy's ROM has most of the table data from 0xC0000 and above.  There are some tables stored at lower addresses (mostly in the 0x82A00+ range) but there is no code at higher addresses.<br /><br />My ROM also has the calibration ID (A2WC522N) stored at 0xC0000.  I am not sure how common this is - I may revise this text if I find out that it's not.  <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" /><br /><br />Our CPUs use an array of pointers to interrupt and exception handlers, which is typically located near the end of the ROM image.  Mine for example starts at FFC50, and runs almost to the end.  The first element of array is stored in a dedicated register called the Vector Base Register, or VBR.<br /><br />The very last doubleword of my ROM image is a pointer to the calibration ID &quot;A2WC522N&quot; at address 0x2000 (yes, it's in the ROM in two places).  The doubleword prior to that is a pointer to the code that sets the VBR.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 21, 2010 3:53 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><span style="font-weight: bold">Calls to the Pull routines in 16-bit code</span><br /><br />The code will send axis information to the map parsing routines:<br /><br />For a 2D map:<br />iy = table map type byte 16-bit offset (function assumes yk=2).<br />b or d = y-axis (depending on data type).<br /><br />For a 3D map:<br />iy = table map type byte 16-bit offset<br />b or d = x-axis (depending on data type)<br />e = y-axis.<br /><br /><span style="font-weight: bold">Calls to the Pull routines in 32-bit code</span><br /><br />coming soon.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>wrxsti-l</b> [ Mon Jun 21, 2010 4:00 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Any chance of adding the details for 16bit? I don't have access to 32bit, but would be willing to put in many many hours to learn via 16bit <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" /><br /><br />Leslie
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 21, 2010 4:04 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I don't actually know anything about the 16-bit ECUs, but I suspect it's very similar.  Hopefully someone who is familiar with both can point out where what's different about 16-bit ECUs.  It probably only requires a different processor choice and RAM address range.  If that's really all it takes, I'll shorten the title.  <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" />
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Mon Jun 21, 2010 7:05 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">4) IDA will prompt you to create a RAM segment as you open the ROM. I've had no luck with this dialog box</div><br />This works for me every time.<br />When you use that dialogue box during the initial load, specify the RAM start address and length:<br />For 7055, Start is 0xFFFF6000 and Length is 0x7FFF<br />For 7058, Start is 0xFFFF0000 and Length is 0xBFFF<br />and check the box to make the RAM segment.<br />More processors details here: <!-- m --><a class="postlink" href="http://romraider.com/forum/viewtopic.php?t=5825">http://romraider.com/forum/viewtopic.php?t=5825</a><!-- m -->
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Mon Jun 21, 2010 7:09 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">Reserved for common patterns in the data (ranges, table structure, etc)</div><br />Like 2D and 3D table definitions...<br /><!-- l --><a class="postlink-local" href="http://www.romraider.com/forum/viewtopic.php?f=34&amp;t=5603&amp;start=58">viewtopic.php?f=34&amp;t=5603&amp;start=58</a><!-- l -->
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Mon Jun 21, 2010 8:54 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Thanks for this guide - I was missing a few key parts and you've definitely set me straight.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>elevenpoint7five</b> [ Mon Jun 21, 2010 9:21 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Very nice man! I wish I had some more time right now to get a better grasp on the 32bit stuff. I'm able to work with it, but it takes me forever! Took me 3 weeks to put together defs for the 2010 WRX! Bill could have had that done in a day! Lol!<br /><br /><div class="quotetitle">wrxsti-l wrote:</div><div class="quotecontent">Any chance of adding the details for 16bit? I don't have access to 32bit, but would be willing to put in many many hours to learn via 16bit <img src="./images/smilies/icon_smile.gif" alt=":)" title="Smile" class="reimg" /><br /><br />Leslie</div><br />I plan to have a similar write up for 16bit stuff over the winter when I am laid off. I will try to go as in depth as possible and explain as much as I can. If you have any specific questions let me know and I will try to help you out sooner.<br /><br />Andy
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 21, 2010 9:27 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent"><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">Reserved for common patterns in the data (ranges, table structure, etc)</div><br />Like 2D and 3D table definitions...<br /><!-- l --><a class="postlink-local" href="http://www.romraider.com/forum/viewtopic.php?f=34&amp;t=5603&amp;start=58">viewtopic.php?f=34&amp;t=5603&amp;start=58</a><!-- l --></div><br /><br />Yes!  Thanks for the link.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Mon Jun 21, 2010 11:19 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I just updated the floating-point value conversion utility in 2nd message to make it a little more usable.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>wrxsti-l</b> [ Tue Jun 22, 2010 2:30 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">elevenpoint7five wrote:</div><div class="quotecontent">I will try to go as in depth as possible and explain as much as I can. If you have any specific questions let me know and I will try to help you out sooner.<br /><br />Andy</div><br />CHeers Andy, that would be awesome mate. <br /><br />Leslie
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Tue Jun 22, 2010 4:18 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">I just updated the floating-point value conversion utility in 2nd message to make it a little more usable.</div><br />Here is a set of functions for Excel that you can use.  I got them from the Interweb somewhere.<br />The HEX2SNG is useful to convert hex float to a single decimal value.<br />44960000 =HEX2SNG(A1) result-&gt; 1200<br /><br />Or <a href="http://www.h-schmidt.net/FloatApplet/IEEE754.html" onclick="window.open(this.href);return false;" class="postlink"><span style="font-weight: bold">this calculator</span></a> on the web.
+
+		
+			<br clear="all" /><br />
+
+			<table class="tablebg" width="100%" cellspacing="1">
+			<tr>
+				<td><b class="genmed">Attachments: </b></td>
+			</tr>
+			
+				<tr>
+					<td>
+			<span class="genmed">
+				<img src="./styles/fisubsilver2/imageset/icon_topic_attach.gif" alt="" title="" /> 
+				<a href="./download/file.php?id=12192">Excel-VBA-Functions.txt</a> [8.23 KiB]
+			</span><br />
+			<span class="gensmall">Downloaded 100 times</span>
+		
+
+		<br />
+	</td>
+				</tr>
+			
+			</table>
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+<hr width="85%" />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line. If you
+	refuse to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2006
+// -->
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td><span class="gensmall">Page <strong>1</strong> of <strong>12</strong></span></td>
+	<td align="right"><span class="gensmall">All times are UTC - 9 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]</span></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><span class="gensmall">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</span></td>
+</tr>
+</table>
+
+</body>
+</html>

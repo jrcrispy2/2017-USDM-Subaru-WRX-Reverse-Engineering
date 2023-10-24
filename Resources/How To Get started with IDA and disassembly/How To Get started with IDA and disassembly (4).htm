@@ -1,0 +1,577 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en-gb">
+<title>RomRaider :: View topic - How To: Get started with IDA and disassembly</title>
+
+<style type="text/css">
+<!--
+
+body {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+}
+
+img {
+	border: 0;
+}
+
+td {
+	font-family: Verdana,serif;
+	font-size: 10pt;
+	line-height: 150%;
+}
+
+.code,
+.quote {
+	font-size: smaller;
+	border: black solid 1px;
+}
+
+.forum {
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+.topic {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.gensmall {
+	font-size: 8pt;
+}
+
+hr {
+	color: #888;
+	height: 3px;
+	border-style: solid;
+}
+
+hr.sep {
+	color: #aaa;
+	height: 1px;
+	border-style: dashed;
+}
+//-->
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Resize too large images
+	*/
+	var reimg_maxWidth = 640, reimg_maxHeight = 480, reimg_relWidth = 100;
+	var reimg_swapPortrait = true;
+	var reimg_loadingImg = "./images/spacer.gif";
+	var reimg_loadingStyle = "width: 16px; height: 16px; background: url(./styles/fisubsilver2/imageset/icon_reimg_loading.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_loadingAlt = "Loading...";
+	
+	var reimg_autoLink = true;
+	
+	var reimg_zoomImg = "./images/spacer.gif";
+	var reimg_zoomStyle = "width: 18px; height: 15px; background: url(./styles/fisubsilver2/imageset/icon_reimg_zoom_in.gif) top left no-repeat; filter: Alpha(Opacity=45); opacity: .45;";
+	var reimg_zoomHover = "filter: Alpha(Opacity=90); opacity: .90;";
+	
+	var reimg_zoomAlt = "Zoom in (real dimensions: %1$d x %2$d)";
+	var reimg_zoomTarget = "_highslide";
+	var reimg_ajax_url = "https://www.romraider.com/forum/reimg/reimg_ajax.php";
+
+	function reimg(img, width, height)
+	{
+		if (window.reimg_version)
+		{
+			reimg_resize(img, width, height);
+		}
+	}
+// ]]>
+</script>
+
+<script type="text/javascript" src="./reimg/reimg.js"></script>
+
+	
+<style type="text/css" media="screen, projection">
+<!--
+	
+	.tablebg .tablebg .postbody .reimg-zoom { display: none; }
+	
+	.reimg { width: 10%; height: auto; visibility: visible; }
+	
+-->
+</style>
+	
+<script type="text/javascript" src="./reimg/highslide/highslide-full.packed.js"></script>
+<link rel="stylesheet" type="text/css" href="./reimg/highslide/highslide.css" />
+	
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Light box for resized images
+	*/
+	
+	if (window.hs)
+	{
+		hs.graphicsDir = "./reimg/highslide/graphics/";
+		// Language settings for Highslide JS
+		hs.lang.cssDirection = "ltr";
+		hs.lang.loadingText = "Loading...";
+		hs.lang.loadingTitle = "Click to cancel";
+		hs.lang.focusTitle = "Click to bring to front";
+		hs.lang.fullExpandTitle = "Expand to actual size (f)";
+		hs.lang.creditsText = "Powered by <em>Highslide JS</em>";
+		hs.lang.creditsTitle = "Go to the Highslide JS homepage";
+		hs.lang.previousText = "Previous";
+		hs.lang.nextText = "Next";
+		hs.lang.moveText = "Move";
+		hs.lang.closeText = "Close";
+		hs.lang.closeTitle = "Close (esc)";
+		hs.lang.resizeTitle = "Resize";
+		hs.lang.playText = "Play";
+		hs.lang.playTitle = "Play slideshow (spacebar)";
+		hs.lang.pauseText = "Pause";
+		hs.lang.pauseTitle = "Pause slideshow (spacebar)";
+		hs.lang.previousTitle = "Previous (arrow left)";
+		hs.lang.nextTitle = "Next (arrow right)";
+		hs.lang.moveTitle = "Move";
+		hs.lang.number = "Image %1 of %2";
+		hs.lang.restoreTitle = "Click to close image, click and drag to move. Use arrow keys for next and previous.";
+		hs.dimmingOpacity = 0.75;
+	}
+	
+// ]]>
+</script>
+
+	
+<script type="text/javascript">
+// <![CDATA[
+	reimg_loading('./styles/fisubsilver2/imageset/icon_reimg_loading.gif');
+// ]]>
+</script>
+
+</head>
+<body>
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td colspan="2" align="center"><span class="Forum">RomRaider</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/">https://www.romraider.com/forum/</a></span></td>
+</tr>
+<tr>
+	<td colspan="2"><br /></td>
+</tr>
+<tr>
+	<td><span class="topic">How To: Get started with IDA and disassembly</span><br /><span class="gensmall"><a href="https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303">https://www.romraider.com/forum/viewtopic.php?f=40&amp;t=6303</a></span></td>
+	<td align="right" valign="bottom"><span class="gensmall">Page <strong>5</strong> of <strong>12</strong></span></td>
+</tr>
+</table>
+
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Fri Jul 09, 2010 10:50 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">Fiend wrote:</div><div class="quotecontent"><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">Which manual are you referring to, the CPU or the instruction set?<br />The hardware manual explains how to access the peripherals.  I have found how all 32 of the A/D converters are read and stored in RAM.  Still working on other things though, like ports and serial stuff.<br /><br />I believe there is a thread somewhere here that described GBR.</div><br /><br />Ah, I was reading just the CPU manual, I didn't realize there was a hardware manual.  I'll see if I can find it.  I didn't think to search for GBR.<br /><br />Thanks.</div><br />Did you find what you were looking for?<br /><div class="quotetitle">The Manual wrote:</div><div class="quotecontent">The global base register functions as a base address for the indirect GBR addressing mode to transfer data to the registers of on-chip peripheral modules.</div>
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Fri Jul 09, 2010 12:43 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">Did you find what you were looking for?<br /><div class="quotetitle">The Manual wrote:</div><div class="quotecontent">The global base register functions as a base address for the indirect GBR addressing mode to transfer data to the registers of on-chip peripheral modules.</div></div><br /><br />I found the hardware manual, but I still don't quite get how the GBR is used.  For instance, what offsets do we use to access the various peripherals via the GBR?  I look at the GBR as a virtualized address segment such that perhaps addresses 0x0000000 to 0x000000FF might go to one peripheral while 0x00000100 to 0x0000FFFF might represent another.  For example, what does this do?<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">mov.l&nbsp; &nbsp;off_BD16C, r0 ; word_98414&nbsp; &nbsp;; 2x2 table with 16-bit data elements<br />ROM:000BD01C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mov.l&nbsp; &nbsp;r0, @(h'E4,gbr)<br />ROM:000BD01E&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mov.l&nbsp; &nbsp;r0, @(h'E8,gbr)<br /></div><br /><br />To me this states:<br /><br />Move the address of the table into whatever gbr + 228 and gbr + 232 points to.  By the description from the hardware manual, I assume these two gbr addresses point to two registers on one or more peripherals?<br /><br />My question is, how do we know what gbr + 228 and gbr + 232 represent?
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Fri Jul 09, 2010 2:16 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Look up the instruction that sets GBR and then search for that in the code.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">LDC&nbsp; &nbsp;Rm,GBR&nbsp; &nbsp; &nbsp; Rm → GBR&nbsp; &nbsp;or<br />LDC.L @Rm+,GBR&nbsp; &nbsp; (Rm) → GBR, Rm + 4 → Rm</div><br />It should be 4?1E or 4?17 where ? is the register Rm number, i.e.: using R15 it would be 4F17.<br />You will then know what the base address is for those mov.l commands.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Fri Jul 09, 2010 3:31 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent">Look up the instruction that sets GBR and then search for that in the code.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">LDC&nbsp; &nbsp;Rm,GBR&nbsp; &nbsp; &nbsp; Rm → GBR&nbsp; &nbsp;or<br />LDC.L @Rm+,GBR&nbsp; &nbsp; (Rm) → GBR, Rm + 4 → Rm</div><br />It should be 4?1E or 4?17 where ? is the register Rm number, i.e.: using R15 it would be 4F17.<br />You will then know what the base address is for those mov.l commands.</div><br /><br />I figured as much but <span style="font-style: italic">what</span> do those addresses point to?  Which peripherals, etc?  Maybe I'm misunderstanding the concept.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sat Jul 10, 2010 5:41 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle"><b>Quote:</b></div><div class="quotecontent">what do those addresses point to? Which peripherals, etc? </div><br />You're going to have to did through the processor manual to figure that out once you know the final address.<br />Appendix A is a summarized list of the peripheral's addresses.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Sat Jul 10, 2010 9:38 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent"><div class="quotetitle"><b>Quote:</b></div><div class="quotecontent">what do those addresses point to? Which peripherals, etc? </div><br />You're going to have to did through the processor manual to figure that out once you know the final address.<br />Appendix A is a summarized list of the peripheral's addresses.</div><br /><br />Gotcha.  Never looked in Appendix A lol...
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Fri Jul 23, 2010 1:35 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />So I've been looking at the 2010 STi SE ROM and comparing it to my defined 2005 OBXT ROM.  Some things are the same and many things are not  <img src="./images/smilies/icon_wink.gif" alt=":wink:" title="Wink" class="reimg" /> <br /><br />I've noticed the latest ROMs seem to make tremendous use of GBR.<br /><div class="quotetitle">The Manual wrote:</div><div class="quotecontent">Global base register (GBR):<br />Indicates the base address of the indirect GBR addressing mode. The indirect GBR addressing mode is used in data transfer for on-chip peripheral module register areas and in logic operations.</div><br /><br />For example, here's code that transfers the A to D registers to RAM on the older 2005 ROM.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:00006A40 D4 46&nbsp; &nbsp; mov.l&nbsp; &nbsp;@(h'118,pc), r4&nbsp; &nbsp;; &#91;00006B5C&#93; = ADDR0_2RAM ; 0xFFFF2D1C<br />ROM:00006A42 92 81&nbsp; &nbsp; mov.w&nbsp; &nbsp;@(h'102,pc), r2&nbsp; &nbsp;; &#91;00006B48&#93; = ADDR0H_B<br />ROM:00006A44 63 21&nbsp; &nbsp; mov.w&nbsp; &nbsp;@r2, r3<br />ROM:00006A46 24 31&nbsp; &nbsp; mov.w&nbsp; &nbsp;r3, @r4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; r4 = 0xFFFF2D1C<br />ROM:00006A48 91 7F&nbsp; &nbsp; mov.w&nbsp; &nbsp;@(h'FE,pc), r1&nbsp; &nbsp; ; &#91;00006B4A&#93; = ADDR1H_B<br />ROM:00006A4A 60 11&nbsp; &nbsp; mov.w&nbsp; &nbsp;@r1, r0<br />ROM:00006A4C 81 41&nbsp; &nbsp; mov.w&nbsp; &nbsp;r0, @(2,r4)&nbsp; &nbsp; &nbsp; &nbsp;; r4 = 0xFFFF2D1E<br />ROM:00006A4E 93 7D&nbsp; &nbsp; mov.w&nbsp; &nbsp;@(h'FA,pc), r3&nbsp; &nbsp; ; &#91;00006B4C&#93; = ADDR2H_B<br />ROM:00006A50 60 31&nbsp; &nbsp; mov.w&nbsp; &nbsp;@r3, r0<br />ROM:00006A52 81 42&nbsp; &nbsp; mov.w&nbsp; &nbsp;r0, @(4,r4)&nbsp; &nbsp; &nbsp; &nbsp;; r4 = 0xFFFF2D20<br />ROM:00006A54 72 06&nbsp; &nbsp; add&nbsp; &nbsp; &nbsp;#6, r2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; r2 = 0xFFFFF806<br />ROM:00006A56 60 21&nbsp; &nbsp; mov.w&nbsp; &nbsp;@r2, r0<br />ROM:00006A58 81 43&nbsp; &nbsp; mov.w&nbsp; &nbsp;r0, @(6,r4)&nbsp; &nbsp; &nbsp; &nbsp;; r4 = 0xFFFF2D22 ssmMassAirFlowVolts2B<br />ROM:00006A5A 71 06&nbsp; &nbsp; add&nbsp; &nbsp; &nbsp;#6, r1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; r1 = 0xFFFFF808<br />ROM:00006A5C 60 11&nbsp; &nbsp; mov.w&nbsp; &nbsp;@r1, r0<br /></div><br />As you can see this makes use of a few general purpose registers to walk the A to D and RAM locations.<br /><br />But in the newer ROM it's a bit different as it performs the same function but making extensive use of GBR.<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ROM:000040D8 EE F8&nbsp; &nbsp; mov&nbsp; &nbsp; &nbsp;#h'FFFFFFF8, r14<br />ROM:000040DA 4E 18&nbsp; &nbsp; shll8&nbsp; &nbsp;r14&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; after shift left 8, r14 = 0xFFFFF800<br />ROM:000040DC 60 E1&nbsp; &nbsp; mov.w&nbsp; &nbsp;@r14, r0&nbsp; &nbsp; &nbsp; &nbsp; ; read ADDR0H_B<br />ROM:000040DE C1 00&nbsp; &nbsp; mov.w&nbsp; &nbsp;r0, @(0,gbr)&nbsp; &nbsp; ; write ADDR0H_B to GBR (0xFFFF4024)<br />ROM:000040E0 85 E1&nbsp; &nbsp; mov.w&nbsp; &nbsp;@(2,r14), r0&nbsp; &nbsp; ; r14+2 = 0xFFFFF802<br />ROM:000040E2 C1 01&nbsp; &nbsp; mov.w&nbsp; &nbsp;r0, @(2,gbr)&nbsp; &nbsp; ; write ADDR1H_B to 0xFFFF4026<br />ROM:000040E4 85 E2&nbsp; &nbsp; mov.w&nbsp; &nbsp;@(4,r14), r0&nbsp; &nbsp; ; r14+4 = 0xFFFFF804<br />ROM:000040E6 C1 02&nbsp; &nbsp; mov.w&nbsp; &nbsp;r0, @(4,gbr)&nbsp; &nbsp; ; write ADDR2H_B to 0xFFFF4028<br />ROM:000040E8 85 E3&nbsp; &nbsp; mov.w&nbsp; &nbsp;@(6,r14), r0&nbsp; &nbsp; ; r14+6 = 0xFFFFF806<br />ROM:000040EA C1 03&nbsp; &nbsp; mov.w&nbsp; &nbsp;r0, @(6,gbr)&nbsp; &nbsp; ; write ADDR3H_B to 0xFFFF402A<br />ROM:000040EC 85 E4&nbsp; &nbsp; mov.w&nbsp; &nbsp;@(8,r14), r0&nbsp; &nbsp; ; r14+8 = 0xFFFFF808<br />ROM:000040EE C1 04&nbsp; &nbsp; mov.w&nbsp; &nbsp;r0, @(8,gbr)&nbsp; &nbsp; ; write ADDR4H_B to 0xFFFF402C<br />ROM:000040F0 7E 0A&nbsp; &nbsp; add&nbsp; &nbsp; &nbsp;#h'A, r14&nbsp; &nbsp; &nbsp; &nbsp;; r14 = 0xFFFFF80A<br />ROM:000040F2 60 E1&nbsp; &nbsp; mov.w&nbsp; &nbsp;@r14, r0<br />ROM:000040F4 C1 05&nbsp; &nbsp; mov.w&nbsp; &nbsp;r0, @(h'A,gbr)&nbsp; ; write ADDR5H_B to 0xFFFF402E<br /></div><br />Quite a difference in code.  I suspect this is more of a function of a more optimized complier than anything else.<br /><br />So far I've found over 1000 tables in the 2010 STi SE ROM.  And that does not included single value parameters such as limit settings etc.<br />I'll keep plugging away at it...
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #006699">nsfw</b> [ Fri Jul 23, 2010 6:51 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Have you worked out which ADCs correspond to what sensors?  That could be an interesting thing to get documented. <br /><br />I've been doing more tuning and reverse-engineering lately, but I just learned a few things about closed-loop, which I'll start a thread for in the next day or two, after I've had some time to dig a little deeper.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Sasha_A80</b> [ Fri Jul 23, 2010 9:16 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />32 bit ecu translates ADC readings (16 bit left justified unsigned digits) into 5 Volts scaled float values by means of fixed multiplier.<br /><br />ROM:0002B5F6<br />ROM:0002B5F6 SSM_READ_MAF_VOLTAGE:                   ; DATA XREF: ROM:00037D24<br />ROM:0002B5F6                 fmov.s  fr15, @-r15<br />ROM:0002B5F8                 mova    @(h'148,pc), r0 ; _16BIT_5VOLT<br />ROM:0002B5FA                 fldi0   fr15<br />ROM:0002B5FC                 mov.l   @(h'148,pc), r4 ; [0002B748] = h'FFFF901E - MAF ADC READING <br />ROM:0002B5FE                 fmov    fr15, fr5<br />ROM:0002B600                 mov.l   @(h'148,pc), r3 ; [0002B74C] = SCALE_FLOAT_FROM_WORD<br />ROM:0002B602                 sts.l   pr, @-r15<br />ROM:0002B604                 fmov.s  @r0, fr4<br />ROM:0002B606                 jsr     @r3 ; SCALE_FLOAT_FROM_WORD<br />ROM:0002B608                 mov.w   @r4, r4<br />ROM:0002B60A                 fmov    fr0, fr4<br />ROM:0002B60C                 mova    @(h'140,pc), r0 ; flt_2B750<br />ROM:0002B60E                 fmov    fr15, fr6<br />ROM:0002B610                 lds.l   @r15+, pr<br />ROM:0002B612                 fmov.s  @r0, fr5<br />ROM:0002B614                 mov.l   @(h'D4,pc), r3 ; [0002B6EC] = MAKE_SSM_PARAM<br />ROM:0002B616                 jmp     @r3 ; MAKE_SSM_PARAM<br />ROM:0002B618                 fmov.s  @r15+, fr15<br /><br />ROM:0002B744 _16BIT_5VOLT:   .float 7.6293945e-5     ; DATA XREF: ROM:0002B5F8<br />ROM:0002B744                                         ; ROM:0002B61C<br /><br />After that those values are recalculated into sensor value by means of appropriate calibration table<br /><br />ROM:00007310 CALC_MAF:                               ; CODE XREF: sub_CF6C-7130p<br />ROM:00007310                                         ; ROM:00005FE2p<br />ROM:00007310                                         ; DATA XREF: ...<br />ROM:00007310                 mov.l   r14, @-r15<br />ROM:00007312                 sts.l   pr, @-r15<br />ROM:00007314                 mov.l   @(h'4C,pc), r14 ; [00007364] = h'FFFF901E<br />ROM:00007316                 mov.w   @r14, r14       ; / 2BYTE_MAF_VOLTAGE<br />ROM:00007318                 mova    @(h'4C,pc), r0 ; flt_7368  _16BIT_5VOLT<br />ROM:0000731A                 extu.w  r14, r3<br />ROM:0000731C                 mov.l   @(h'4C,pc), r4 ; [0000736C] = MAF_CALIBRATION_54730<br />ROM:0000731E                 lds     r3, fpul<br />ROM:00007320                 fmov.s  @r0, fr2<br />ROM:00007322                 float   fpul, fr3<br />ROM:00007324                 mov.l   @(h'48,pc), r3 ; [00007370] = sub_21E0 - 2D interpolation subroutine<br />ROM:00007326                 fmov    fr3, fr4<br />ROM:00007328                 jsr     @r3 ; sub_21E0<br />ROM:0000732A                 fmul    fr2, fr4<br /><br />ROM:00007364 dword_7364:     .data.l h'FFFF901E      ; DATA XREF: CALC_MAF+4<br />ROM:00007368 flt_7368:       .float 7.6293945e-5     ; DATA XREF: CALC_MAF+8<br />ROM:0000736C off_736C:       .data.l MAF_CALIBRATION_54730 ; DATA XREF: CALC_MAF+C<br />ROM:00007370 off_7370:       .data.l sub_21E0        ; DATA XREF: CALC_MAF+14
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sat Jul 24, 2010 8:30 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">NSFW wrote:</div><div class="quotecontent">Have you worked out which ADCs correspond to what sensors?  That could be an interesting thing to get documented. </div><br />I think it should be easy. Basically the ADC register is read and stored at a RAM location. That RAM location is read by some of the SSM routines.  Mapping that out in my ROM so far I think it goes like this:<br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">ADC&nbsp; &nbsp; &nbsp; Sensor<br />------&nbsp; &nbsp;---------------------------------<br />ADDR0&nbsp; &nbsp;<br />ADDR1&nbsp; &nbsp;<br />ADDR2&nbsp; &nbsp; MAP Sensor Volts<br />ADDR3&nbsp; &nbsp; Mass Air Flow Volts<br />ADDR4&nbsp; &nbsp; Main Accelerator Sensor Volts<br />ADDR5&nbsp; &nbsp; Sub Accelerator Sensor Volts<br />ADDR6&nbsp; &nbsp; Intake OCV Left Current<br />ADDR7&nbsp; &nbsp;<br />ADDR8&nbsp; &nbsp; Tumble Valve Position Left Volts<br />ADDR9&nbsp; &nbsp; Tumble Valve Position Right Volts<br />ADDR10&nbsp; &nbsp;<br />ADDR11&nbsp; &nbsp;<br />ADDR12&nbsp; &nbsp;Front O2 Sensor Amps<br />ADDR13&nbsp; &nbsp;Main Throttle Sensor Volts<br />ADDR14&nbsp; &nbsp;Sub Throttle Sensor Volts<br />ADDR15&nbsp; &nbsp;Exhaust OCV Left Current (not applicable)<br />ADDR16&nbsp; &nbsp;Intake OCV Right Current<br />ADDR17&nbsp; &nbsp;Rear O2 Volts<br />ADDR18&nbsp; &nbsp;Exhaust OCV Right Current (not applicable)<br />ADDR19&nbsp; &nbsp;Battery Volts<br />ADDR20&nbsp; &nbsp;Fuel Tank Pressure Volts<br />ADDR21&nbsp; &nbsp;Knock Sensor<br />ADDR22&nbsp; &nbsp;<br />ADDR23&nbsp; &nbsp;<br />ADDR24&nbsp; &nbsp;<br />ADDR25&nbsp; &nbsp;Fuel Tank Temperature Volts<br />ADDR26&nbsp; &nbsp;ATM Volts<br />ADDR27&nbsp; &nbsp;EGT Volts<br />ADDR28&nbsp; &nbsp;ECT Volts<br />ADDR29&nbsp; &nbsp;IAT Volts<br />ADDR30&nbsp; &nbsp;<br />ADDR31&nbsp; &nbsp;Fuel Level Volts</div><br />For a mapping example in my ROM A2WC522S:<br />The routine that moves the ADC registers to RAM writes the value of ADC #3 to RAM:FFFF2D22.<br />If you then look at the references to that RAM address.  You'll see one of them is to ROM location ROM:00049010.<br />That ROM location is referenced by the subroutine at ROM:00048EF8 which is the SSM routine to read MAFv.<br />Therefore I expect that ADC #3 is the MAF sensor voltage in its raw uint16 value.<br />The SSM routine then goes on to convert this uint16 value to a float value of volts by multiplying it by 7.6293945e-5 and adding 0.<br />The last step is to take that volts value and make it an uint8 to be returned by the SSM routine.<br /><br />One other thing I've noticed is that the STACK is used to store temporary variables.  This would be similar to defining local scope variables in a C function.  Its life is only as long as the function is active.  In the end the local variable would be popped off the STACK as a return value stored in some predefined RAM location.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Fri Aug 27, 2010 6:55 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" /><div class="quotetitle">Fiend wrote:</div><div class="quotecontent">Oh and can someone please tell me how to convert a range of addresses from byte to word/dword in one go?  I can convert a range of unknown addresses to bytes by selecting the range, pressing D, and unchecking the &quot;create array&quot; option.  I assumed creating word elements would be as simple as selecting the range, pressing D, unchecking the &quot;create array&quot; option, and then setting element width to &quot;2&quot;.  But oh noooo, that'd be too easy.  All I end up with is the selected range being marked as bytes instead of words.<br /><br />Am I missing something?</div><br /><br />I made these four little scripts to convert contiguous ranges of addresses to a selected type.  Hope this helps.
+
+		
+			<br clear="all" /><br />
+
+			<table class="tablebg" width="100%" cellspacing="1">
+			<tr>
+				<td><b class="genmed">Attachments: </b></td>
+			</tr>
+			
+				<tr>
+					<td>
+			<span class="gensmall"><b>File comment:</b> Make Byte, Word, Dword &amp; Float</span><br />
+		
+			<span class="genmed">
+				<img src="./styles/fisubsilver2/imageset/icon_topic_attach.gif" alt="" title="" /> 
+				<a href="./download/file.php?id=12566">IdcFormatScripts.zip</a> [2.06 KiB]
+			</span><br />
+			<span class="gensmall">Downloaded 65 times</span>
+		
+
+		<br />
+	</td>
+				</tr>
+			
+			</table>
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>Fiend</b> [ Fri Aug 27, 2010 8:05 pm ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Ooooh.  Will have to try these out.  Thanks!  I've been so swamped with work I've been really behind on my disassembly.  <br /><br />That GBR crap still confuses me.  If it is being set to one of the addresses in appendix A, OK fine, that is simple to understand - that is used to access onboard peripheral registers/address space and transfer data.  But I see the GBR being set to common RAM addresses, which seems to make it like any other pointer, no?  Does it have double-duty?<br /><br />The other thing I <span style="font-style: italic">really</span> hate is how the code will set a reference to a RAM address but then use offset addressing, e.g. @(r0, r4) to access/store to another location.  That makes it extremely tedious to track references, since you can't just do a binary search or cross-reference check.  Argh.<br /><br />Anyhow, I'm still searching for per-gear ignition timing...<br /><br />Thanks again for the scripts.<br /><br /><div class="quotetitle">dschultz wrote:</div><div class="quotecontent"><div class="quotetitle">Fiend wrote:</div><div class="quotecontent">Oh and can someone please tell me how to convert a range of addresses from byte to word/dword in one go?  I can convert a range of unknown addresses to bytes by selecting the range, pressing D, and unchecking the &quot;create array&quot; option.  I assumed creating word elements would be as simple as selecting the range, pressing D, unchecking the &quot;create array&quot; option, and then setting element width to &quot;2&quot;.  But oh noooo, that'd be too easy.  All I end up with is the selected range being marked as bytes instead of words.<br /><br />Am I missing something?</div><br /><br />I made these four little scripts to convert contiguous ranges of addresses to a selected type.  Hope this helps.</div>
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Sat Aug 28, 2010 7:13 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />I'd say yes GBR has a second life as a general index register.<br />And yes again &quot;Indirect indexed register addressing&quot;  &amp; &quot;Indirect indexed GBR addressing&quot; are both a pain.<br />I've been thinking about how to use IDA scripting to comment those indirect address destinations...<br /><br />BTW: if you want to have those four functions I wrote available all the time and loaded at IDA startup then just rename your &quot;C:\Program Files\IDA\idc\ida.idc&quot; file and replace it with this one.
+
+		
+			<br clear="all" /><br />
+
+			<table class="tablebg" width="100%" cellspacing="1">
+			<tr>
+				<td><b class="genmed">Attachments: </b></td>
+			</tr>
+			
+				<tr>
+					<td>
+			<span class="gensmall"><b>File comment:</b> IDA user startup script</span><br />
+		
+			<span class="genmed">
+				<img src="./styles/fisubsilver2/imageset/icon_topic_attach.gif" alt="" title="" /> 
+				<a href="./download/file.php?id=12985">ida.zip</a> [889 Bytes]
+			</span><br />
+			<span class="gensmall">Downloaded 45 times</span>
+		
+
+		<br />
+	</td>
+				</tr>
+			
+			</table>
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b>sega</b> [ Thu Dec 02, 2010 12:00 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />Hi,<br /><br />I have my ROM is 06 EDM WRX AD8H200Y.<br />I'm new for IDA pro and try to use for finding my Fuel Pump duty.<br />When I'm at step4. to create a RAM segment, I got the following screen as attached picture.<br />I checked it's &quot;For 7058, Start is 0xFFFF0000 and Length is 0xBFFF&quot;.<br />How can I put in the value for loading segment and loading offset?<br /><br />Thanks,<br /> Sega
+
+		
+			<br clear="all" /><br />
+
+			<table class="tablebg" width="100%" cellspacing="1">
+			<tr>
+				<td><b class="genmed">Attachments: </b></td>
+			</tr>
+			
+				<tr>
+					<td>
+			<a href="./download/file.php?id=12980&amp;mode=view"><img src="./download/file.php?id=12980&amp;t=1" alt="ida.jpg" /></a><br />
+			<span class="gensmall">ida.jpg [ 30.19 KiB | Viewed 141 times ]</span>
+		
+
+		<br />
+	</td>
+				</tr>
+			
+			</table>
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+	<hr width="85%" />
+
+	<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="10%" nowrap="nowrap">Author:&nbsp;</td>
+		<td><b style="color: #777777">dschultz</b> [ Thu Dec 02, 2010 6:26 am ]</td>
+	</tr>
+	<tr>
+		<td width="10%" nowrap="nowrap">Post subject:&nbsp;</td>
+		<td><b>Re: How To: Get started with IDA and a 32-bit ROM</b></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr class="sep" />No need, just hit OK.<br />Also change the processor to Hitachi SH4B.
+
+		
+
+		</td>
+	</tr>
+	</table>
+
+
+<hr width="85%" />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line. If you
+	refuse to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2006
+// -->
+
+<table width="85%" cellspacing="3" cellpadding="0" border="0" align="center">
+<tr>
+	<td><span class="gensmall">Page <strong>5</strong> of <strong>12</strong></span></td>
+	<td align="right"><span class="gensmall">All times are UTC - 9 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]</span></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><span class="gensmall">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</span></td>
+</tr>
+</table>
+
+</body>
+</html>
